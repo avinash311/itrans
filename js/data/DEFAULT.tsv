@@ -1,0 +1,173 @@
+INPUT	CODE-NAME	INPUT-TYPE	#sanskrit	#hindi	#marathi	#modi	#bengali	#gurmukhi	#gujarati	#oriya	#tamil	#tamils	#telugu	#kannada	#malayalam	#grantha	#roman	#roman-south
+k	ka	consonant	u+0915	u+0915	u+0915	u+1160E	u+0995	u+0A15	u+0A95	u+0B15	u+0B95	u+0B95	u+0C15	u+0C95	u+0D15	u+11315	k	k
+kh	kha	consonant	u+0916	u+0916	u+0916	u+1160F	u+0996	u+0A16	u+0A96	u+0B16	u+0B95	u+0B95u+00B2	u+0C16	u+0C96	u+0D16	u+11316	kh	kh
+g	ga	consonant	u+0917	u+0917	u+0917	u+11610	u+0997	u+0A17	u+0A97	u+0B17	u+0B95	u+0B95u+00B3	u+0C17	u+0C97	u+0D17	u+11317	g	g
+gh	gha	consonant	u+0918	u+0918	u+0918	u+11611	u+0998	u+0A18	u+0A98	u+0B18	u+0B95	u+0B95u+2074	u+0C18	u+0C98	u+0D18	u+11318	gh	gh
+~N | ṅ	nga	consonant	u+0919	u+0919	u+0919	u+11612	u+0999	u+0A19	u+0A99	u+0B19	u+0B99	u+0B99	u+0C19	u+0C99	u+0D19	u+11319	ṅ	ṅ
+ch	ca	consonant	u+091A	u+091A	u+091A	u+11613	u+099A	u+0A1A	u+0A9A	u+0B1A	u+0B9A	u+0B9A	u+0C1A	u+0C9A	u+0D1A	u+1131A	c	c
+chh | Ch	cha	consonant	u+091B	u+091B	u+091B	u+11614	u+099B	u+0A1B	u+0A9B	u+0B1B	u+0B9A	u+0B9Au+00B2	u+0C1B	u+0C9B	u+0D1B	u+1131B	ch	ch
+j	ja	consonant	u+091C	u+091C	u+091C	u+11615	u+099C	u+0A1C	u+0A9C	u+0B1C	u+0B9C	u+0B9C	u+0C1C	u+0C9C	u+0D1C	u+1131C	j	j
+jh	jha	consonant	u+091D	u+091D	u+091D	u+11616	u+099D	u+0A1D	u+0A9D	u+0B1D	u+0B9C	u+0B9Cu+00B2	u+0C1D	u+0C9D	u+0D1D	u+1131D	jh	jh
+~n	nya	consonant	u+091E	u+091E	u+091E	u+11617	u+099E	u+0A1E	u+0A9E	u+0B1E	u+0B9E	u+0B9E	u+0C1E	u+0C9E	u+0D1E	u+1131E	ñ	ñ
+T	tta	consonant	u+091F	u+091F	u+091F	u+11618	u+099F	u+0A1F	u+0A9F	u+0B1F	u+0B9F	u+0B9F	u+0C1F	u+0C9F	u+0D1F	u+1131F	ṭ	ṭ
+Th	ttha	consonant	u+0920	u+0920	u+0920	u+11619	u+09A0	u+0A20	u+0AA0	u+0B20	u+0B9F	u+0B9Fu+00B2	u+0C20	u+0CA0	u+0D20	u+11320	ṭh	ṭh
+D	dda	consonant	u+0921	u+0921	u+0921	u+1161A	u+09A1	u+0A21	u+0AA1	u+0B21	u+0B9F	u+0B9Fu+00B3	u+0C21	u+0CA1	u+0D21	u+11321	ḍ	ḍ
+Dh	ddha	consonant	u+0922	u+0922	u+0922	u+1161B	u+09A2	u+0A22	u+0AA2	u+0B22	u+0B9F	u+0B9Fu+2074	u+0C22	u+0CA2	u+0D22	u+11322	ḍh	ḍh
+N	nna	consonant	u+0923	u+0923	u+0923	u+1161C	u+09A3	u+0A23	u+0AA3	u+0B23	u+0BA3	u+0BA3	u+0C23	u+0CA3	u+0D23	u+11323	ṇ	ṇ
+t	ta	consonant	u+0924	u+0924	u+0924	u+1161D	u+09A4	u+0A24	u+0AA4	u+0B24	u+0BA4	u+0BA4	u+0C24	u+0CA4	u+0D24	u+11324	t	t
+th	tha	consonant	u+0925	u+0925	u+0925	u+1161E	u+09A5	u+0A25	u+0AA5	u+0B25	u+0BA4	u+0BA4u+00B2	u+0C25	u+0CA5	u+0D25	u+11325	th	th
+d	da	consonant	u+0926	u+0926	u+0926	u+1161F	u+09A6	u+0A26	u+0AA6	u+0B26	u+0BA4	u+0BA4u+00B3	u+0C26	u+0CA6	u+0D26	u+11326	d	d
+dh	dha	consonant	u+0927	u+0927	u+0927	u+11620	u+09A7	u+0A27	u+0AA7	u+0B27	u+0BA4	u+0BA4u+2074	u+0C27	u+0CA7	u+0D27	u+11327	dh	dh
+n	na	consonant	u+0928	u+0928	u+0928	u+11621	u+09A8	u+0A28	u+0AA8	u+0B28	u+0BA8	u+0BA8	u+0C28	u+0CA8	u+0D28	u+11328	n	n
+^n	nnna	consonant	u+0929	u+0929	u+0929						u+0BA9	u+0BA9	u+0C29		u+0D29	u+0BA9	ṉ	ṉ
+p	pa	consonant	u+092A	u+092A	u+092A	u+11622	u+09AA	u+0A2A	u+0AAA	u+0B2A	u+0BAA	u+0BAA	u+0C2A	u+0CAA	u+0D2A	u+1132a	p	p
+ph	pha	consonant	u+092B	u+092B	u+092B	u+11623	u+09AB	u+0A2B	u+0AAB	u+0B2B	u+0BAA	u+0BAAu+00B2	u+0C2B	u+0CAB	u+0D2B	u+1132b	ph	ph
+b	ba	consonant	u+092C	u+092C	u+092C	u+11624	u+09AC	u+0A2C	u+0AAC	u+0B2C	u+0BAA	u+0BAAu+00B3	u+0C2C	u+0CAC	u+0D2C	u+1132c	b	b
+bh	bha	consonant	u+092D	u+092D	u+092D	u+11625	u+09AD	u+0A2D	u+0AAD	u+0B2D	u+0BAA	u+0BAAu+2074	u+0C2D	u+0CAD	u+0D2D	u+1132d	bh	bh
+m	ma	consonant	u+092E	u+092E	u+092E	u+11626	u+09AE	u+0A2E	u+0AAE	u+0B2E	u+0BAE	u+0BAE	u+0C2E	u+0CAE	u+0D2E	u+1132e	m	m
+y	ya	consonant	u+092F	u+092F	u+092F	u+11627	u+09AF	u+0A2F	u+0AAF	u+0B2F	u+0BAF	u+0BAF	u+0C2F	u+0CAF	u+0D2F	u+1132f	y	y
+r	ra	consonant	u+0930	u+0930	u+0930	u+11628	u+09B0	u+0A30	u+0AB0	u+0B30	u+0BB0	u+0BB0	u+0C30	u+0CB0	u+0D30	u+11330	r	r
+R	rra	consonant	u+0931	u+0931	u+0931		u+09DC				u+0BB1	u+0BB1	u+0C31	u+0CB1	u+0D31	u+0BB1	ṟ	ṟ
+l	la	consonant	u+0932	u+0932	u+0932	u+11629	u+09B2	u+0A32	u+0AB2	u+0B32	u+0BB2	u+0BB2	u+0C32	u+0CB2	u+0D32	u+11332	l	l
+ld | L	lla	consonant	u+0933	u+0933	u+0933	u+1162F		u+0A33	u+0AB3	u+0B33	u+0BB3	u+0BB3	u+0C33	u+0CB3	u+0D33	u+11333	ḷ	ḷ
+zh	llla	consonant	u+0934	u+0934	u+0934						u+0BB4	u+0BB4	u+0C34	u+0CDE	u+0D34	u+0BB4	ḻ	ḻ
+v	va	consonant	u+0935	u+0935	u+0935	u+1162A	u+09AC	u+0A35	u+0AB5	u+0B35	u+0BB5	u+0BB5	u+0C35	u+0CB5	u+0D35	u+11335	v	v
+sh	sha	consonant	u+0936	u+0936	u+0936	u+1162B	u+09B6	u+0A36	u+0AB6	u+0B36	u+0BB6	u+0BB6	u+0C36	u+0CB6	u+0D36	u+11336	ś	ś
+Sh	ssa	consonant	u+0937	u+0937	u+0937	u+1162C	u+09B7	ਸ਼਼	u+0AB7	u+0B37	u+0BB7	u+0BB7	u+0C37	u+0CB7	u+0D37	u+11337	ṣ	ṣ
+s	sa	consonant	u+0938	u+0938	u+0938	u+1162D	u+09B8	u+0A38	u+0AB8	u+0B38	u+0BB8	u+0BB8	u+0C38	u+0CB8	u+0D38	u+11338	s	s
+h	ha	consonant	u+0939	u+0939	u+0939	u+1162E	u+09B9	u+0A39	u+0AB9	u+0B39	u+0BB9	u+0BB9	u+0C39	u+0CB9	u+0D39	u+11339	h	h
+																		
+x | kSh	ksha	consonant	क्ष	क्ष	क्ष	क्ष	ক্ষ	ਕ੍ਸ਼਼	ક્ષ	କ୍ଷ	க்ஷ	க்ஷ	క్ష	ಕ್ಷ	ക്ഷ	𑌕𑍍𑌷	kṣ	kṣ
+GY | j~n | dny	jnya	consonant	ज्ञ	ज्ञ	ज्ञ	ज्ञ	জ্ঞ	ਜ੍ਞ	જ્ઞ	ଜ୍ଞ	ஜ்ஞ	ஜ்ஞ	జ్ఞ	ಜ್ಞ	ജ്ഞ	𑌜𑍍𑌞	jñ	jñ
+																		
+																		
+q	qa	consonant	u+0958	u+0958	u+0958		u+0995u+09BC	u+0A15u+0A3C	u+0A95u+0ABC	u+0B15u+0B3C			u+0C58	u+0C95u+0CBC			q	q
+K	khha	consonant	u+0959	u+0959	u+0959		u+0996u+09BC	u+0A59	u+0A96u+0ABC	u+0B16u+0B3C			u+0C59	u+0C96u+0CBC			k͟h	k͟h
+G	ghha	consonant	u+095A	u+095A	u+095A		u+0997u+09BC	u+0A5A	u+0A97u+0ABC	u+0B17u+0B3C			u+0C5A	u+0C97u+0CBC			ġ	ġ
+J | z	za	consonant	u+095B	u+095B	u+095B		u+099Cu+09BC	u+0A5B	u+0A9Cu+0ABC	u+0B1Cu+0B3C			u+0C5B	u+0C9Cu+0CBC			z	z
+.D	dddha	consonant	u+095C	u+095C	u+095C		u+09DC	u+0A5C	u+0AA1u+0ABC	u+0B5C			u+0C5C	u+0CA1u+0CBC			ṛ	ṛ
+.Dh	rha	consonant	u+095D	u+095D	u+095D		u+09DD	u+0A22u+0A3C	u+0AA2u+0ABC	u+0B5D			u+0C5D	u+0CA2u+0CBC			ṛh	ṛh
+f	fa	consonant	u+095E	u+095E	u+095E		u+09ABu+09BC	u+0A5E	u+0AABu+0ABC	u+0B2Bu+0B3C			u+0C5E	u+0CABu+0CBC			f	f
+Y	yya	consonant	u+095F	u+095F	u+095F		u+09DF			u+0B5F			u+0C5F					
+	marwari-dda	consonant	u+0978	u+0978	u+0978								u+0C78					
+	zha	consonant	u+0979	u+0979	u+0979				u+0AF9				u+0C79					
+	heavy-ya	consonant	u+097A	u+097A	u+097A								u+0C7A					
+	gga	consonant	u+097B	u+097B	u+097B								u+0C7B					
+	jja	consonant	u+097C	u+097C	u+097C								u+0C7C					
+	ddda	consonant	u+097E	u+097E	u+097E								u+0C7E					
+	bba	consonant	u+097F	u+097F	u+097F								u+0C7F					
+w	wa	consonant								u+0B71							w	w
+	ttta	consonant													u+0D3A			
+																		
+	chillu-m	consonant	{ma}	{ma}	{ma}	{ma}	{ma}	{ma}	{ma}	{ma}	{ma}	{ma}	{ma}	{ma}	u+0D54	{ma}	{ma}	{ma}
+	chillu-n	consonant	{na}	{na}	{na}	{na}	{na}	{na}	{na}	{na}	{na}	{na}	{na}	{na}	u+0D7B	{na}	{na}	{na}
+																		
+	rrra	consonant											u+0C5A					
+																		
+																		
+	short-a		u+0904	u+0904	u+0904								u+0C04					
+a	a	vowel	u+0905	u+0905	u+0905	u+11600	u+0985	u+0A05	u+0A85	u+0B05	u+0B85	u+0B85	u+0C05	u+0C85	u+0D05	u+11305	a	a
+aa | A	aa	vowel	u+0906	u+0906	u+0906	u+11601	u+0986	u+0A06	u+0A86	u+0B06	u+0B86	u+0B86	u+0C06	u+0C86	u+0D06	u+11306	ā	ā
+i	i	vowel	u+0907	u+0907	u+0907	u+11602	u+0987	u+0A07	u+0A87	u+0B07	u+0B87	u+0B87	u+0C07	u+0C87	u+0D07	u+11307	i	i
+ii | I | ee	ii	vowel	u+0908	u+0908	u+0908	u+11603	u+0988	u+0A08	u+0A88	u+0B08	u+0B88	u+0B88	u+0C08	u+0C88	u+0D08	u+11308	ī	ī
+u	u	vowel	u+0909	u+0909	u+0909	u+11604	u+0989	u+0A09	u+0A89	u+0B09	u+0B89	u+0B89	u+0C09	u+0C89	u+0D09	u+11309	u	u
+uu | U	uu	vowel	u+090A	u+090A	u+090A	u+11605	u+098A	u+0A0A	u+0A8A	u+0B0A	u+0B8A	u+0B8A	u+0C0A	u+0C8A	u+0D0A	u+1130a	ū	ū
+RRi | R^i	vocalic-r	vowel	u+090B	u+090B	u+090B	u+11606	u+098B		u+0A8B	u+0B0B			u+0C0B	u+0C8B	u+0D0B	u+1130b	r̥	r̥
+LLi | L^i	vocalic-l	vowel	u+090C	u+090C	u+090C	u+11608	u+098C		u+0A8C	u+0B0C			u+0C0C	u+0C8C	u+0D0C	u+1130C	l̥	l̥
+RRI	vocalic-rr	vowel	u+0960	u+0960	u+0960	u+11607	u+09E0		u+0AE0	u+0B60			u+0C60	u+0CE0	u+0D60	u+11360	r̥̄	r̥̄
+LLI	vocalic-ll	vowel	u+0961	u+0961	u+0961	u+11609	u+09E1		u+0AE1	u+0B61			u+0C61	u+0CE1	u+0D61	u+11361	l̥̄	l̥̄
+a.e	candra-a		u+0972	u+0972	u+0972													
+a.c	candra-e	vowel	u+090D	u+090D	u+090D				u+0A8D								ê	ê
+^e	short-e	vowel	u+090E	u+090E	u+090E												e	
+e	e	vowel	u+090F	u+090F	u+090F	u+1160A	u+098F	u+0A0F	u+0A8F	u+0B0F	u+0B8E	u+0B8E	u+0C0E	u+0C8E	u+0D0E		ē	e
+E	ee	vowel									u+0B8F	u+0B8F	u+0C0F	u+0C8F	u+0D0F	u+1130F		ē
+ai	ai	vowel	u+0910	u+0910	u+0910	u+1160B	u+0990	u+0A10	u+0A90	u+0B10	u+0B90	u+0B90	u+0C10	u+0C90	u+0D10	u+11310	ai	ai
+A.c	candra-o	vowel	u+0911	u+0911	u+0911				u+0A91				u+0C11				ô	ô
+^o	short-o	vowel	u+0912	u+0912	u+0912												o	
+o	o	vowel	u+0913	u+0913	u+0913	u+1160C	u+0993	u+0A13	u+0A93	u+0B13	u+0B92	u+0B92	u+0C12	u+0C92	u+0D12		ō	o
+O	oo	vowel									u+0B93	u+0B93	u+0C13	u+0C93	u+0D13	u+11313		ō
+au	au	vowel	u+0914	u+0914	u+0914	u+1160D	u+0994	u+0A14	u+0A94	u+0B14	u+0B94	u+0B94	u+0C14	u+0C94	u+0D14	u+11314	au	au
+																		
+	dv-short-a	dependent-vowel																
+	dv-a	dependent-vowel															a	a
+	dv-aa	dependent-vowel	u+093E	u+093E	u+093E	u+11630	u+09BE	u+0A3E	u+0ABE	u+0B3E	u+0BBE	u+0BBE	u+0C3E	u+0CBE	u+0D3E	u+1133E	ā	ā
+	dv-i	dependent-vowel	u+093F	u+093F	u+093F	u+11631	u+09BF	u+0A3F	u+0ABF	u+0B3F	u+0BBF	u+0BBF	u+0C3F	u+0CBF	u+0D3F	u+1133F	i	i
+	dv-ii	dependent-vowel	u+0940	u+0940	u+0940	u+11632	u+09C0	u+0A40	u+0AC0	u+0B40	u+0BC0	u+0BC0	u+0C40	u+0CC0	u+0D40	u+11340	ī	ī
+	dv-u	dependent-vowel	u+0941	u+0941	u+0941	u+11633	u+09C1	u+0A41	u+0AC1	u+0B41	u+0BC1	u+0BC1	u+0C41	u+0CC1	u+0D41	u+11341	u	u
+	dv-uu	dependent-vowel	u+0942	u+0942	u+0942	u+11634	u+09C2	u+0A42	u+0AC2	u+0B42	u+0BC2	u+0BC2	u+0C42	u+0CC2	u+0D42	u+11342	ū	ū
+	dv-vocalic-r	dependent-vowel	u+0943	u+0943	u+0943	u+11635	u+09C3		u+0AC3	u+0B43			u+0C43	u+0CC3	u+0D43	u+11343	r̥	r̥
+	dv-vocalic-rr	dependent-vowel	u+0944	u+0944	u+0944	u+11636	u+09C4		u+0AC4	u+0B44			u+0C44	u+0CC4	u+0D44	u+11344	r̥̄	r̥̄
+	dv-vocalic-l	dependent-vowel	u+0962	u+0962	u+0962	u+11637	u+09E2		u+0AE2	u+0B62			u+0C62	u+0CE2	u+0D62	u+11362	l̥	l̥
+	dv-vocalic-ll	dependent-vowel	u+0963	u+0963	u+0963	u+11638	u+09E3		u+0AE3	u+0B63			u+0C63	u+0CE3	u+0D63	u+11363	l̥̄	l̥̄
+	dv-candra-e	dependent-vowel	u+0945	u+0945	u+0945	u+11640		u+0A71	u+0AC5								ê	ê
+	dv-short-e	dependent-vowel	u+0946	u+0946	u+0946												e	
+	dv-e	dependent-vowel	u+0947	u+0947	u+0947	u+11639	u+09C7	u+0A47	u+0AC7	u+0B47	u+0BC6	u+0BC6	u+0C46	u+0CC6	u+0D46		ē	e
+	dv-ee	dependent-vowel									u+0BC7	u+0BC7	u+0C47	u+0CC7	u+0D47	u+11347		ē
+	dv-ai	dependent-vowel	u+0948	u+0948	u+0948	u+1163A	u+09C8	u+0A48	u+0AC8	u+0B48	u+0BC8	u+0BC8	u+0C48	u+0CC8	u+0D48	u+11348	ai	ai
+	dv-candra-o	dependent-vowel	u+0949	u+0949	u+0949				u+0AC9				u+0C49				ô	ô
+	dv-short-o	dependent-vowel	u+094A	u+094A	u+094A												o	
+	dv-o	dependent-vowel	u+094B	u+094B	u+094B	u+1163B	u+09CB	u+0A4B	u+0ACB	u+0B4B	u+0BCA	u+0BCA	u+0C4A	u+0CCA	u+0D4A		ō	o
+	dv-oo	dependent-vowel									u+0BCB	u+0BCB	u+0C4B	u+0CCB	u+0D4B	u+1134B		ō
+	dv-au	dependent-vowel	u+094C	u+094C	u+094C	u+1163C	u+09CC	u+0A4C	u+0ACC	u+0B4C	u+0BCC	u+0BCC	u+0C4C	u+0CCC	u+0D4C	u+1134C	au	au
+																		
+	nukta		u+093C	u+093C	u+093C		u+09BC	u+0A3C	u+0ABC	u+0B3C				u+0CBC		U+1133c		
+.a	avagraha		u+093D	u+093D	u+093D		u+09BD		u+0ABD	u+0B3D			u+0C3D	u+0CBD	u+0D3D		’	’
+	virama		u+094D	u+094D	u+094D	u+1163F	u+09CD	u+0A4D	u+0ACD	u+0B4D	u+0BCD	u+0BCD	u+0C4D	u+0CCD	u+0D4D	u+1134D		
+.h	explicit-virama		{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}		
+.N	chandrabindu		u+0901	u+0901	u+0901	{anusvara}{dv-candra-e}	u+0981	u+0A01	u+0A81	u+0B01				u+0C81	u+0D01	u+11301	m̐	m̐
+.n | M | .m	anusvara		u+0902	u+0902	u+0902	u+1163D	u+0982	u+0A02	u+0A82	u+0B02	u+0B82	ம்	u+0C02	u+0C82	u+0D02	u+11302	ṁ	ṁ
+H	visarga		u+0903	u+0903	u+0903	u+1163E	u+0983	u+0A03	u+0A83	u+0B03	u+0B83	:	u+0C03	u+0C83	u+0D03	u+11303	ḥ	ḥ
+OM | AUM	om		u+0950	u+0950	u+0950	u+0950	ওঁ	u+0A74	u+0AD0	ଓଁ	u+0BD0	ௐ	ఓం	ಓಂ	ഓം	𑌓𑌂	oṃ	oṁ
+	udatta		u+0951	u+0951	u+0951		u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951
+	anudatta		u+0952	u+0952	u+0952		u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952
+	candrabindu-virama		u+A8F3	u+A8F3	u+A8F3		u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3
+	double-svarita 		u+1CDA	u+1CDA	u+1CDA		u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA
+	grave-accent		u+0953	u+0953	u+0953		u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	`	`
+	acute-accent		u+0954	u+0954	u+0954		u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	'	'
+|	danda		u+0964	u+0964	u+0964	u+11641	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	.	.
+||	double-danda		u+0965	u+0965	u+0965	u+11642	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	..	..
+																		
+0	zero		u+0966	u+0966	u+0966	u+11650	u+09E6	u+0A66	u+0AE6	u+0B66	u+0BE6	u+0BE6	u+0C66	u+0CE6	u+0D66	u+0BE6	0	0
+1	one		u+0967	u+0967	u+0967	u+11651	u+09E7	u+0A67	u+0AE7	u+0B67	u+0BE7	u+0BE7	u+0C67	u+0CE7	u+0D67	u+0BE7	1	1
+2	two		u+0968	u+0968	u+0968	u+11652	u+09E8	u+0A68	u+0AE8	u+0B68	u+0BE8	u+0BE8	u+0C68	u+0CE8	u+0D68	u+0BE8	2	2
+3	three		u+0969	u+0969	u+0969	u+11653	u+09E9	u+0A69	u+0AE9	u+0B69	u+0BE9	u+0BE9	u+0C69	u+0CE9	u+0D69	u+0BE9	3	3
+4	four		u+096A	u+096A	u+096A	u+11654	u+09EA	u+0A6A	u+0AEA	u+0B6A	u+0BEA	u+0BEA	u+0C6A	u+0CEA	u+0D6A	u+0BEA	4	4
+5	five		u+096B	u+096B	u+096B	u+11655	u+09EB	u+0A6B	u+0AEB	u+0B6B	u+0BEB	u+0BEB	u+0C6B	u+0CEB	u+0D6B	u+0BEB	5	5
+6	six		u+096C	u+096C	u+096C	u+11656	u+09EC	u+0A6C	u+0AEC	u+0B6C	u+0BEC	u+0BEC	u+0C6C	u+0CEC	u+0D6C	u+0BEC	6	6
+7	seven		u+096D	u+096D	u+096D	u+11657	u+09ED	u+0A6D	u+0AED	u+0B6D	u+0BED	u+0BED	u+0C6D	u+0CED	u+0D6D	u+0BED	7	7
+8	eight		u+096E	u+096E	u+096E	u+11658	u+09EE	u+0A6E	u+0AEE	u+0B6E	u+0BEE	u+0BEE	u+0C6E	u+0CEE	u+0D6E	u+0BEE	8	8
+9	nine		u+096F	u+096F	u+096F	u+11659	u+09EF	u+0A6F	u+0AEF	u+0B6F	u+0BEF	u+0BEF	u+0C6F	u+0CEF	u+0D6F	u+0BEF	9	9
+																		
+	candrabindu-avagraha		u+A8F7	u+A8F7	u+A8F7		u+A8F7	u+A8F7	u+A8F7	u+A8F7	u+A8F7	u+A8F7	u+A8F7	u+A8F7	u+A8F7	u+A8F7	u+A8F7	u+A8F7
+	pushpika		u+A8F8	u+A8F8	u+A8F8		u+A8F8	u+A8F8	u+A8F8	u+A8F8	u+A8F8	u+A8F8	u+A8F8	u+A8F8	u+A8F8	u+A8F8	u+A8F8	u+A8F8
+																		
+	karshana		u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0	u+1CD0
+	shara		u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1	u+1CD1
+	prenkha		u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2	u+1CD2
+	nihshvasa		u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3	u+1CD3
+																		
+~o	abbreviation					u+11643												
+^h	huva					u+11644												
+Rs.	rupee		u+20B9	u+20B9	u+20B9	u+20B9	u+09F3	u+20B9	u+0AF1	u+20B9	u+0BF9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9
+~Rs.	rupee-mark		u+20B9	u+20B9	{ra}{dv-uu}	u+A838	u+09F2	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9
+																		
+{}	no-ligature	command	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}		
+_	no-output	command																
+																		
+	zwsp		u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B		
+	zwnj		u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C		
+	zwj		u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D		
+																		
+																		
+																		
+	consonants-joiner	command	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}		
+	end-word-vowel	command	{explicit-virama}	{dv-a}	{dv-a}	{dv-a}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}
+																		
+																		
+##	itrans-toggle	command																
+																		
+	face-grin		😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀
+	face-neutral		u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610
+	face-frown		u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639
+	skier		u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7
+	heart		u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764

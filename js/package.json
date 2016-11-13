@@ -1,0 +1,40 @@
+{
+  "name": "itrans",
+  "version": "0.2.0",
+  "description": "itrans - convert input text to unicode text",
+  "scripts": {
+    "browserify": "browserify browser -t brfs -t babelify --presets es2015 | uglifyjs -v > dist/itrans_bundle.js",
+    "test": "mocha --reporter spec --no-colors",
+    "data": "cd data && node makeData.js DEFAULT",
+    "browserify-noext": "browserify browser --no-bundle-external -t brfs -o dist/itrans_noexternal.js"
+  },
+  "keywords": [
+    "itrans",
+    "unicode",
+    "devanagari",
+    "bengali",
+    "gurmukhi",
+    "hindi",
+    "kannada",
+    "malayalam",
+    "marathi",
+    "modi",
+    "roman",
+    "sanskrit",
+    "tamil",
+    "telugu"
+  ],
+  "author": "Avinash Chopde",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "~7.3.0",
+    "brfs": "^1.4.3",
+    "browserify": "~13.1.1",
+    "mocha": "^3.1.0",
+    "request": "~2.78.0",
+    "uglify-js": "^2.7.4"
+  },
+  "dependencies": {}
+}

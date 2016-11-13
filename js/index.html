@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs ======================================= -->
+  <meta charset="utf-8">
+  <title>Online Interface to ITRANS</title>
+  <meta name="description" Content="Online Interface to ITRANS - text to Unicode conversion package.">
+  <meta name="author" content="Avinash Chopde">
+  <meta name="contact" content="avinash@aczoom.com">
+
+  <meta name="keywords" Content="ITRANS, Indian Languages, Indian Scripts,
+        Hindi, Marathi, Sanskrit, Devanagari, Telugu, Bengali, Gujarati,
+	Tamil, Gurmukhi, Malayalam, Oriya, Grantha, Romanized Sanskrit">
+
+  <!-- Mobile Specific Metas ================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT =================================================== -->
+  <!-- <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+  <!-- CSS ==================================================== -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/itrans.css">
+
+  <!-- Javascript ============================================= -->
+  <script src="dist/itrans_bundle.js"></script> <!-- uses DOM elements of this page -->
+
+  <!-- Favicon ================================================ -->
+  <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body>
+
+<!-- Primary Page Layout ==================================== -->
+
+<div class="container">
+  <!-- columns should be the immediate child of a .row -->
+
+  <div class="row">
+    <div class="twelve columns">
+      <TABLE>
+        <TR>
+          <TD>
+            <A HREF="http://www.aczoom.com/" TARGET="_top">ACZoom Home</A>
+          </TD>
+          <TD>
+            <A HREF="http://www.aczoom.com/email.html" TARGET="_top">E-mail</A>
+          </TD>
+          <TD>
+            <A HREF="http://www.aczoom.com/itrans/" TARGET="_top">ITRANS</A>
+          </TD>
+          <TD>
+            <A HREF="http://www.aczoom.com/isongs/" TARGET="_top">ITRANS Song Book</A>
+          </TD>
+        </TR>
+      </TABLE>
+
+      <h4>Online Interface to Itrans. Text to Unicode converter.</h4>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="six columns i-input">
+      <label for="i-input">Enter itrans input:</label>
+      <textarea id="i-input" placeholder="Type here: a aa | ka kSha | sa.nskRRit | ..."
+        autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+      <br>
+      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">Spreadsheet with all itrans input codes</a>
+      <br>
+      <a href="#example">Example itrans input text and output</a>
+    </div>
+
+    <div class="six columns i-output">
+      <label for="i-sel-1">Default output:</label>
+      <select id="i-sel-1">
+        <option value="#sanskrit" selected>#sanskrit</option>
+        <option value="#hindi">#hindi</option>
+        <option value="#marathi">#marathi</option>
+        <option value="#modi">#modi (marathi)</option>
+        <option value="#telugu">#telugu</option>
+        <option value="#bengali">#bengali</option>
+        <option value="#gurmukhi">#gurmukhi</option>
+        <option value="#gujarati">#gujarati</option>
+        <option value="#oriya">#oriya</option>
+        <option value="#tamil">#tamil</option>
+        <option value="#kannada">#kannada</option>
+        <option value="#malayalam">#malayalam</option>
+        <option value="#grantha">#grantha</option>
+        <option value="#roman">#roman</option>
+        <option value="unicode-names">Unicode Names</option>
+      </select>
+      <br>
+      <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="six columns i-output">
+      <label for="i-sel-2">Default output:</label>
+      <select id="i-sel-2">
+        <option value="#sanskrit">#sanskrit</option>
+        <option value="#hindi">#hindi</option>
+        <option value="#marathi">#marathi</option>
+        <option value="#modi">#modi (marathi)</option>
+        <option value="#telugu" selected>#telugu</option>
+        <option value="#bengali">#bengali</option>
+        <option value="#gurmukhi">#gurmukhi</option>
+        <option value="#gujarati">#gujarati</option>
+        <option value="#oriya">#oriya</option>
+        <option value="#tamil">#tamil</option>
+        <option value="#kannada">#kannada</option>
+        <option value="#malayalam">#malayalam</option>
+        <option value="#grantha">#grantha</option>
+        <option value="#roman">#roman</option>
+        <option value="unicode-names">Unicode Names</option>
+      </select>
+      <br>
+      <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
+    </div>
+
+    <div class="six columns i-output">
+      <label for="i-sel-3">Default output:</label>
+      <select id="i-sel-3">
+        <option value="#sanskrit">#sanskrit</option>
+        <option value="#hindi">#hindi</option>
+        <option value="#marathi">#marathi</option>
+        <option value="#modi">#modi (marathi)</option>
+        <option value="#telugu">#telugu</option>
+        <option value="#bengali">#bengali</option>
+        <option value="#gurmukhi">#gurmukhi</option>
+        <option value="#gujarati">#gujarati</option>
+        <option value="#oriya">#oriya</option>
+        <option value="#tamil">#tamil</option>
+        <option value="#kannada">#kannada</option>
+        <option value="#malayalam">#malayalam</option>
+        <option value="#grantha">#grantha</option>
+        <option value="#roman">#roman</option>
+        <option value="unicode-names" selected>Unicode Names</option>
+      </select>
+      <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- =========================================================== -->
+  <form id="i-data">
+    <div class="row">
+      <div class="twelve columns">
+        <label for="i-data-input">Load tab-separated spreadsheet with itrans data:</label>
+        <input type="file" id="i-data-input">
+        <div id="i-data-msg"><!-- load message - success, failure --></div>
+        <p>
+        <div>
+        Here's the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a>.
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <p>
+
+  <div class="row">
+    <div class="twelve columns">
+      <h4>Using your own transliteration encoding</h4>
+      This is a customizable application. The goal is to allow users to provide their own
+      input to output mapping, by using their own version of the spreadsheet shown above. While
+      itrans is used for Indic script output, the spreadsheet can be used to for any Unicode
+      conversion of input text, based on one-to-one mapping of each input code to any string
+      of Unicode characters.
+      <p>
+      There is no support available for this tool, other than this document. Knowledge
+      of web tools and editors is required to modify the default behavior.
+      In addition to the steps below,
+      the code can also be copied by looking at the source of this web page, and a local
+      web page created with input and output text boxes as desired.
+      <p>
+      <ol>
+      <li>First, make a copy of the default spreadsheet. Either make an online copy,
+      or download the spreadsheet if you wish to edit it using Excel or LibreOffice or other
+      desktop application.</li>
+      <li>To make a copy: Use the <code>File &rarr; Make a copy ... </code> command.</li>
+      <li>Or, download a copy: Use the <code>File &rarr; Download As... </code> command.</li>
+      <li>Then, edit your copy of the spreadsheet. The most common changes are to edit the
+      rows in the <code>INPUT</code> column so that it uses different input codes.</li>
+      <li>
+      The 
+      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a> has many cells with notes
+      that describe the rows and columns in more detail.
+      In short: make sure each row of the <code>INPUT</code> has unique codes with no
+      duplicates. If creating new rows, copy and existing row to make sure it has data
+      in all the columns.
+      </li>
+      <li>Once you have the spreadsheet data as you need it, export or download the spreadsheet
+      as a tab-separated file. Only tab-separated .tsv files can then be loaded on this web page.
+      </li>
+      <li>Every spreadsheet program has a way to save a spreadsheet in a Tab-Separated format.
+      In the online Google Spreadsheets for example, use the <code>File &rarr; Download As... </code> command with the <code>Tab-separated values (.tsv, current sheet)</code>.
+      Destktop spreadsheet programs may have different ways to do this - for example, the
+      <code>Save As</code> may offer a way to save it in a Tab-Separated format and use a
+      <code>.txt</code>
+      file extension.. Or there may be an <code>Export</code> command that offers that.</li>
+      </li>
+      <li>The tab-separated text spreadsheet can be loaded using the <em>Load tab-separated spreadsheet with itrans data</em> input field on this page.
+      </li>
+      <li>If the spreadsheet has no errors, it will be loaded and a message printed in the section above. If there are errors, it will pop up a dialog box with the error message.
+      </li>
+      </ol>
+    </div>
+    <div class="twelve columns">
+      <h4>Modifications to the spreadsheet</h4>
+      <ol>
+      <li>The above section outlines the steps to upload a modified spreadsheet. This section
+      desribes the kinds of changes that can be done. New rows can be added (for new
+      characters), new columns can be added (for new languages).
+      </li>
+      <li>If a new column is added, it needs to be used manually in the input box. There will
+      be no drop-down Default output for that language. Use <code>#language your-text</code>
+      to enter that text in the Enter itrans input: box. See the <a href="#example">Example</a>
+      section below that shows this usage.
+      The name of the column for a language name must be of the form <code>#name</code>
+      </li>
+      <li>If a new row is added, make sure the INPUT column entry does not conflict with any
+      other row. Additionally, if one of the two rows starts with the same character or sequence
+      of characters as the other, then the longest sequence will be matched.
+      So if rows <code>k</code> and <code>h</code> and <code>kh</code> exist, then input
+      text <code>kh</code> will always match the longer kh sequence row. Use <code>k_h</code>
+      in the input to have it match the k row and then the h row instead.
+      </li>
+      </ol>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- =========================================================== -->
+  <div class="row">
+    <div class="twelve columns">
+      <!--
+      <p>
+      <A HREF="http://www.aczoom.com/itrans/online/#help">Documentation</A>
+      &nbsp;&nbsp;[ if needed, or just start filling in the form ]
+      </p>
+      -->
+      October 2016: This is a new package, and should work with latest versions of most web browsers.
+      <!--
+      It works with the latest
+      <a href="https://www.google.com/chrome/browser/desktop/">Chrome web browser</a>
+      and
+      <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge web browser</a>.
+      -->
+      </p>
+      <p>
+      <b>Note</b>: itrans uses a precise mapping of input codes to output code. It is not a phonetic
+      conversion system, nor is it meant to be. (There are many other systems that do that.)
+      Itrans is a table-driven, customizable mapping of input words to any Unicode character
+      sequence.
+      </p>
+      <p>
+      October 2016: This is a new package, and it is still under development, but all major
+      features are now working. Remaining items:
+      <ul>
+        <li> Update the documentation. </li>
+        <li> Source code will be made available at <a href="https://github.com/avinash311/itrans">GitHub itrans</a></li>
+      </ul>
+
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="six columns">
+      <h4 id="example">Example</h4>
+      <p><pre>
+a aa | ka kSha || sa.nskRRit
+cha{nukta} 0 9  Tha.N na.n OM
+#telugu ka kha ## Toggle itrans mode
+#oriya ka kha
+#sanskrit dil  #hindi dil
+{skier} {face-frown} {face-grin}</pre>
+      The above text shows these features:
+      <ul>
+        <li>vowels such as <code>a aa</code>, consonants such as <code>ka Kha</code></li>
+        <li>Unicode code points such as <code>{nukta}</code></li>
+        <li>languages such as <code>#telugu</code></li>
+        <li>schwa deletion in Hindi and corresponding sanskrit example: <code>dil</code></li>
+        <li>use of <code>##</code> to toggle off/on of itrans mode</li>
+        <li>use of unicode names directly<code>{face-grin}</code></li>
+      </ul>
+      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">Spreadsheet with all itrans input codes and unicode code point names</a>
+    </div>
+    <div class="six columns">
+      <img src="./images/example1.gif" alt="Example output" width="332" height="342"/>
+    </div>
+  </div>
+  <hr>
+  <p>
+  Email any bug-reports or comments and suggestions to
+  <a href="mailto:avinash@aczoom.com">avinash@aczoom.com</a>
+  <BR>
+  Please note that no technical support is available for this web page
+  or for the tools on this web page.
+  </p>
+
+  <h4>Older itrans6 online web interface</h4>
+  For the older itrans online interface visit the <a href="http://www.aczoom.com/itrans/online/itrans6/">itrans6 web server-based online interface</a>.
+
+  <hr>
+
+  <div class="row">
+    <div class="twelve columns">
+      <TABLE>
+        <TR>
+          <TD>
+            <A HREF="http://www.aczoom.com/" TARGET="_top">ACZoom Home</A>
+          </TD>
+          <TD>
+            <A HREF="http://www.aczoom.com/email.html" TARGET="_top">E-mail</A>
+          </TD>
+          <TD>
+            <A HREF="http://www.aczoom.com/itrans/" TARGET="_top">ITRANS</A>
+          </TD>
+          <TD>
+            <A HREF="http://www.aczoom.com/isongs/" TARGET="_top">ITRANS Song Book</A>
+          </TD>
+        </TR>
+      </TABLE>
+
+      <hr>
+
+    </div>
+  </div>
+</div>
+<!-- End Document ============================================= -->
+</body>
+</html>

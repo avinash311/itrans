@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+/**
+ * Do not use earlyaccess/*.css. They don't work locally (no scheme, just // in the .css files)
+@import url(http://fonts.googleapis.com/earlyaccess/notosansdevanagari.css);
+ * Only use the fonts when they graduate up to fonts.googleapis.com/
+ * Noto Sans includes Devanagari, so no need to include that.
+
+.i-output textarea {
+  font-family:
+    "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Gujarati", "Noto Sans",
+    ...
+    }
+*/
+
+/* Loading local fonts */
+@font-face {
+  font-family: "MarathiCursiveG";
+  src: url("MarathiCursiveG.ttf");
+}
+
+@font-face {
+  font-family: "Sampradaya";
+  src: url("Sampradaya.ttf");
+}
+
+.i-output textarea {
+  font-family:
+    /* "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Gujarati", */
+    "Noto Sans", sans-serif,
+    "Sampradaya", /* Grantha */
+    /* Modi script: put this last, otherwise it is used for other scripts too */
+    "MarathiCursiveG"; /* Modi */
+}
+
+.i-input textarea,
+.i-output textarea {
+  padding: 0.3em; font-size: 1.2em;
+  width: 100%;
+  height: 11em;
+}
+
+.i-output, /* parent that holds the language select dropdown and itrans-output box */
+.i-input,
+#data-file-form {
+  margin-top: 2em; margin-bottom: 1em; padding: 0.5em;
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+  box-sizing: border-box; border-width: 1px; border-style: dotted;
+}
+
+form#i-data {
+  margin-top: 5px; margin-bottom: 5px; padding: 0.5em;
+  box-sizing: border-box; border-width: 1px; border-style: dotted;
+}
+
+form#i-data input {
+  width: 80%;
+}
+
+#i-data-msg {
+  color: #600;
+  margin-top: 2px; margin-bottom: 2px; padding: 0.5em;
+  box-sizing: border-box; border-width: 1px; border-style: dotted;
+}
+
+label {padding: 0 1em 0 0; }
+
+label, select { display: inline-block; vertical-align: middle; }
+
+body {
+  background-image: url("http://www.aczoom.com/images/smil_d3.gif");
+}
+
+/* Later, TODO, if needed:
+:lang(sa) {
+  font-family: "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans", sans-serif;
+}
+
+:lang(ta) {
+  font-family: "Noto Sans Tamil", "Noto Sans", sans-serif;
+}
+*/
