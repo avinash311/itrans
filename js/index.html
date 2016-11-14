@@ -158,6 +158,9 @@
         <p>
         <div>
         Here's the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a>.
+        <p>
+        There are cells with explanation notes in the spreadsheet. Additional help is
+        available at the <a href="customize.html">customize this package</a> page.
         </div>
       </div>
     </div>
@@ -165,90 +168,14 @@
 
   <p>
 
-  <div class="row">
-    <div class="twelve columns">
-      <h4>Using your own transliteration encoding</h4>
-      This is a customizable application. The goal is to allow users to provide their own
-      input to output mapping, by using their own version of the spreadsheet shown above. While
-      itrans is used for Indic script output, the spreadsheet can be used to for any Unicode
-      conversion of input text, based on one-to-one mapping of each input code to any string
-      of Unicode characters.
-      <p>
-      There is no support available for this tool, other than this document. Knowledge
-      of web tools and editors is required to modify the default behavior.
-      In addition to the steps below,
-      the code can also be copied by looking at the source of this web page, and a local
-      web page created with input and output text boxes as desired.
-      <p>
-      <ol>
-      <li>First, make a copy of the default spreadsheet. Either make an online copy,
-      or download the spreadsheet if you wish to edit it using Excel or LibreOffice or other
-      desktop application.</li>
-      <li>To make a copy: Use the <code>File &rarr; Make a copy ... </code> command.</li>
-      <li>Or, download a copy: Use the <code>File &rarr; Download As... </code> command.</li>
-      <li>Then, edit your copy of the spreadsheet. The most common changes are to edit the
-      rows in the <code>INPUT</code> column so that it uses different input codes.</li>
-      <li>
-      The 
-      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a> has many cells with notes
-      that describe the rows and columns in more detail.
-      In short: make sure each row of the <code>INPUT</code> has unique codes with no
-      duplicates. If creating new rows, copy and existing row to make sure it has data
-      in all the columns.
-      </li>
-      <li>Once you have the spreadsheet data as you need it, export or download the spreadsheet
-      as a tab-separated file. Only tab-separated .tsv files can then be loaded on this web page.
-      </li>
-      <li>Every spreadsheet program has a way to save a spreadsheet in a Tab-Separated format.
-      In the online Google Spreadsheets for example, use the <code>File &rarr; Download As... </code> command with the <code>Tab-separated values (.tsv, current sheet)</code>.
-      Destktop spreadsheet programs may have different ways to do this - for example, the
-      <code>Save As</code> may offer a way to save it in a Tab-Separated format and use a
-      <code>.txt</code>
-      file extension.. Or there may be an <code>Export</code> command that offers that.</li>
-      </li>
-      <li>The tab-separated text spreadsheet can be loaded using the <em>Load tab-separated spreadsheet with itrans data</em> input field on this page.
-      </li>
-      <li>If the spreadsheet has no errors, it will be loaded and a message printed in the section above. If there are errors, it will pop up a dialog box with the error message.
-      </li>
-      </ol>
-    </div>
-    <div class="twelve columns">
-      <h4>Modifications to the spreadsheet</h4>
-      <ol>
-      <li>The above section outlines the steps to upload a modified spreadsheet. This section
-      desribes the kinds of changes that can be done. New rows can be added (for new
-      characters), new columns can be added (for new languages).
-      </li>
-      <li>If a new column is added, it needs to be used manually in the input box. There will
-      be no drop-down Default output for that language. Use <code>#language your-text</code>
-      to enter that text in the Enter itrans input: box. See the <a href="#example">Example</a>
-      section below that shows this usage.
-      The name of the column for a language name must be of the form <code>#name</code>
-      </li>
-      <li>If a new row is added, make sure the INPUT column entry does not conflict with any
-      other row. Additionally, if one of the two rows starts with the same character or sequence
-      of characters as the other, then the longest sequence will be matched.
-      So if rows <code>k</code> and <code>h</code> and <code>kh</code> exist, then input
-      text <code>kh</code> will always match the longer kh sequence row. Use <code>k_h</code>
-      in the input to have it match the k row and then the h row instead.
-      </li>
-      </ol>
-    </div>
-  </div>
-
   <hr>
 
   <!-- =========================================================== -->
   <div class="row">
     <div class="twelve columns">
+      <h4 id="example">Example</h4>
       <!--
-      <p>
-      <A HREF="http://www.aczoom.com/itrans/online/#help">Documentation</A>
-      &nbsp;&nbsp;[ if needed, or just start filling in the form ]
-      </p>
-      -->
-      October 2016: This is a new package, and should work with latest versions of most web browsers.
-      <!--
+      This is a new package, and should work with latest versions of most web browsers.
       It works with the latest
       <a href="https://www.google.com/chrome/browser/desktop/">Chrome web browser</a>
       and
@@ -261,23 +188,11 @@
       Itrans is a table-driven, customizable mapping of input words to any Unicode character
       sequence.
       </p>
-      <p>
-      October 2016: This is a new package, and it is still under development, but all major
-      features are now working. Remaining items:
-      <ul>
-        <li> Update the documentation. </li>
-        <li> Source code will be made available at <a href="https://github.com/avinash311/itrans">GitHub itrans</a></li>
-      </ul>
-
-
     </div>
   </div>
-
-  <hr>
-
   <div class="row">
     <div class="six columns">
-      <h4 id="example">Example</h4>
+      Enter this example text in the <em>Enter itrans input</em> box above:
       <p><pre>
 a aa | ka kSha || sa.nskRRit
 cha{nukta} 0 9  Tha.N na.n OM
@@ -289,24 +204,58 @@ cha{nukta} 0 9  Tha.N na.n OM
       <ul>
         <li>vowels such as <code>a aa</code>, consonants such as <code>ka Kha</code></li>
         <li>Unicode code points such as <code>{nukta}</code></li>
-        <li>languages such as <code>#telugu</code></li>
+        <li>explicit language markers such as <code>#telugu</code></li>
         <li>schwa deletion in Hindi and corresponding sanskrit example: <code>dil</code></li>
-        <li>use of <code>##</code> to toggle off/on of itrans mode</li>
+        <li>use of <code>##</code> to toggle off/on the itrans mode. The toggle will disable
+        itrans conversion, or use the last used language marker for itrans conversion,
+        depending on whether it is the first ## or the second ## marker.</li>
         <li>use of unicode names directly<code>{face-grin}</code></li>
       </ul>
-      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">Spreadsheet with all itrans input codes and unicode code point names</a>
     </div>
     <div class="six columns">
+      The example text produces this output:
       <img src="./images/example1.gif" alt="Example output" width="332" height="342"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      <h4 id="example">More Examples</h4>
+      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">Spreadsheet with all itrans input codes and unicode code point names</a>
+      <p>
+      Try these other examples to see additional features. Copy each of these snippets
+      and enter it in the <em>Enter itrans input</em> box above.
+      </p>
+      <ul>
+        <li><code>#hindi ma shrii #kannada ta Ta</code>
+        <br>These language markers
+        (#hindi and #kannada) show that all the language column names
+        from the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">spreadsheet</a>
+        can be explicity specified in the input text. This can be used if you are using a
+        customized spreadsheet with new language columns in it.</li>
+        <li>Note that the <em>Default output</em> dropdown list does not list all the
+        available languages defined in the spreadsheet. Even if the loaded spreadsheet 
+        has more or fewer languages, the list of names remains the same. Use the example
+        above as a guide to explicitly specifying language names in the input text.</li>
+        <li>In addition to loading updated spreadsheet conversion tables, this entire
+        web page can be recreated and customized and hosted locally.
+        It requires coding, and familiarity with
+        Javascript, HTML, CSS, etc. Details are at the <a href="customize.html">customize this
+        package</a> page.
+      </ul>
     </div>
   </div>
   <hr>
   <p>
-  Email any bug-reports or comments and suggestions to
-  <a href="mailto:avinash@aczoom.com">avinash@aczoom.com</a>
+  The source code for this client-side application is available
+  at <a href="https://github.com/avinash311/itrans">GitHub itrans</a> link.
+  It has the Javascript files, as well as this HTML web page and CSS files.
+  </p>
+  <p>
+  Please note that no technical support is available for this web page or for the tools on this web page.
   <BR>
-  Please note that no technical support is available for this web page
-  or for the tools on this web page.
+  If you do find a bug (note that mapping issues may not be bugs, you can modify the mapping
+  and use a customized spreadsheet as described above), feel free to file it at the
+  <a href="https://github.com/avinash311/itrans/issues">GitHub itrans issues</a> page.
   </p>
 
   <h4>Older itrans6 online web interface</h4>

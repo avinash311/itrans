@@ -18,8 +18,13 @@ Or, users can use the Javascript code and tools provided here to build their own
 
 Some more information on spreadsheet and how to upload locally customized versions of the spreadsheet is available at 
 the [Online Itrans web page](http://www.aczoom/itrans/online/)
-page.
+page and the 
+[spreadsheet customization help](http://www.aczoom/itrans/online/customize.html) page.
 
 # No support
 
 Please note that there is no technical help available for this code. This is useful only for developers already familiar with Javascript, Node.js, Browserify, HTML, CSS, Web fonts, and related tools.
+
+If you do find a bug (note that mapping issues may not be bugs, you can modify the mapping
+and use a customized spreadsheet as described above), feel free to file it at the
+<a href="https://github.com/avinash311/itrans/issues">GitHub itrans issues</a> page.

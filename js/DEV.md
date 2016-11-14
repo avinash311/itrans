@@ -96,7 +96,7 @@ On the web page, one of the common changes would be to change, delete, or add th
 The default language, which is used when the input text does not start with a language name (which is the column name in the spreadsheet such as `#sanskrit`), is selected using a drop-down list of languages, and that too can be modifed as needed.
 For example, for your custom web page you may wish to restrict to a specific langauge, or even delete the language selector entirely and use some other way to select the default language.
 
-If the text in the input box starts with a language name (such as `#sanskrit`), there is no need to have a default language selector at all, since it won't do anything.
+If the text in the input box starts with a language name (such as `#sanskrit`), there is no need to have a default language selector at all, since it will not do anything.
 
 ## Edit browser.js
 
