@@ -17,9 +17,9 @@ That table can be copied and the data modified to support different input (or ev
 Or, users can use the Javascript code and tools provided here to build their own versions of the web page or conversion mappings.
 
 Some more information on spreadsheet and how to upload locally customized versions of the spreadsheet is available at 
-the [Online Itrans web page](http://www.aczoom/itrans/online/)
+the [Online Itrans web page](http://www.aczoom.com/itrans/online/)
 page and the 
-[spreadsheet customization help](http://www.aczoom/itrans/online/customize.html) page.
+[spreadsheet customization help](http://www.aczoom.com/itrans/online/customize.html) page.
 
 # No support
 
