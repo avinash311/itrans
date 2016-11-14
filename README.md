@@ -3,7 +3,7 @@ itrans - Convert encoded text to Unicode output - for Indic or other scripts
 
 ## Web site
 
-The Javascript code in the `js` folder here is used to run the [Online Itrans web page](http://www.aczoom/itrans/online/).
+The Javascript code in the `js` folder here is used to run the [Online Itrans web page](http://www.aczoom.com/itrans/online/).
 
 For users who wish to build customized web pages or text to Unicode conversion, see the documentation for developers in [js/DEV.md](js/DEV.md).
 
