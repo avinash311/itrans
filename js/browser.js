@@ -130,6 +130,9 @@ function loadItransData(data, name) {
   }
   // Update web elements that depend on the itrans object data.
   updateAllWebElements();
+
+  // Update all the output text boxes using the new spreadsheet data.
+  runAllItrans();
 }
 
 function updateDataFileMessage(msg, tempItrans) {
