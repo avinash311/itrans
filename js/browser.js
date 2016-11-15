@@ -22,6 +22,7 @@ const OUTPUT_CLASS = 'i-output'; // class containing select and  textarea to sho
 
 const TSV_FORM_ID = 'i-data'; // form containing the load spreadsheet input
 const TSV_INPUT_ID = 'i-data-input'; // load new spreadsheet TSV from this file name
+const TSV_INPUT_RESET_ID = 'i-data-input-reset'; // load default spreadsheet TSV
 const TSV_INPUT_MESSAGE_ID = 'i-data-msg'; // error or success messages on loading data
 
 const OUTPUT_FORMAT = constants.OUTPUT_FORMAT; // utf8, html7, or unicodeNames
@@ -106,20 +107,29 @@ function readDataFile(fileId) {
   reader.readAsText(file);
   reader.onload = ( (event) => {
     const data = event.target.result;
-    const tempItrans = new Itrans();
-    try {
-      loadItransTable(tempItrans, data);
-      itrans = tempItrans;
-      updateDataFileMessage('Loaded ' + name, itrans);
-    } catch(err) {
-      const msg = 'Error: ' + name + ' has invalid itrans data: ' + err;
-      if (dataFileForm) {
-        dataFileForm.reset();
-      }
-      updateDataFileMessage(msg, undefined);
-      alert(msg);
-    }
+    loadItransData(data, name);
   });
+}
+
+// Load the spreadsheet string (data) and display message about
+// loading it from source name. Update all web elements that need updating on newly
+// loaded spreadsheet data.
+function loadItransData(data, name) {
+  const tempItrans = new Itrans();
+  try {
+    tempItrans.load(data);
+    itrans = tempItrans;
+    updateDataFileMessage('Loaded ' + name, itrans);
+  } catch(err) {
+    const msg = 'Error: ' + name + ' has invalid itrans data: ' + err;
+    if (dataFileForm) {
+      dataFileForm.reset();
+    }
+    updateDataFileMessage(msg, undefined);
+    alert(msg);
+  }
+  // Update web elements that depend on the itrans object data.
+  updateAllWebElements();
 }
 
 function updateDataFileMessage(msg, tempItrans) {
@@ -138,7 +148,7 @@ function updateDataFileMessage(msg, tempItrans) {
   dataFileMessage.innerHTML = out + langs + ' languages/scripts, ' + rows + ' rows.';
 }
 
-// Update the select drop-down list.
+// Update the select drop-down list based on data on the current "itrans" object.
 // Sync the languages in this element with the actually loaded languages.
 // Keep track of currently selected language, so it can be selected (if the language is present).
 function updateSelectList(selectElement) {
@@ -170,12 +180,9 @@ function updateSelectList(selectElement) {
   selectElement.add(option);
 }
 
-// Load the itrans object with the spreadsheet data.
-// After loading, update all the elements of the web page that need updating
+// Update all the elements of the web page that need updating
 // based on the data in the spreadsheet such as the languages supported.
-function loadItransTable(itransObj, dataString) {
-  itransObj.load(dataString);
-
+function updateAllWebElements() {
   outputLanguages.forEach(({language}) => {
     // Update web page elements that depend on list of loaded languages.
     // For each select element, update its option items to match loaded languages.
@@ -235,12 +242,19 @@ function itransSetup() {
         return;
       }
     }
+
     dataFileMessage = document.getElementById(TSV_INPUT_MESSAGE_ID);
 
-    // Web page setup done, now load the itrans tables.
-    loadItransTable(itrans, DEFAULT_TSV);
+    // Reset spreadsheet TSV data to default
+    if (dataFileForm) {
+      dataFileForm.addEventListener('reset', () => {
+        loadItransData(DEFAULT_TSV, 'Default');      
+      }, false);
+    }
 
-    updateDataFileMessage('Default data loaded', itrans);
+    // Web page setup done, now load the itrans tables.
+    loadItransData(DEFAULT_TSV, 'Default');      
+
     console.log('Ready for interactive itrans use.');
   });
 }
