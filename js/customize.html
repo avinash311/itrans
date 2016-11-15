@@ -50,6 +50,7 @@
       </TABLE>
     </div>
   </div>
+
   <h4>Spreadsheet customization for the online itrans page</h4>
 
   The online itrans page uses a spreadsheet for converting input text to Unicode characters.
@@ -85,22 +86,18 @@
       that describe the rows and columns in more detail.
       In short: make sure each row of the <code>INPUT</code> has unique codes with no
       duplicates. If creating new rows, copy and existing row to make sure it has data
-      in all the columns.
-      </li>
+      in all the columns.</li>
       <li>Once you have the spreadsheet data as you need it, export or download the spreadsheet
-      as a tab-separated file. Only tab-separated .tsv files can then be loaded on this web page.
-      </li>
+      as a tab-separated file. Only tab-separated .tsv files can then be loaded on this web
+      page.</li>
       <li>Every spreadsheet program has a way to save a spreadsheet in a Tab-Separated format.
       In the online Google Spreadsheets for example, use the <code>File &rarr; Download As... </code> command with the <code>Tab-separated values (.tsv, current sheet)</code>.
       Destktop spreadsheet programs may have different ways to do this - for example, the
       <code>Save As</code> may offer a way to save it in a Tab-Separated format and use a
       <code>.txt</code>
       file extension.. Or there may be an <code>Export</code> command that offers that.</li>
-      </li>
-      <li>The tab-separated text spreadsheet can be loaded using the <em>Load tab-separated spreadsheet with itrans data</em> input field on this page.
-      </li>
-      <li>If the spreadsheet has no errors, it will be loaded and a message printed in the section above. If there are errors, it will pop up a dialog box with the error message.
-      </li>
+      <li>The tab-separated text spreadsheet can be loaded using the <em>Load tab-separated spreadsheet with itrans data</em> input field on this page.</li>
+      <li>If the spreadsheet has no errors, it will be loaded and a message printed in the section above. If there are errors, it will pop up a dialog box with the error message.</li>
       </ol>
     </div>
     <div class="twelve columns">
@@ -110,14 +107,14 @@
       desribes the kinds of changes that can be done. New rows can be added (for new
       characters), new columns can be added (for new languages).
       </li>
-      <li>If a new column is added, it needs to be used manually in the input box. The new
-      languages will not be added to the <em>Default output</em>
-      drop-down list. Use <code>#language your-text</code>
+      <li>If a new column is added, it will be automatically added to the
+      <em>Default output</em>
+      drop-down list. Alternately, use <code>#language your-text</code>
       to enter that text in the Enter itrans input: box. See the
       <a href="index.html#example">Examples</a> present on the online itrans page.
       The name of the column for a language name must be of the form <code>#name</code>
-      And if the custom spreadsheet has language columns deleted, that will not change
-      the web page drop lists either.
+      And if the custom spreadsheet has language columns deleted, that will remove
+      those languages from the drop-down list.
       </li>
       <li>If a new row is added, make sure the INPUT column entry does not conflict with any
       other row. Additionally, if one of the two rows starts with the same character or sequence

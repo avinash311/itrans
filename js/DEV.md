@@ -1,4 +1,6 @@
-For developers:
+# For developers
+
+How to build this package.
 
 # Pre-requisites
 
@@ -104,6 +106,10 @@ This is the Javascript that is loaded by `index.html`.
 Edit this as needed to support your customized version of `index.html` and to load your customized version of the spreadsheet (if you are not using the default).
 
 After any change to the Javascript file, run `npm run browserify` to recreate the `dist/itrans_bundle.js` which is the script loaded in `index.html`.
+
+# Additional external dependencies
+
+ChangeLog is present here: [CHANGES.md](CHANGES.md).
 
 # Additional external dependencies
 

@@ -78,21 +78,8 @@
     <div class="six columns i-output">
       <label for="i-sel-1">Default output:</label>
       <select id="i-sel-1">
+        <!-- only need the selected language, other languages will be added automatically -->
         <option value="#sanskrit" selected>#sanskrit</option>
-        <option value="#hindi">#hindi</option>
-        <option value="#marathi">#marathi</option>
-        <option value="#modi">#modi (marathi)</option>
-        <option value="#telugu">#telugu</option>
-        <option value="#bengali">#bengali</option>
-        <option value="#gurmukhi">#gurmukhi</option>
-        <option value="#gujarati">#gujarati</option>
-        <option value="#oriya">#oriya</option>
-        <option value="#tamil">#tamil</option>
-        <option value="#kannada">#kannada</option>
-        <option value="#malayalam">#malayalam</option>
-        <option value="#grantha">#grantha</option>
-        <option value="#roman">#roman</option>
-        <option value="unicode-names">Unicode Names</option>
       </select>
       <br>
       <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
@@ -103,21 +90,8 @@
     <div class="six columns i-output">
       <label for="i-sel-2">Default output:</label>
       <select id="i-sel-2">
-        <option value="#sanskrit">#sanskrit</option>
-        <option value="#hindi">#hindi</option>
-        <option value="#marathi">#marathi</option>
-        <option value="#modi">#modi (marathi)</option>
+        <!-- only need the selected language, other languages will be added automatically -->
         <option value="#telugu" selected>#telugu</option>
-        <option value="#bengali">#bengali</option>
-        <option value="#gurmukhi">#gurmukhi</option>
-        <option value="#gujarati">#gujarati</option>
-        <option value="#oriya">#oriya</option>
-        <option value="#tamil">#tamil</option>
-        <option value="#kannada">#kannada</option>
-        <option value="#malayalam">#malayalam</option>
-        <option value="#grantha">#grantha</option>
-        <option value="#roman">#roman</option>
-        <option value="unicode-names">Unicode Names</option>
       </select>
       <br>
       <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
@@ -126,20 +100,7 @@
     <div class="six columns i-output">
       <label for="i-sel-3">Default output:</label>
       <select id="i-sel-3">
-        <option value="#sanskrit">#sanskrit</option>
-        <option value="#hindi">#hindi</option>
-        <option value="#marathi">#marathi</option>
-        <option value="#modi">#modi (marathi)</option>
-        <option value="#telugu">#telugu</option>
-        <option value="#bengali">#bengali</option>
-        <option value="#gurmukhi">#gurmukhi</option>
-        <option value="#gujarati">#gujarati</option>
-        <option value="#oriya">#oriya</option>
-        <option value="#tamil">#tamil</option>
-        <option value="#kannada">#kannada</option>
-        <option value="#malayalam">#malayalam</option>
-        <option value="#grantha">#grantha</option>
-        <option value="#roman">#roman</option>
+        <!-- only need the selected language, other languages will be added automatically -->
         <option value="unicode-names" selected>Unicode Names</option>
       </select>
       <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
@@ -181,7 +142,6 @@
       and
       <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge web browser</a>.
       -->
-      </p>
       <p>
       <b>Note</b>: itrans uses a precise mapping of input codes to output code. It is not a phonetic
       conversion system, nor is it meant to be. (There are many other systems that do that.)
@@ -219,7 +179,7 @@ cha{nukta} 0 9  Tha.N na.n OM
   </div>
   <div class="row">
     <div class="twelve columns">
-      <h4 id="example">More Examples</h4>
+      <h4 id="more-examples">More Examples</h4>
       <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">Spreadsheet with all itrans input codes and unicode code point names</a>
       <p>
       Try these other examples to see additional features. Copy each of these snippets
@@ -229,18 +189,20 @@ cha{nukta} 0 9  Tha.N na.n OM
         <li><code>#hindi ma shrii #kannada ta Ta</code>
         <br>These language markers
         (#hindi and #kannada) show that all the language column names
-        from the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">spreadsheet</a>
-        can be explicity specified in the input text. This can be used if you are using a
-        customized spreadsheet with new language columns in it.</li>
-        <li>Note that the <em>Default output</em> dropdown list does not list all the
-        available languages defined in the spreadsheet. Even if the loaded spreadsheet 
-        has more or fewer languages, the list of names remains the same. Use the example
-        above as a guide to explicitly specifying language names in the input text.</li>
+        from the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">spreadsheet</a> or any custom loaded spreadsheet
+        can be explicity specified in the input text.</li>
         <li>In addition to loading updated spreadsheet conversion tables, this entire
         web page can be recreated and customized and hosted locally.
         It requires coding, and familiarity with
         Javascript, HTML, CSS, etc. Details are at the <a href="customize.html">customize this
-        package</a> page.
+        package</a> page.</li>
+        <li>Tamil-Sanskrit: <code>#tamils ka kha khi khii khu khuu</code>
+        will work if entered like this.
+        But #tamils is not present in the default output dropdown list because there is no
+        font that fully supports Tamil-Sanskrit today. There are issues with rendering
+        the superscript (or subscript) correctly. It should appear after any dependent
+        vowels, which no font does today. Therefore, #tamils is only experimental at this
+        time and only available for manual testing as shown in this example.</li>
       </ul>
     </div>
   </div>

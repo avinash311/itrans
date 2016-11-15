@@ -2,7 +2,7 @@
  * @fileoverview Browser code for itrans input and output.
  * @author Avinash Chopde <avinash@aczoom.com>
  *
- * http://www.aczoom.com/itrans/
+ * http://www.aczoom.com/itrans/online/
  */
 
 'use strict';
@@ -39,13 +39,21 @@ let dataFileForm;               // form with input field to load data file
 
 // Each output section has two controls: one where user selects a default language,
 // and another where the converted itrans text is output.
-// The controls have distinct Ids, and are collected in this array.
+// The controls have distinct elements, and are collected in this array.
+// language: the select object where language.value is the selected element
+// output: the output text area
 // { language: null; output = null; }
-let inputLanguages = [];
+let outputLanguages = [];
+
+// select element drop-down elements are synced with the spreadsheet languages
+// and some custom names and additions made
+const UNICODE_NAMES_OPTION = {text: 'Unicode names', value: 'unicode-names'};
+// Suppress #tamils from output. There is no font that correctly supports it,
+// no font puts the superscript characters after the vowel sign, for example.
+const SELECT_SKIP_NAMES = ['#tamils']; // suppress these names from the dropdown list
 
 // Load the default itrans conversion table
 const itransDefault = new Itrans();
-itransDefault.load(DEFAULT_TSV);
 let itrans = itransDefault;
 
 function runItrans(inputText, outputScript, outputDiv) {
@@ -53,7 +61,7 @@ function runItrans(inputText, outputScript, outputDiv) {
     language: '#sanskrit',
     outputFormat: 'HTML7'
   };
-  if (outputScript == 'unicode-names') {
+  if (outputScript === UNICODE_NAMES_OPTION.value) {
     options.outputFormat = OUTPUT_FORMAT.unicodeNames;
   } else {
     options.language = outputScript;
@@ -63,7 +71,7 @@ function runItrans(inputText, outputScript, outputDiv) {
 
 // user is 'finished typing,' do something
 function runAllItrans () {
-  inputLanguages.forEach(({language, output}) => {
+  outputLanguages.forEach(({language, output}) => {
     runItrans(inputTextArea.value, language.value, output);
   });
 }
@@ -100,7 +108,7 @@ function readDataFile(fileId) {
     const data = event.target.result;
     const tempItrans = new Itrans();
     try {
-      tempItrans.load(data);
+      loadItransTable(tempItrans, data);
       itrans = tempItrans;
       updateDataFileMessage('Loaded ' + name, itrans);
     } catch(err) {
@@ -130,6 +138,52 @@ function updateDataFileMessage(msg, tempItrans) {
   dataFileMessage.innerHTML = out + langs + ' languages/scripts, ' + rows + ' rows.';
 }
 
+// Update the select drop-down list.
+// Sync the languages in this element with the actually loaded languages.
+// Keep track of currently selected language, so it can be selected (if the language is present).
+function updateSelectList(selectElement) {
+  if (!selectElement) {
+    return;
+  }
+  // Save the currently selected element, so if this
+  const selected = selectElement.value;
+
+  // Remove all existing items
+  while (selectElement.options.length) {
+    selectElement.remove(0);
+  }
+  // Add all currently loaded languages
+  const table = itrans.itransTable;
+  const langs = table.languages;
+  table.languages.forEach((language) => {
+    // Only add option if it is not in the skip options list
+    if (SELECT_SKIP_NAMES.indexOf(language) < 0) {
+      const isSelected = selected == language;
+      const option = new Option(language, language, isSelected, isSelected);
+      selectElement.add(option);
+    }
+  });
+
+  // Add in Unicode names language option
+  const option = new Option(UNICODE_NAMES_OPTION.text, UNICODE_NAMES_OPTION.value);
+  option.selected = selected === UNICODE_NAMES_OPTION.value;
+  selectElement.add(option);
+}
+
+// Load the itrans object with the spreadsheet data.
+// After loading, update all the elements of the web page that need updating
+// based on the data in the spreadsheet such as the languages supported.
+function loadItransTable(itransObj, dataString) {
+  itransObj.load(dataString);
+
+  outputLanguages.forEach(({language}) => {
+    // Update web page elements that depend on list of loaded languages.
+    // For each select element, update its option items to match loaded languages.
+    // Adds all the languages available in the spreadsheet.
+    updateSelectList(language);
+  });
+}
+
 function itransSetup() {
   document.addEventListener('DOMContentLoaded', function() {
     // this function runs when the DOM is ready, i.e. when the document has been parsed
@@ -155,16 +209,16 @@ function itransSetup() {
     }
     for (let i = 0; i < outputs.length; i++) {
       const output = outputs[i];
-      const select = output.getElementsByTagName("select");
+      const select = output.getElementsByTagName("select")[0]; // only 1 descendant of this type expected
       const outputText = output.getElementsByTagName("textarea");
-      inputLanguages.push({
-        language: select[0], // only 1 descendant of this type expected
+      outputLanguages.push({
+        language: select,
         output: outputText[0]
       });
     }
 
     // For each language selector, run the conversion when selection is made.
-    inputLanguages.forEach(({language}) => {
+    outputLanguages.forEach(({language}) => {
       language.addEventListener('change', () => runAllItrans());
     });
 
@@ -182,6 +236,9 @@ function itransSetup() {
       }
     }
     dataFileMessage = document.getElementById(TSV_INPUT_MESSAGE_ID);
+
+    // Web page setup done, now load the itrans tables.
+    loadItransTable(itrans, DEFAULT_TSV);
 
     updateDataFileMessage('Default data loaded', itrans);
     console.log('Ready for interactive itrans use.');
