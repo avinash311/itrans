@@ -37,6 +37,7 @@ let doneTypingInterval = 1000;  // time in ms, after this expires, run itrans.co
 let inputTextArea;              // itrans input text is entered here
 let dataFileMessage;            // loaded data file status/error messages
 let dataFileForm;               // form with input field to load data file
+let dataFileReset;              // load default data spreadsheet
 
 // Each output section has two controls: one where user selects a default language,
 // and another where the converted itrans text is output.
@@ -115,11 +116,13 @@ function readDataFile(fileId) {
 // loading it from source name. Update all web elements that need updating on newly
 // loaded spreadsheet data.
 function loadItransData(data, name) {
+  // There is no clear function available for itrans data, so create a new object
+  // with the new itrans table data.
   const tempItrans = new Itrans();
   try {
     tempItrans.load(data);
     itrans = tempItrans;
-    updateDataFileMessage('Loaded ' + name, itrans);
+    updateDataFileMessage('Loaded: ' + name, itrans);
   } catch(err) {
     const msg = 'Error: ' + name + ' has invalid itrans data: ' + err;
     if (dataFileForm) {
@@ -249,8 +252,9 @@ function itransSetup() {
     dataFileMessage = document.getElementById(TSV_INPUT_MESSAGE_ID);
 
     // Reset spreadsheet TSV data to default
-    if (dataFileForm) {
-      dataFileForm.addEventListener('reset', () => {
+    dataFileReset = document.getElementById(TSV_INPUT_RESET_ID);
+    if (dataFileReset) {
+      dataFileReset.addEventListener('click', () => {
         loadItransData(DEFAULT_TSV, 'Default');      
       }, false);
     }

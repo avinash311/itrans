@@ -1,5 +1,9 @@
 # ChangeLog
 
+## Version 0.2.2
+  * Improved the look and working of the Load spreadsheet button. Load Default now loads
+  the default data file.
+
 ## Version 0.2.1
   * The web page Default Output languages list is now auto-populated based on the actual
   languages in the loaded spreadsheet. The HTML page can indicate the selected language,

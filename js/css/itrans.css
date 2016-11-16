@@ -49,14 +49,25 @@
      -moz-box-sizing: border-box;
   box-sizing: border-box; border-width: 1px; border-style: dotted;
 }
-
 form#i-data {
   margin-top: 5px; margin-bottom: 5px; padding: 0.5em;
   box-sizing: border-box; border-width: 1px; border-style: dotted;
 }
 
-form#i-data input {
-  width: 80%;
+form#i-data label {
+  width: 90%;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+form#i-data #i-data-input {
+  /* hide this element - input file type */
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 #i-data-msg {

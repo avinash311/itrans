@@ -112,30 +112,32 @@
   <!-- =========================================================== -->
   <form id="i-data">
     <div class="row">
-      <div class="six columns">
-        <label for="i-data-input">Load tab-separated spreadsheet with itrans data:</label>
-        <input type="file" id="i-data-input">
-      </div>
-      <div class="six columns">
-        <input type="reset" id="i-data-input-reset">
+      <div class="twelve columns">
+        <b>Customize the character mapping</b>
+        <div id="i-data-msg"><!-- load message - success, failure --></div>
       </div>
     </div>
+    <br clear="all">
     <div class="row">
-      <div class="twelve columns">
-        <div id="i-data-msg"><!-- load message - success, failure --></div>
-        <p>
-        <div>
-        Here's the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a>.
-        <p>
-        There are cells with explanation notes in the spreadsheet. Additional help is
-        available at the <a href="customize.html">customize this package</a> page.
-        </div>
+      <div class="eight columns">
+        <input type="file" id="i-data-input" class="button button-primary"><!--hidden by css-->
+        <label for="i-data-input" class="button button-primary">Load tab-separated itrans data file</label>
+      </div>
+      <div class="four columns">
+        <input type="button" class="button" value="Load default" id="i-data-input-reset">
       </div>
     </div>
   </form>
+  <div class="row">
+    <div class="twelve columns">
+       Here's the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a>.
+        <br>
+        There are cells with explanation notes in the spreadsheet. Additional help is
+        available at the <a href="customize.html">customize this package</a> page.
+    </div>
+  </div>
 
   <p>
-
   <hr>
 
   <!-- =========================================================== -->
