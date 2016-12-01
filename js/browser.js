@@ -18,6 +18,7 @@ const DEFAULT_TSV = require('./data/DEFAULT_TSV');
 
 // Web page must use these id/class names
 const INPUT_ID = 'i-input'; // id of text area for entering itrans input
+const INPUT_CLEAR_ID = 'i-input-clear'; // id of button to clear input textarea
 const OUTPUT_CLASS = 'i-output'; // class containing select and  textarea to show output
 
 const TSV_FORM_ID = 'i-data'; // form containing the load spreadsheet input
@@ -213,6 +214,14 @@ function itransSetup() {
         typingTimer = setTimeout(runAllItrans, doneTypingInterval);      
       });
     });
+
+    const clearButton = document.getElementById(INPUT_CLEAR_ID);
+    if (clearButton) {
+      clearButton.addEventListener('click', () => {
+        inputTextArea.value = '';
+        runAllItrans();
+     });
+    }
 
     // All the output controls.
     const outputs = document.getElementsByClassName(OUTPUT_CLASS);
