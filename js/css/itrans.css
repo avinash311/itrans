@@ -30,6 +30,7 @@
     "Sampradaya", /* Grantha */
     /* Modi script: put this last, otherwise it is used for other scripts too */
     "MarathiCursiveG"; /* Modi */
+  background-color: transparent;
 }
 
 .i-input textarea,
@@ -60,8 +61,8 @@ form#i-data label {
   margin-right: 1em;
 }
 
-form#i-data #i-data-input {
-  /* hide this element - input file type */
+.i-hide {
+  /* hide this element - input file type, mostly */
   width: 0.1px;
   height: 0.1px;
   opacity: 0;

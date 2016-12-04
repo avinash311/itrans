@@ -40,37 +40,39 @@
 <div class="container">
   <!-- columns should be the immediate child of a .row -->
 
-  <div class="row">
-    <div class="twelve columns">
-      <TABLE>
-        <TR>
-          <TD>
-            <A HREF="http://www.aczoom.com/" TARGET="_top">ACZoom Home</A>
-          </TD>
-          <TD>
-            <A HREF="http://www.aczoom.com/email.html" TARGET="_top">E-mail</A>
-          </TD>
-          <TD>
-            <A HREF="http://www.aczoom.com/itrans/" TARGET="_top">ITRANS</A>
-          </TD>
-          <TD>
-            <A HREF="http://www.aczoom.com/isongs/" TARGET="_top">ITRANS Song Book</A>
-          </TD>
-        </TR>
-      </TABLE>
+  <TABLE>
+    <TR>
+      <TD>
+        <A HREF="http://www.aczoom.com/" TARGET="_top">ACZoom Home</A>
+      </TD>
+      <TD>
+        <A HREF="http://www.aczoom.com/email.html" TARGET="_top">E-mail</A>
+      </TD>
+      <TD>
+        <A HREF="http://www.aczoom.com/itrans/" TARGET="_top">ITRANS</A>
+      </TD>
+      <TD>
+        <A HREF="http://www.aczoom.com/isongs/" TARGET="_top">ITRANS Song Book</A>
+      </TD>
+    </TR>
+  </TABLE>
 
-      <h4>Online Interface to Itrans. Text to Unicode converter.</h4>
-      <hr>
-    </div>
-  </div>
+  <h4>Online Interface to Itrans</h4>
+  <p>Text to Unicode converter</p>
 
   <div class="row">
-    <div class="six columns i-input">
-      <label for="i-input">Enter itrans input:</label>
-      <textarea id="i-input" placeholder="Type here: a aa | ka kSha | sa.nskRRit | ..."
-        autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
-      <button id="i-input-clear" type="button" value="Clear">Clear</button>
-      <br>
+    <div class="six columns">
+      <!-- div#i-input contains a form, with a textarea for input, load and clear buttons -->
+      <form class="i-input" id="i-input-form">
+        <label for="i-input-text">Enter itrans input:</label>
+        <textarea id="i-input-text" placeholder="Type here: a aa | ka kSha | sa.nskRRit | ..."
+          autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+        <br>
+        <label for="i-input-file" class="button button-primary">Load file</label>
+        <input type="file" id="i-input-file" class="i-hide button button-primary"><!--hidden by css-->
+        <button class="u-pull-right" id="i-input-clear" type="button" value="Clear">Clear</button>
+      </form>
+      <br class="u-cf">
       <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">Spreadsheet with all itrans input codes</a>
       <br>
       <a href="#example">Example itrans input text and output</a>
@@ -121,7 +123,7 @@
     <br clear="all">
     <div class="row">
       <div class="eight columns">
-        <input type="file" id="i-data-input" class="button button-primary"><!--hidden by css-->
+        <input type="file" id="i-data-input" class="i-hide button button-primary"><!--hidden by css-->
         <label for="i-data-input" class="button button-primary">Load tab-separated itrans data file</label>
       </div>
       <div class="four columns">

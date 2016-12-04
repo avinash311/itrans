@@ -1,5 +1,8 @@
 # ChangeLog
 
+## Version 0.3.0
+  * Added load button to load local file into itrans input area
+
 ## Version 0.2.2
   * Improved the look and working of the Load spreadsheet button. Load Default now loads
   the default data file.

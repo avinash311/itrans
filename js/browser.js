@@ -17,7 +17,9 @@ const Itrans = require('./src/Itrans');
 const DEFAULT_TSV = require('./data/DEFAULT_TSV');
 
 // Web page must use these id/class names
-const INPUT_ID = 'i-input'; // id of text area for entering itrans input
+const INPUT_FORM_ID = 'i-input-form'; // id of form containing textarea and buttons for itrans input
+const INPUT_ID = 'i-input-text'; // id of text area for entering itrans input
+const INPUT_FILE_ID = 'i-input-file'; // id of button to load file into input textarea
 const INPUT_CLEAR_ID = 'i-input-clear'; // id of button to clear input textarea
 const OUTPUT_CLASS = 'i-output'; // class containing select and  textarea to show output
 
@@ -79,29 +81,29 @@ function runAllItrans () {
   });
 }
 
-// Read in the spreadsheet tsv file
-function readDataFile(fileId) {
+// Load in the itrans input file
+function loadInputFile(fileId, formId) {
   if (!fileId || !fileId.files) {
     return;
   }
 
   if (!(window && window.File && window.FileReader && window.FileList && window.Blob)) {
-    dataFileForm.reset();
+    formId.reset();
     alert('Error: This browser does not support file loading (old browser?).');
     return;
   }
 
   const file = fileId.files[0];
   const {name, type, size} = file || {};
-  console.log('Got readData file', name, type, size);
+  console.log('Got loadInput file', name, type, size);
   if (type && !type.startsWith('text')) {
     // Sometimes type is undefined, so skip this check in that case.
-    dataFileForm.reset();
+    formId.reset();
     alert('Error: File "' + name + '" is not a text file.');
     return;
   }
   if (size > MAX_TSV_SIZE) {
-    dataFileForm.reset();
+    formId.reset();
     alert('Error: File "' + name + '" is too large. Over ' + MAX_TSV_SIZE/1000 + 'k.');
     return;
   }
@@ -109,14 +111,49 @@ function readDataFile(fileId) {
   reader.readAsText(file);
   reader.onload = ( (event) => {
     const data = event.target.result;
-    loadItransData(data, name);
+    inputTextArea.value = data;
+    runAllItrans();
+  });
+}
+
+// Load in the spreadsheet tsv file
+function loadDataFile(fileId, formId) {
+  if (!fileId || !fileId.files) {
+    return;
+  }
+
+  if (!(window && window.File && window.FileReader && window.FileList && window.Blob)) {
+    formId.reset();
+    alert('Error: This browser does not support file loading (old browser?).');
+    return;
+  }
+
+  const file = fileId.files[0];
+  const {name, type, size} = file || {};
+  console.log('Got loadData file', name, type, size);
+  if (type && !type.startsWith('text')) {
+    // Sometimes type is undefined, so skip this check in that case.
+    formId.reset();
+    alert('Error: File "' + name + '" is not a text file.');
+    return;
+  }
+  if (size > MAX_TSV_SIZE) {
+    formId.reset();
+    alert('Error: File "' + name + '" is too large. Over ' + MAX_TSV_SIZE/1000 + 'k.');
+    return;
+  }
+  const reader = new FileReader();
+  reader.readAsText(file);
+  reader.onload = ( (event) => {
+    const data = event.target.result;
+    loadItransData(data, name, formId);
   });
 }
 
 // Load the spreadsheet string (data) and display message about
 // loading it from source name. Update all web elements that need updating on newly
 // loaded spreadsheet data.
-function loadItransData(data, name) {
+function loadItransData(data, name, formId) {
   // There is no clear function available for itrans data, so create a new object
   // with the new itrans table data.
   const tempItrans = new Itrans();
@@ -126,8 +163,8 @@ function loadItransData(data, name) {
     updateDataFileMessage('Loaded: ' + name, itrans);
   } catch(err) {
     const msg = 'Error: ' + name + ' has invalid itrans data: ' + err;
-    if (dataFileForm) {
-      dataFileForm.reset();
+    if (formId) {
+      formId.reset();
     }
     updateDataFileMessage(msg, undefined);
     alert(msg);
@@ -215,12 +252,28 @@ function itransSetup() {
       });
     });
 
+    const inputForm = document.getElementById(INPUT_FORM_ID);
     const clearButton = document.getElementById(INPUT_CLEAR_ID);
     if (clearButton) {
       clearButton.addEventListener('click', () => {
+        if (inputForm) {
+          inputForm.reset();
+        }
         inputTextArea.value = '';
         runAllItrans();
      });
+    }
+    // Load file into itrans input area
+    const fileInput = document.getElementById(INPUT_FILE_ID);
+    if (fileInput) {
+      if (!inputForm) {
+        alert('Page invalid: required form missing : id: ' + INPUT_FORM_ID);
+        return;
+      }
+
+      fileInput.addEventListener('change', () => {
+        loadInputFile(fileInput, inputForm);      
+      }, false);
     }
 
     // All the output controls.
@@ -247,15 +300,16 @@ function itransSetup() {
     // Read spreadsheet TSV text data file 
     const dataFileInput = document.getElementById(TSV_INPUT_ID);
     if (dataFileInput) {
-      dataFileInput.addEventListener('change', () => {
-        readDataFile(dataFileInput);      
-      }, false);
-
       dataFileForm = document.getElementById(TSV_FORM_ID);
       if (!dataFileForm) {
         alert('Page invalid: required form missing : id: ' + TSV_FORM_ID);
         return;
       }
+
+      dataFileInput.addEventListener('change', () => {
+        loadDataFile(dataFileInput, dataFileForm);      
+      }, false);
+
     }
 
     dataFileMessage = document.getElementById(TSV_INPUT_MESSAGE_ID);
@@ -264,12 +318,12 @@ function itransSetup() {
     dataFileReset = document.getElementById(TSV_INPUT_RESET_ID);
     if (dataFileReset) {
       dataFileReset.addEventListener('click', () => {
-        loadItransData(DEFAULT_TSV, 'Default');      
+        loadItransData(DEFAULT_TSV, 'Default', null);      
       }, false);
     }
 
     // Web page setup done, now load the itrans tables.
-    loadItransData(DEFAULT_TSV, 'Default');      
+    loadItransData(DEFAULT_TSV, 'Default', null);      
 
     console.log('Ready for interactive itrans use.');
   });
