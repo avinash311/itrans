@@ -1,5 +1,12 @@
 # ChangeLog
 
+## Version 0.3.1
+  * 2021-01-12
+  * Updated DEFAULT.tsv to include avagraha
+  * Removed `browser.js` transpiling load of `babel-polyfill`, no need to
+  handle some of the ES6 constructs used in the Javascript files since ES6
+  is widely available,and no transpiling is now necessary.
+
 ## Version 0.3.0
   * Added load button to load local file into itrans input area
 

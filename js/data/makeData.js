@@ -20,10 +20,12 @@ const ItransTable = require('../src/ItransTable');
  * the spreadsheet, and save the file locally and pass that file name to this
  * program.
  *
- * node makedata  save-name  [optional URL of TSV data]
+ * node makedata  save-name  [optional URL of TSV data|optional local file name]
  * example:   node makedata DEFAULT
  * will create a file named DEFAULT.tsv with the downloaded data.
  * By default, the URL fetches from URL_DEFAULT (link in the code below).
+ * 
+ * See ../DEV.md for using node, npm, etc to update DEFAULT.tsv.
  */
 
 const USAGE = `

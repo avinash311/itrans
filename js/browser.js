@@ -9,7 +9,7 @@
 
 // Application entry point, so for all the .js files used by this app, transpile.
 // Remove this line once all key browsers handle ES6 (they already do?)
-require('babel-polyfill');
+// 2021-01-12 removed: require('babel-polyfill');
 
 // Load the itrans converter. This is loaded with the default itrans conversion tables.
 const constants = require('./src/constants');

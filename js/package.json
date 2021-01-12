@@ -1,6 +1,6 @@
 {
   "name": "itrans",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "itrans - convert input text to unicode text",
   "scripts": {
     "browserify": "browserify browser -t brfs -t babelify --presets es2015 | uglifyjs -v > dist/itrans_bundle.js",
@@ -36,5 +36,9 @@
     "request": "~2.78.0",
     "uglify-js": "^2.7.4"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avinash311/itrans.git"
+  }
 }
