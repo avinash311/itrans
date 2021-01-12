@@ -8,8 +8,7 @@
 'use strict';
 
 // Application entry point, so for all the .js files used by this app, transpile.
-// Remove this line once all key browsers handle ES6 (they already do?)
-require('babel-polyfill');
+// Coded using JavaScript ES6 
 
 // Load the itrans converter. This is loaded with the default itrans conversion tables.
 const constants = require('./src/constants');
@@ -332,4 +331,4 @@ function itransSetup() {
 // Run the function to setup the web interaction.
 itransSetup();
 
-// Nothing to export here, browserify this file, and just load it in the web page.
+// Nothing to export here, browserify this browser.js file, and just load it in the web page.

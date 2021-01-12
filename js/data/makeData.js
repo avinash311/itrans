@@ -1,10 +1,8 @@
 'use strict';
 
-// Since this is the application main entry point, need to invoke transpile.
-// Needed for things like constants.js use of Object.values
-require('babel-polyfill');
+// JavaScript ES6 required.
 
-const request = require('request');
+const fetch = require('node-fetch');
 const fs = require('fs');
 const ItransTable = require('../src/ItransTable');
 
@@ -20,10 +18,12 @@ const ItransTable = require('../src/ItransTable');
  * the spreadsheet, and save the file locally and pass that file name to this
  * program.
  *
- * node makedata  save-name  [optional URL of TSV data]
+ * node makedata  save-name  [optional URL of TSV data|optional local file name]
  * example:   node makedata DEFAULT
  * will create a file named DEFAULT.tsv with the downloaded data.
  * By default, the URL fetches from URL_DEFAULT (link in the code below).
+ * 
+ * See ../DEV.md for using node, npm, etc to update DEFAULT.tsv.
  */
 
 const USAGE = `
@@ -81,6 +81,7 @@ function save(saveName, saveString) {
 function loadAndSave(saveName, tsvBody) {
   load(tsvBody); // validate tsvBody string, throws on failure
   save(saveName, tsvBody);
+  console.log('...Load and Save Done.');
 }
 
 /**
@@ -94,14 +95,16 @@ function makeData(saveName, url) {
   if (/https?:/.test(url)) {
     console.log('...Downloading file at', url);
 
-    request.get(url, {timeout: 5000}, ((error, response, tsvBody) => {
-      if (error || response.statusCode !== 200) {
-        console.error('Failed to download file. Error', error, response);
-        return;
-      }
-
+    function doFetch(tsvBody) {
+      console.log('...Download done.');
       loadAndSave(saveName, tsvBody);
-    }));
+    }
+
+    fetch(url)
+      .then(res => res.text()) // returns response as text
+      .then(doFetch) // doFetch(tsvBody)
+      .catch(result => console.log('Failed URL download', result));
+
   } else {
     // This is likely not useful - since it will just rename an existing disk file.
     // But it is partly helpful - to validate the spreadsheet data.
@@ -117,7 +120,6 @@ const url = process.argv[3] || URL_DEFAULT;
 
 if (url && saveName) {
   makeData(saveName, url);
-  console.log('All done');
 } else {
   console.log(USAGE);
 }

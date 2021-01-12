@@ -39,6 +39,7 @@ h	ha	consonant	u+0939	u+0939	u+0939	u+1162E	u+09B9	u+0A39	u+0AB9	u+0B39	u+0BB9	u
 																		
 x | kSh	ksha	consonant	क्ष	क्ष	क्ष	क्ष	ক্ষ	ਕ੍ਸ਼਼	ક્ષ	କ୍ଷ	க்ஷ	க்ஷ	క్ష	ಕ್ಷ	ക്ഷ	𑌕𑍍𑌷	kṣ	kṣ
 GY | j~n | dny	jnya	consonant	ज्ञ	ज्ञ	ज्ञ	ज्ञ	জ্ঞ	ਜ੍ਞ	જ્ઞ	ଜ୍ଞ	ஜ்ஞ	ஜ்ஞ	జ్ఞ	ಜ್ಞ	ജ്ഞ	𑌜𑍍𑌞	jñ	jñ
+SRI	shrii	consonant									ஶ்ரீ							
 																		
 																		
 q	qa	consonant	u+0958	u+0958	u+0958		u+0995u+09BC	u+0A15u+0A3C	u+0A95u+0ABC	u+0B15u+0B3C			u+0C58	u+0C95u+0CBC			q	q
@@ -110,8 +111,8 @@ au	au	vowel	u+0914	u+0914	u+0914	u+1160D	u+0994	u+0A14	u+0A94	u+0B14	u+0B94	u+0B
 	dv-oo	dependent-vowel									u+0BCB	u+0BCB	u+0C4B	u+0CCB	u+0D4B	u+1134B		ō
 	dv-au	dependent-vowel	u+094C	u+094C	u+094C	u+1163C	u+09CC	u+0A4C	u+0ACC	u+0B4C	u+0BCC	u+0BCC	u+0C4C	u+0CCC	u+0D4C	u+1134C	au	au
 																		
-	nukta		u+093C	u+093C	u+093C		u+09BC	u+0A3C	u+0ABC	u+0B3C				u+0CBC		U+1133c		
-.a	avagraha		u+093D	u+093D	u+093D		u+09BD		u+0ABD	u+0B3D			u+0C3D	u+0CBD	u+0D3D		’	’
+	nukta		u+093C	u+093C	u+093C		u+09BC	u+0A3C	u+0ABC	u+0B3C				u+0CBC		u+1133C		
+.a	avagraha		u+093D	u+093D	u+093D	u+093D	u+09BD	u+093D	u+0ABD	u+0B3D	u+1133D	u+1133D	u+0C3D	u+0CBD	u+0D3D	u+1133D	’	’
 	virama		u+094D	u+094D	u+094D	u+1163F	u+09CD	u+0A4D	u+0ACD	u+0B4D	u+0BCD	u+0BCD	u+0C4D	u+0CCD	u+0D4D	u+1134D		
 .h	explicit-virama		{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}		
 .N	chandrabindu		u+0901	u+0901	u+0901	{anusvara}{dv-candra-e}	u+0981	u+0A01	u+0A81	u+0B01				u+0C81	u+0D01	u+11301	m̐	m̐
@@ -121,7 +122,7 @@ OM | AUM	om		u+0950	u+0950	u+0950	u+0950	ওঁ	u+0A74	u+0AD0	ଓଁ	u+0BD0	ௐ	
 	udatta		u+0951	u+0951	u+0951		u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951
 	anudatta		u+0952	u+0952	u+0952		u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952
 	candrabindu-virama		u+A8F3	u+A8F3	u+A8F3		u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3
-	double-svarita 		u+1CDA	u+1CDA	u+1CDA		u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA
+	double-svarita		u+1CDA	u+1CDA	u+1CDA		u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA	u+1CDA
 	grave-accent		u+0953	u+0953	u+0953		u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	`	`
 	acute-accent		u+0954	u+0954	u+0954		u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	'	'
 |	danda		u+0964	u+0964	u+0964	u+11641	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	.	.

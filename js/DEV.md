@@ -40,7 +40,7 @@ Dependencies are listed in the package.json file.
 This will also install command line versions of some programs which can be used if needed:
 
 `./node_modules/.bin/browserify`
-`./node_modules/.bin/uglifyjs`
+`./node_modules/.bin/terser`
 
 Normally, the above programs are run automatically using the `scripts` section of `package.json` by using `npm run browserify` for example.
 
@@ -51,20 +51,27 @@ The bundled Javascript is what is loaded by the web page.
 `npm run browserify`
 
 creates the bundle file and that runs this command:
+`browserify browser -t brfs | terser > dist/itrans_bundle.js`
+It requires Javascript ES6 support.
+
+brfs is used to inline file contents of the itrans spreadsheet into the .js file.
+babelify is needed to handle `let` .js lines.
+
+## Old version until 2020
+
+Until 2020, the main application entry point `browser.js` used transpiling and loaded `babel-polyfill` to handle some of the ES6 constructs used in the Javascript files.
+That is why the browserify command used the babel-preset-es2015 for the conversion to non-ES6 Javascript code.
+This did make the bundle size quite large, around 300k.
+Old command used:
 `browserify browser -t brfs -t babelify --presets es2015 | uglifyjs -v > dist/itrans_bundle.js`
-
-Currently, the main application entry point `browser.js` uses transpiling and loads `babel-polyfill` to handle some of the ES6 constructs used in the Javascript files.
-That is why the browserify command uses the babel-preset-es2015 for the conversion to non-ES6 Javascript code.
-This does make the bundle size quite large, around 300k.
-
-If the `browser.js` file is edited and this line removed:
+Now the `browser.js` file has this line removed:
 `require('babel-polyfill');`
-then the same browserify command results in a file size of around 40K.
-Eventually, once ES6 is widely available, that can be done and no transpiling would be necessary.
+and the new browserify command results in a file size of around 40K instead of 300k.
 
 # Updating spreadsheet for customized Javascript package
 
 `data/DEFAULT_TSV.js` is loaded by the Itrans package, and it reads in the spreadsheet from `DEFAULT.tsv` from the same directory.
+It needs the `node-fetch` package to download the spreadsheet.
 
 The `DEFAULT.tsv` can be updated if needed, for local customizations, for example.
 

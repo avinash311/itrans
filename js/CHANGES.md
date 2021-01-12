@@ -1,5 +1,23 @@
 # ChangeLog
 
+## Version 0.3.2
+  * 2021-01-13
+  * Updated to newer package.json devDependencies
+  * Use terser instead of uglifyjs
+  * Use node-fetch for makedata.js instead of request to download spreadsheet
+  * JavaScript ES6 required: Remove browserify -t babelify --presets es2015
+
+## Version 0.3.1
+  * 2021-01-12
+  * Updated DEFAULT.tsv to include avagraha
+
+## Version 0.3.1
+  * 2021-01-12
+  * Updated DEFAULT.tsv to include avagraha
+  * Removed browser.js transpiling load of `babel-polyfill`, no need to
+  handle some of the ES6 constructs used in the Javascript files since ES6
+  is widely available,and no transpiling is now necessary.
+
 ## Version 0.3.0
   * Added load button to load local file into itrans input area
 

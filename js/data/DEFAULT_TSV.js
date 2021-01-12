@@ -7,8 +7,8 @@
  * This module is loaded by the main online itrans program, to get the
  * spreadsheet data that defines the itrans mappings.
  * The file it uses (DEFAULT.tsv) contains the spreadsheet data, and the
- * browserify static asset inliner is used to package this up in a bundle
- * for use in web scripts.
+ * browserify -t brfs static asset inliner is used to package this up in a
+ * bundle for use in web scripts.
  */
 
 'use strict';

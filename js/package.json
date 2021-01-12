@@ -1,9 +1,10 @@
 {
   "name": "itrans",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "itrans - convert input text to unicode text",
   "scripts": {
-    "browserify": "browserify browser -t brfs -t babelify --presets es2015 | uglifyjs -v > dist/itrans_bundle.js",
+    "browserify": "browserify browser -t brfs | terser > dist/itrans_bundle.js",
+    "browserify-raw": "browserify browser -t brfs -o dist/itrans_raw.js",
     "test": "mocha --reporter spec --no-colors",
     "data": "cd data && node makeData.js DEFAULT",
     "browserify-noext": "browserify browser --no-bundle-external -t brfs -o dist/itrans_noexternal.js"
@@ -13,6 +14,7 @@
     "unicode",
     "devanagari",
     "bengali",
+    "grantha",
     "gurmukhi",
     "hindi",
     "kannada",
@@ -27,14 +29,15 @@
   "author": "Avinash Chopde",
   "license": "MIT",
   "devDependencies": {
-    "babel-polyfill": "^6.16.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babelify": "~7.3.0",
     "brfs": "^1.4.3",
     "browserify": "~13.1.1",
     "mocha": "^3.1.0",
-    "request": "~2.78.0",
-    "uglify-js": "^2.7.4"
+    "node-fetch": "^2.6.1",
+    "terser": "^4.3.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avinash311/itrans.git"
+  }
 }
