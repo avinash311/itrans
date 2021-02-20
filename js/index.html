@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="css/itrans.css">
 
   <!-- Javascript ============================================= -->
-  <script src="dist/itrans_bundle.js"></script> <!-- uses DOM elements of this page -->
+  <script src="dist/itrans_bundle.js?v=0.3.3"></script> <!-- uses DOM elements of this page -->
 
   <!-- Favicon ================================================ -->
   <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
@@ -62,14 +62,14 @@
 
   <div class="row">
     <div class="six columns">
-      <!-- div#i-input contains a form, with a textarea for input, load and clear buttons -->
-      <form class="i-input" id="i-input-form">
+      <!-- div#c-input contains a form, with a textarea for input, load and clear buttons -->
+      <form class="c-input" id="i-input-form">
         <label for="i-input-text">Enter itrans input:</label>
         <textarea id="i-input-text" placeholder="Type here: a aa | ka kSha | sa.nskRRit | ..."
           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
         <br>
         <label for="i-input-file" class="button button-primary">Load file</label>
-        <input type="file" id="i-input-file" class="i-hide button button-primary"><!--hidden by css-->
+        <input type="file" id="i-input-file" class="c-hide button button-primary"><!--hidden by css-->
         <button class="u-pull-right" id="i-input-clear" type="button" value="Clear">Clear</button>
       </form>
       <br class="u-cf">
@@ -78,34 +78,44 @@
       <a href="#example">Example itrans input text and output</a>
     </div>
 
-    <div class="six columns i-output">
+    <div class="six columns c-output">
       <label for="i-sel-1">Default output:</label>
       <select id="i-sel-1">
         <!-- only need the selected language, other languages will be added automatically -->
         <option value="#sanskrit" selected>#sanskrit</option>
       </select>
+      <button class="copy-button u-pull-right" type="button">
+        <img class="copy-icon" src="images/copy-icon.svg" alt="Copy" title="Copy"/>
+      </button>
       <br>
       <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
     </div>
   </div>
 
   <div class="row">
-    <div class="six columns i-output">
+    <div class="six columns c-output">
       <label for="i-sel-2">Default output:</label>
       <select id="i-sel-2">
         <!-- only need the selected language, other languages will be added automatically -->
         <option value="#telugu" selected>#telugu</option>
       </select>
+      <button class="copy-button u-pull-right" type="button">
+        <img class="copy-icon" src="images/copy-icon.svg" alt="Copy" title="Copy"/>
+      </button>
       <br>
       <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
     </div>
 
-    <div class="six columns i-output">
+    <div class="six columns c-output">
       <label for="i-sel-3">Default output:</label>
       <select id="i-sel-3">
         <!-- only need the selected language, other languages will be added automatically -->
         <option value="unicode-names" selected>Unicode Names</option>
       </select>
+      <button class="copy-button u-pull-right" type="button">
+        <img class="copy-icon" src="images/copy-icon.svg" alt="Copy" title="Copy"/>
+      </button>
+      <br>
       <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
     </div>
   </div>
@@ -123,7 +133,7 @@
     <br clear="all">
     <div class="row">
       <div class="eight columns">
-        <input type="file" id="i-data-input" class="i-hide button button-primary"><!--hidden by css-->
+        <input type="file" id="i-data-input" class="c-hide button button-primary"><!--hidden by css-->
         <label for="i-data-input" class="button button-primary">Load tab-separated itrans data file</label>
       </div>
       <div class="four columns">
@@ -232,8 +242,10 @@ cha{nukta} 0 9  Tha.N na.n OM
   <a href="https://github.com/avinash311/itrans/issues">GitHub itrans issues</a> page.
   </p>
 
-  <h4>Older itrans6 online web interface</h4>
+  <h4>Older itrans6 online web interface - no longer available.</h4>
+  <!--
   For the older itrans online interface visit the <a href="http://www.aczoom.com/itrans/online/itrans6/">itrans6 web server-based online interface</a>.
+  -->
 
   <hr>
 

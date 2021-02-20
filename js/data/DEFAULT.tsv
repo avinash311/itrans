@@ -1,4 +1,4 @@
-INPUT	CODE-NAME	INPUT-TYPE	#sanskrit	#hindi	#marathi	#modi	#bengali	#gurmukhi	#gujarati	#oriya	#tamil	#tamils	#telugu	#kannada	#malayalam	#grantha	#roman	#roman-south
+INPUT	CODE-NAME	INPUT-TYPE	#sanskrit	#hindi	#marathi	#modi	#bengali	#gurmukhi	#gujarati	#oriya	#tamil	tamils-unused	#telugu	#kannada	#malayalam	#grantha	#roman	#roman-south
 k	ka	consonant	u+0915	u+0915	u+0915	u+1160E	u+0995	u+0A15	u+0A95	u+0B15	u+0B95	u+0B95	u+0C15	u+0C95	u+0D15	u+11315	k	k
 kh	kha	consonant	u+0916	u+0916	u+0916	u+1160F	u+0996	u+0A16	u+0A96	u+0B16	u+0B95	u+0B95u+00B2	u+0C16	u+0C96	u+0D16	u+11316	kh	kh
 g	ga	consonant	u+0917	u+0917	u+0917	u+11610	u+0997	u+0A17	u+0A97	u+0B17	u+0B95	u+0B95u+00B3	u+0C17	u+0C97	u+0D17	u+11317	g	g

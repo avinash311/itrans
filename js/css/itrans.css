@@ -5,7 +5,7 @@
  * Only use the fonts when they graduate up to fonts.googleapis.com/
  * Noto Sans includes Devanagari, so no need to include that.
 
-.i-output textarea {
+.c-output textarea {
   font-family:
     "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Gujarati", "Noto Sans",
     ...
@@ -23,7 +23,7 @@
   src: url("Sampradaya.ttf");
 }
 
-.i-output textarea {
+.c-output textarea {
   font-family:
     /* "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Gujarati", */
     "Noto Sans", sans-serif,
@@ -33,15 +33,15 @@
   background-color: transparent;
 }
 
-.i-input textarea,
-.i-output textarea {
+.c-input textarea,
+.c-output textarea {
   padding: 0.3em; font-size: 1.2em;
   width: 100%;
   height: 11em;
 }
 
-.i-output, /* parent that holds the language select dropdown and itrans-output box */
-.i-input,
+.c-output, /* parent that holds the language select dropdown and itrans-output box */
+.c-input,
 #data-file-form {
   margin-top: 2em; margin-bottom: 1em; padding: 0.5em;
   display: block;
@@ -61,7 +61,7 @@ form#i-data label {
   margin-right: 1em;
 }
 
-.i-hide {
+.c-hide {
   /* hide this element - input file type, mostly */
   width: 0.1px;
   height: 0.1px;
@@ -81,8 +81,23 @@ label {padding: 0 1em 0 0; }
 
 label, select { display: inline-block; vertical-align: middle; }
 
+/*
+  <button id="..." class="copy-button u-pull-right" type="button">
+    <img class="copy-icon" src="images/copy-icon.svg" alt="Copy" title="Copy"/>
+  Need src in HTML to have alt and title display correctly
+  so don't mention copy-icon.svg in this CSS class.
+*/
+.copy-button {
+  padding: 0;
+  border: 0;
+}
+.copy-icon {
+  height: 30px;
+  width: 30px;
+}
+
 body {
-  background-image: url("http://www.aczoom.com/images/smil_d3.gif");
+  background-image: url("/images/smil_d3.gif");
 }
 
 /* Later, TODO, if needed:

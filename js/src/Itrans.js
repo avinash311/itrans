@@ -2,6 +2,8 @@
  * @fileoverview Convert input text tokens into Unicode output using a table driven
  *     conversion. The tables are loaded from a .tsv spreadsheet text file.
  * @author Avinash Chopde <avinash@aczoom.com>
+ * @version 0.2.0
+ * @since 2016-10-10
  *
  * http://www.aczoom.com/itrans/
  */
@@ -10,7 +12,6 @@
 
 /*jshint esversion: 6 */
 /*jshint node: true */
-/*jshint loopfunc: true */
 
 /**
  * Load and operate on the tables that map itrans input to Unicode output.
@@ -30,7 +31,9 @@ const {
 } = require('./util');
 
 const constants = require('./constants');
+// import { constants } from "./constants.js";
 const ItransTable = require('./ItransTable');
+// import { ItransTable } from "./ItransTable.js";
 
 /*
  * When the Unicode names are output, we wrap them in these characters.
@@ -307,4 +310,5 @@ function outputRow(name, replacement, outputFormat) {
   return toHtmlCodes(toSafeHtml(output));
 }
 
+// export { Itrans, };
 module.exports = Itrans;

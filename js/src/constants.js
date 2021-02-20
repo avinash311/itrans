@@ -1,6 +1,8 @@
 /**
  * @fileoverview Shared constants and names of external Itrans table data.
  * @author Avinash Chopde <avinash@aczoom.com>
+ * @version 0.2.0
+ * @since 2016-10-10
  *
  * http://www.aczoom.com/itrans/
  */
@@ -9,11 +11,11 @@
 
 /*jshint esversion: 6 */
 /*jshint node: true */
-/*jshint loopfunc: true */
 
 const {
   Braces,
 } = require('./util');
+// import { Braces } from "./util.js";
 
 /* ========================================================================== */
 const TITLES_MAP = {

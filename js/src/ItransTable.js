@@ -2,6 +2,8 @@
  * @fileoverview Load the tables that map itrans input to Unicode output.
  *     The tables are loaded from a .tsv spreadsheet Unicode text file.
  * @author Avinash Chopde <avinash@aczoom.com>
+ * @version 0.2.0
+ * @since 2016-10-10
  *
  * http://www.aczoom.com/itrans/
  */
@@ -10,7 +12,6 @@
 
 /*jshint esversion: 6 */
 /*jshint node: true */
-/*jshint loopfunc: true */
 
 /* ========================================================================== */
 
@@ -22,6 +23,7 @@ const {
 } = require('./util');
 
 const constants = require('./constants');
+// import { constants } from "./constants.js";
 
 // RegExp for blank lines in the input that will be skipped
 const BLANK_RE = constants.BLANK_RE;
@@ -211,8 +213,9 @@ class ItransTable {
           }
           if (item === undefined) {
             let rowNum = i + 1;
-            const msg = 'Warning: Row ' + rowNum + ' Column ' + rowString + ' missing name ' + name
-              + ' at column number ' + index;
+            const msg = 'itrans: Warning: Row ' + rowNum + ' Column ' +
+              rowString + ' missing name ' + name + ' at column number ' +
+              index;
             console.log(msg);
             item = '';
           }
@@ -228,10 +231,10 @@ class ItransTable {
       throw Error('No data in spreadsheet, found 0 itrans rows.');
     }
 
-    console.log('Loaded table rows, count: ', this.itransRows.length);
-    //console.log('Loaded table[0] ', this.itransRows[0]);
-    console.log('Loaded table[62] ', this.itransRows[62]);
-    //console.log('Loaded table[122] ', this.itransRows[122]);
+    console.log('itrans: Loaded table rows, count: ', this.itransRows.length);
+    //console.log('  itrans: Loaded table[0] ', this.itransRows[0]);
+    console.log('itrans: Example row table[62] ', this.itransRows[62]);
+    //console.log('  itrans: Example row table[122] ', this.itransRows[122]);
 
     // Prepare all data structures necessary for mapping input to Unicode.
     setupTablesAndMaps.call(this);
@@ -299,7 +302,7 @@ function getTitleColumns(columns) {
       columnIndex[item] = i;
     }
   }
-  console.log('Loaded table title row: ', columnIndex);
+  console.log('itrans: Loaded table title row: ', columnIndex);
   return columnIndex;
 }
 
@@ -339,7 +342,7 @@ function setIfUnset(key, value) {
  */
 function setupTablesAndMaps() {
 
-  console.log('Itrans table languages: ', this.languages);
+  console.log('itrans: Itrans table languages: ', this.languages);
   if (!this.languages.length) {
     throw Error('Invalid spreadsheet data: 0 languages found.');
   }
@@ -393,7 +396,7 @@ function setupTablesAndMaps() {
       }
     });
   }
-  console.log('Count of all input codes: ', allInputRowIndex.size);
+  console.log('itrans: Count of all input codes: ', allInputRowIndex.size);
 
   // Create the regexs that find the next match in the input
   const languagesCodes = []; // #sanskrit ## etc
@@ -423,7 +426,7 @@ function setupTablesAndMaps() {
       // All vowels should be also present in dependent vowels map, but ok if missing
       // since not all full vowels may be needed as dependent vowels.
       if (!allInputRowIndex.has(dvCodeName)) {
-        console.log('Note: Vowel', name, 'has no dependent-vowel', dvName);
+        console.log('itrans: Note: Vowel', name, 'has no dependent-vowel', dvName);
       }
       if (!allInputRowIndex.has(codeName)) {
         throw Error('Missing/incorrect dependent vowel or vowel rows ' + dvCodeName);
@@ -514,5 +517,5 @@ function expandNamesInData(input, languageIndex) {
 }
 
 /* ========================================================================== */
-
+// export { ItransTable, };
 module.exports = ItransTable;

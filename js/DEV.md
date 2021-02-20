@@ -109,6 +109,7 @@ If the text in the input box starts with a language name (such as `#sanskrit`), 
 
 ## Edit browser.js
 
+This has to be edited only if the `index.html` was changed to new new objects.
 This is the Javascript that is loaded by `index.html`.
 Edit this as needed to support your customized version of `index.html` and to load your customized version of the spreadsheet (if you are not using the default).
 

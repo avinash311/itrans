@@ -1,6 +1,8 @@
 /**
  * @fileoverview Shared functions for the itrans package.
  * @author Avinash Chopde <avinash@aczoom.com>
+ * @version 0.2.0
+ * @since 2016-10-10
  *
  * http://www.aczoom.com/itrans/
  */
@@ -202,7 +204,7 @@ function toSafeHtml (string) {
 
 /* ========================================================================== */
 
-// export { escapeRegExp, };
+// export { escapeRegExp, createLiteralsRegExp, toHtmlCodes, toJSString, Braces, expandUnicodeIds, toSafeHtml, }
 module.exports.escapeRegExp = escapeRegExp;
 module.exports.createLiteralsRegExp = createLiteralsRegExp;
 module.exports.toHtmlCodes = toHtmlCodes;
