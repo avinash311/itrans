@@ -1,5 +1,12 @@
 # ChangeLog
 
+## Version 0.5.0
+  * 2022-01-09
+  * tsv= URL parameter added to load custom tab-separated itrans table
+    on startup. Example:
+    https://www.aczoom.com/itrans/online/?s=hindi&tsv=https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format%3Dtsv%26gid%3D0
+  * Updated DEFAULT.tsv to include expansions for SRI
+
 ## Version 0.4.0
   * 2021-02-20
   * Added Copy to clipboard button.

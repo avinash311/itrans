@@ -1,7 +1,7 @@
 /**
  * @fileoverview Browser code for itrans input and output.
  * @author Avinash Chopde <avinash@aczoom.com>
- * @version 0.4.0
+ * @version 0.5.0
  * @since 2021-02-20
  *
  * http://www.aczoom.com/itrans/online/
@@ -44,6 +44,13 @@ const MAX_TSV_SIZE = 100 * 1000; // in bytes. DEFAULT tsv data is under 20k.
 // Names are same as itrans spreadsheet column names, without the # leading character.
 // Example: aczoom.com/itrans/online/?s=hindi,bengali,unicode-names
 const URL_PARAM_SCRIPTS = 's';
+
+// tsv= URL param can be used to load itrans conversion spreadsheet in TSV tab-separated format.
+// Example for the default spreadsheet:
+// tsv=https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format=tsv&gid=0
+// fully URL encoded: https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo%2Fexport%3Fformat%3Dtsv%26gid%3D0
+// URL encoded minimal: tsv=https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format%3Dtsv%26gid%3D0
+const URL_PARAM_TSV = 'tsv';
 
 // Web page elements and data used by all the functions and callbacks.
 
@@ -358,6 +365,7 @@ function loadItransTsvTable(tsvString, name, formId) {
  */
 function loadTableAndSetupOutputDivs(tsvString, name, formId) {
   loadItransTsvTable(tsvString, name, formId);
+  console.log('Loaded from: ', name);
   // All data now available, including ItransTable
   // Prepare the language output script textareas
   // Also fill the select scripts dropdown with the supported script names
@@ -405,6 +413,46 @@ function loadCustomTsvFile(fileId, formId) {
     const data = event.target.result;
     loadTableAndSetupOutputDivs(data, name, formId);
   });
+}
+
+/**
+ * Load custom itrans tables from a URL parameter pointing to a TSV file.
+ * Then setup the page.outputDivs with new languages and rerun itrans on
+ * input text.
+ *
+ * @see {@link loadTableAndSetupOutputDivs} is called after TSV loaded.
+ */
+function loadUrlTsv() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlTsv = urlParams.get(URL_PARAM_TSV);
+  const mode = {
+    mode: 'cors',
+    cache: 'no-cache',
+    headers: {
+      // 'Content-Type': 'text/plain'
+      'Content-Type': 'text/tab-separated-values'
+    },
+  };
+  
+  if (!urlTsv) {
+    return;
+  }
+
+  fetch(urlTsv, mode)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Fetch failed: ' + urlTsv);
+        return '';
+      }
+      return response.text();
+    })
+
+    .then(tsvString => loadTableAndSetupOutputDivs(
+      tsvString, urlTsv, null))
+
+    .catch(error => {
+      console.error('Failed URL data loading: ', error);
+    });
 }
 
 /**
@@ -500,8 +548,12 @@ function setupWebPage() {
     }, false);
   }
 
-  // Load the default itrans conversion table data.
+  // Load the built-in default itrans conversion table data.
   loadTableAndSetupOutputDivs(DEFAULT_TSV, 'Default', null);
+
+  // If provided, replace the table with tsv= url file.
+  // If this fails, the previously loaded built-in default will be used.
+  loadUrlTsv();
 
   console.log('Ready for interactive itrans use.');
 }

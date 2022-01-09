@@ -1,6 +1,6 @@
 {
   "name": "itrans",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "itrans - convert input text to unicode text",
   "scripts": {
     "browserify": "browserify browser -t brfs | terser > dist/itrans_bundle.js",
@@ -31,11 +31,10 @@
   "devDependencies": {
     "brfs": "^1.4.3",
     "browserify": "~13.1.1",
-    "mocha": "^3.1.0",
+    "mocha": "^9.1.3",
     "node-fetch": "^2.6.1",
     "terser": "^4.3.1"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/avinash311/itrans.git"

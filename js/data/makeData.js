@@ -12,14 +12,14 @@ const ItransTable = require('../src/ItransTable');
  * Command line tool to download a TSV tab-separated Itrans Table Spreadsheet and
  * store it as a text file. Does some rudimentary check on the data to make sure it
  * will at least load correctly in ItransTable.
- * NOTE: If using Google Docs Spreadsheets URL, then it have a delay in providing
+ * NOTE: If using Google Docs Spreadsheets URL, then it has a delay in providing
  * latest version of the spreadsheet to the output=tsv URL, so may need to check
  * the data manually. Or, just use the Google Docs manual Download As command on
  * the spreadsheet, and save the file locally and pass that file name to this
  * program.
  *
  * node makedata  save-name  [optional URL of TSV data|optional local file name]
- * example:   node makedata DEFAULT
+ * example:   node makeData DEFAULT
  * will create a file named DEFAULT.tsv with the downloaded data.
  * By default, the URL fetches from URL_DEFAULT (link in the code below).
  * 

@@ -39,7 +39,7 @@ h	ha	consonant	u+0939	u+0939	u+0939	u+1162E	u+09B9	u+0A39	u+0AB9	u+0B39	u+0BB9	u
 																		
 x | kSh	ksha	consonant	क्ष	क्ष	क्ष	क्ष	ক্ষ	ਕ੍ਸ਼਼	ક્ષ	କ୍ଷ	க்ஷ	க்ஷ	క్ష	ಕ್ಷ	ക്ഷ	𑌕𑍍𑌷	kṣ	kṣ
 GY | j~n | dny	jnya	consonant	ज्ञ	ज्ञ	ज्ञ	ज्ञ	জ্ঞ	ਜ੍ਞ	જ્ઞ	ଜ୍ଞ	ஜ்ஞ	ஜ்ஞ	జ్ఞ	ಜ್ಞ	ജ്ഞ	𑌜𑍍𑌞	jñ	jñ
-SRI	shrii	consonant									ஶ்ரீ							
+SRI	shrii	consonant	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	ஶ்ரீ		{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}
 																		
 																		
 q	qa	consonant	u+0958	u+0958	u+0958		u+0995u+09BC	u+0A15u+0A3C	u+0A95u+0ABC	u+0B15u+0B3C			u+0C58	u+0C95u+0CBC			q	q
@@ -118,7 +118,7 @@ au	au	vowel	u+0914	u+0914	u+0914	u+1160D	u+0994	u+0A14	u+0A94	u+0B14	u+0B94	u+0B
 .N	chandrabindu		u+0901	u+0901	u+0901	{anusvara}{dv-candra-e}	u+0981	u+0A01	u+0A81	u+0B01				u+0C81	u+0D01	u+11301	m̐	m̐
 .n | M | .m	anusvara		u+0902	u+0902	u+0902	u+1163D	u+0982	u+0A02	u+0A82	u+0B02	u+0B82	ம்	u+0C02	u+0C82	u+0D02	u+11302	ṁ	ṁ
 H	visarga		u+0903	u+0903	u+0903	u+1163E	u+0983	u+0A03	u+0A83	u+0B03	u+0B83	:	u+0C03	u+0C83	u+0D03	u+11303	ḥ	ḥ
-OM | AUM	om		u+0950	u+0950	u+0950	u+0950	ওঁ	u+0A74	u+0AD0	ଓଁ	u+0BD0	ௐ	ఓం	ಓಂ	ഓം	𑌓𑌂	oṃ	oṁ
+OM | AUM	om		u+0950	u+0950	u+0950	u+0950	ওঁ	u+0A74	u+0AD0	ଓଁ	u+0BD0	ௐ	ఓం	ಓಂ	ഓം	𑍐	oṃ	oṁ
 	udatta		u+0951	u+0951	u+0951		u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951	u+0951
 	anudatta		u+0952	u+0952	u+0952		u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952
 	candrabindu-virama		u+A8F3	u+A8F3	u+A8F3		u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3	u+A8F3

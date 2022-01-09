@@ -21,10 +21,10 @@ Assumes at least these versions:
 
 ```
     npm --version
-    3.10.3
+    3.10.3   [7.7.6 works too]
 
     node --version
-    v6.6.0
+    v6.6.0   [v15.14.0 works too]
 ```
 
 ## node modules
@@ -32,6 +32,9 @@ Assumes at least these versions:
 In the directory that contains package.json (itrans/js/package.json)
 run:
 
+    `npm ci`        [in npm 5.7.1 version or newer, uses package-lock.json]
+
+    [in older npm versions or if npm ci fails]
     `npm install`
 
 This will install all the dev dependencies.

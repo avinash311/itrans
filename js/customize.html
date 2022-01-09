@@ -24,11 +24,6 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/itrans.css">
 
-  <!-- Javascript ============================================= -->
-  <!-- Replace this with path to your .js file -->
-  <script src="dist/itrans_bundle.js?v=0.3.2"></script> <!-- uses DOM elements of this page -->
-
-
   <!-- Favicon ================================================ -->
   <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -99,8 +94,27 @@
       <code>Save As</code> may offer a way to save it in a Tab-Separated format and use a
       <code>.txt</code>
       file extension.. Or there may be an <code>Export</code> command that offers that.</li>
-      <li>The tab-separated text spreadsheet can be loaded using the <em>Load tab-separated spreadsheet with itrans data</em> input field on this page.</li>
+      <li>The tab-separated text spreadsheet can be loaded using the <em>Load tab-separated spreadsheet with itrans data</em> input field on the <a href="index.html">Online Itrans</a>
+      page.</li>
       <li>If the spreadsheet has no errors, it will be loaded and a message printed in the section above. If there are errors, it will pop up a dialog box with the error message.</li>
+      <li>For easier use, there is the <b>tsv=</b> URL parameter for the <a href="index.html">Online Itrans</a> URL,
+        to load any custom table on page startup. This avoids the need to click on the <em>Load tab-separated spreadsheet with itrans data</em> button.
+        Make sure to provide the URL of a tab-separated text file. For example, the default table from the Google Docs spreadsheet can also be loaded by using this URL:
+        <br>
+        <b>https://www.aczoom.com/itrans/online/?s=hindi&#x26;tsv=https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format%3Dtsv%26gid%3D0</b>
+        <br>
+        The tsv= string should be URL encoded. At a minimum, encode = (%3D) and &amp; (%26) in the tsv= value, as shown. The Google Docs Spreadsheet used for the
+        <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a>
+        can be downloaded as a TSV text file using the URL
+        <b>https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format=tsv&amp;gid=0</b>
+        <br>
+        and that URL string should be provided as a parameter to tsv=, after encoding it as a string by replacing the = and &amp; characters as shown above.
+        <br>
+        There is no requirement to use Google Docs. Any URL that shows a tab-seprated text file with the itrans conversion tables can be given as the <b>tsv=</b> parameter.
+        <br>
+        The <a href="index.html">Online Itrans</a>
+        page section in the middle <em>Customize the character mapping</em> will show the tsv= parameter if that file was correctly loaded.
+      </li>
       </ol>
     </div>
     <div class="twelve columns">
