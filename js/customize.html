@@ -4,8 +4,8 @@
 
   <!-- Basic Page Needs ======================================= -->
   <meta charset="utf-8">
-  <title>Online Interface to ITRANS</title>
-  <meta name="description" Content="Online Interface to ITRANS - text to Unicode conversion package.">
+  <title>Customize the Online Interface to ITRANS</title>
+  <meta name="description" Content="Customize Online Interface to ITRANS - text to Unicode conversion package.">
   <meta name="author" content="Avinash Chopde">
   <meta name="contact" content="avinash@aczoom.com">
 
@@ -54,9 +54,28 @@
   The online itrans page uses a spreadsheet for converting input text to Unicode characters.
   Users can make a copy of the spreadsheet, modify it, and upload it to the online itrans
   page, to have the conversion use the modified mappings.
+  <p>
+  The <a href="index.html">Online Itrans</a> URL accepts a bunch of parameters which allow
+  customization. It offers a way to automatically load customized conversion tables. It also
+  offers a way to start with a specified number of textareas and scripts.
   <hr>
   <div class="row">
     <div class="twelve columns">
+      <h4>URL parameter s= to load specified scripts</h4>
+      Use URL parameter <b>s</b>. For example: <b>s=<i>script-name[,script-name,...]</i></b>
+      <p>
+      The script-name should match the name in the
+      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">spreadsheet for itrans conversion</a>
+      without the leading # character.
+      <p>
+      Examples:
+      <br>
+      Load hindi only:
+      <b><a href="https://www.aczoom.com/itrans/online/?s=hindi">www.aczoom.com/itrans/online/?s=hindi</a></b>
+      <br>
+      Load hindi and sanskrit:
+      <b><a href="https://www.aczoom.com/itrans/online/?s=hindi,sanskrit">www.aczoom.com/itrans/online/?s=hindi,sanskrit</a></b>
+
       <h4>Using your own character mapping</h4>
       This is a customizable application. The goal is to allow users to provide their own
       input to output mapping, by using their own version of the spreadsheet shown above. While
@@ -97,25 +116,46 @@
       <li>The tab-separated text spreadsheet can be loaded using the <em>Load tab-separated spreadsheet with itrans data</em> input field on the <a href="index.html">Online Itrans</a>
       page.</li>
       <li>If the spreadsheet has no errors, it will be loaded and a message printed in the section above. If there are errors, it will pop up a dialog box with the error message.</li>
-      <li>For easier use, there is the <b>tsv=</b> URL parameter for the <a href="index.html">Online Itrans</a> URL,
-        to load any custom table on page startup. This avoids the need to click on the <em>Load tab-separated spreadsheet with itrans data</em> button.
-        Make sure to provide the URL of a tab-separated text file. For example, the default table from the Google Docs spreadsheet can also be loaded by using this URL:
-        <br>
-        <b>https://www.aczoom.com/itrans/online/?s=hindi&#x26;tsv=https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format%3Dtsv%26gid%3D0</b>
-        <br>
-        The tsv= string should be URL encoded. At a minimum, encode = (%3D) and &amp; (%26) in the tsv= value, as shown. The Google Docs Spreadsheet used for the
-        <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a>
-        can be downloaded as a TSV text file using the URL
-        <b>https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format=tsv&amp;gid=0</b>
-        <br>
-        and that URL string should be provided as a parameter to tsv=, after encoding it as a string by replacing the = and &amp; characters as shown above.
-        <br>
-        There is no requirement to use Google Docs. Any URL that shows a tab-seprated text file with the itrans conversion tables can be given as the <b>tsv=</b> parameter.
-        <br>
-        The <a href="index.html">Online Itrans</a>
-        page section in the middle <em>Customize the character mapping</em> will show the tsv= parameter if that file was correctly loaded.
-      </li>
       </ol>
+
+      <h4>URL parameter tsv= to load custom TSV conversion spreadsheet</h4>
+      For easier use of customized itrans conversion spreadsheet tables in tab-separated values format,
+      there is the <b>tsv=</b> URL parameter for the <a href="index.html">Online Itrans</a> URL,
+      to load any custom table on page startup. This avoids the need to click on the <em>Load tab-separated spreadsheet with itrans data</em> button.
+      <p>
+      <p>
+      Make sure to provide the URL of a tab-separated values spreadsheet text file.
+      And it must be hosted at a site has a permissible CORS policy otherwise the file cannot be fetched by the itrans script.
+      <p>
+      Examples:
+      <br>
+      Load the data file from the aczoom.com site:
+      <br>
+      <b>aczoom.com/itrans/online/?tsv=https://www.aczoom.com/itrans/online/data/DEFAULT.tsv</b>
+      <br>
+      Or the Google Docs spreadsheet can also be loaded by using this URL:
+      <br>
+      <b>aczoom.com/itrans/online/tsv=https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format%3Dtsv%26gid%3D0</b>
+      <br>
+      The default table from the source code Github site cannot be loaded since Github CORS setting rejects this request:
+      <br>
+      <b>aczoom.com/itrans/online/tsv=https://raw.githubusercontent.com/avinash311/itrans/master/js/data/DEFAULT.tsv</b> [will fail]
+      <p>
+      The tsv= string should be URL encoded. At a minimum, encode = (%3D) and &amp; (%26) in the tsv= value, as shown. The Google Docs Spreadsheet used for the
+      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a>
+      can be downloaded as a TSV text file using the URL
+      <b>docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format=tsv&amp;gid=0</b>
+      <br>
+      and that URL string should be provided as a parameter to tsv=, after encoding it as a string by replacing the = and &amp; characters as shown above.
+      <br>
+      There is no requirement to use Google Docs. Any URL that shows a tab-seprated text file with the itrans conversion tables can be given as the <b>tsv=</b> parameter.
+      <br>
+      The <a href="index.html">Online Itrans</a>
+      page section in the middle <em>Customize the character mapping</em> will show the tsv= parameter if that file was correctly loaded.
+      <p>
+      To use multiple URL parameters, separate them by &amp; character. Example:
+      <br>
+      <b>www.aczoom.com/itrans/online/?s=hindi&#x26;tsv=https://www.aczoom.com/itrans/online/data/DEFAULT.tsv</b>
     </div>
     <div class="twelve columns">
       <h4>Modifications to the spreadsheet</h4>
