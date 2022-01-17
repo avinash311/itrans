@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="css/itrans.css">
 
   <!-- Javascript ============================================= -->
-  <script src="dist/itrans_bundle.js?v=0.3.4"></script> <!-- uses DOM elements of this page -->
+  <script src="dist/itrans_bundle.js?v=101"></script> <!-- uses DOM elements of this page -->
 
   <!-- Favicon ================================================ -->
   <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
@@ -72,14 +72,12 @@
         <input type="file" id="i-input-file" class="c-hide button button-primary"><!--hidden by css-->
         <button class="u-pull-right" id="i-input-clear" type="button" value="Clear">Clear</button>
       </form>
-      <br class="u-cf">
-      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">Spreadsheet with all itrans input codes</a>
       <br>
       <a href="#example">Example itrans input text and output</a>
     </div>
 
     <div class="six columns c-output">
-      <label for="i-sel-1">Default output:</label>
+      <label for="i-sel-1">Output:</label>
       <select id="i-sel-1">
         <!-- only need the selected language, other languages will be added automatically -->
         <option value="#sanskrit" selected>#sanskrit</option>
@@ -94,7 +92,7 @@
 
   <div class="row">
     <div class="six columns c-output">
-      <label for="i-sel-2">Default output:</label>
+      <label for="i-sel-2">Output:</label>
       <select id="i-sel-2">
         <!-- only need the selected language, other languages will be added automatically -->
         <option value="#telugu" selected>#telugu</option>
@@ -107,10 +105,38 @@
     </div>
 
     <div class="six columns c-output">
-      <label for="i-sel-3">Default output:</label>
+      <label for="i-sel-3">Output:</label>
       <select id="i-sel-3">
         <!-- only need the selected language, other languages will be added automatically -->
         <option value="unicode-names" selected>Unicode Names</option>
+      </select>
+      <button class="copy-button u-pull-right" type="button">
+        <img class="copy-icon" src="images/copy-icon.svg" alt="Copy" title="Copy"/>
+      </button>
+      <br>
+      <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="six columns c-output">
+      <label for="i-sel-4">Output:</label>
+      <select id="i-sel-4">
+        <!-- only need the selected language, other languages will be added automatically -->
+        <option value="#sanskrit" selected>#sanskrit</option>
+      </select>
+      <button class="copy-button u-pull-right" type="button">
+        <img class="copy-icon" src="images/copy-icon.svg" alt="Copy" title="Copy"/>
+      </button>
+      <br>
+      <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
+    </div>
+
+    <div class="six columns c-output">
+      <label for="i-sel-5">Output:</label>
+      <select id="i-sel-5">
+        <!-- only need the selected language, other languages will be added automatically -->
+        <option value="#roman" selected>Romanized</option>
       </select>
       <button class="copy-button u-pull-right" type="button">
         <img class="copy-icon" src="images/copy-icon.svg" alt="Copy" title="Copy"/>
@@ -126,27 +152,31 @@
   <form id="i-data">
     <div class="row">
       <div class="twelve columns">
-        <b>Customize the character mapping</b>
+        <b>Load tab-separated itrans conversion table</b>
         <div id="i-data-msg"><!-- load message - success, failure --></div>
       </div>
     </div>
     <br clear="all">
     <div class="row">
-      <div class="eight columns">
+      <div class="three columns">
         <input type="file" id="i-data-input" class="c-hide button button-primary"><!--hidden by css-->
-        <label for="i-data-input" class="button button-primary">Load tab-separated itrans data file</label>
+        <label for="i-data-input" class="button button-primary">Load .tsv</label>
       </div>
-      <div class="four columns">
-        <input type="button" class="button" value="Load default" id="i-data-input-reset">
+      <div class="three columns">
+        <input type="button" class="button" value="Reset: iso" id="i-data-input-iso">
+      </div>
+      <div class="three columns">
+        <input type="button" class="button" value="Reset: default" id="i-data-input-default">
       </div>
     </div>
   </form>
   <div class="row">
     <div class="twelve columns">
-       Here's the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet for itrans conversion</a>.
-        <br>
-        There are cells with explanation notes in the spreadsheet. Additional help is
-        available at the <a href="customize.html">customize this package</a> page.
+       Here's the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet</a>
+       and the <a href="https://docs.google.com/spreadsheets/d/1PHC3EJ69PZ4U39LSWtjMJhOL7aVE5qdW8qANaPTKDW8/edit?usp=sharing">iso based input spreadsheet</a> for itrans conversion.
+       <br>
+       There are cells with explanation notes in the spreadsheet. Additional help is
+       available at the <a href="customize.html">customize this package</a> page.
     </div>
   </div>
 
@@ -174,7 +204,8 @@
   </div>
   <div class="row">
     <div class="six columns">
-      Enter this example text in the <em>Enter itrans input</em> box above:
+      Default (original itrans input encoding)
+      <br>Enter this example text in the <em>Enter itrans input</em> box above:
       <p><pre>
 a aa | ka kSha || sa.nskRRit
 cha{nukta} 0 9  Tha.N na.n OM
@@ -202,7 +233,6 @@ cha{nukta} 0 9  Tha.N na.n OM
   <div class="row">
     <div class="twelve columns">
       <h4 id="more-examples">More Examples</h4>
-      <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">Spreadsheet with all itrans input codes and unicode code point names</a>
       <p>
       Try these other examples to see additional features. Copy each of these snippets
       and enter it in the <em>Enter itrans input</em> box above.
@@ -218,13 +248,6 @@ cha{nukta} 0 9  Tha.N na.n OM
         It requires coding, and familiarity with
         Javascript, HTML, CSS, etc. Details are at the <a href="customize.html">customize this
         package</a> page.</li>
-        <li>Tamil-Sanskrit: <code>#tamils ka kha khi khii khu khuu</code>
-        will work if entered like this.
-        But #tamils is not present in the default output dropdown list because there is no
-        font that fully supports Tamil-Sanskrit today. There are issues with rendering
-        the superscript (or subscript) correctly. It should appear after any dependent
-        vowels, which no font does today. Therefore, #tamils is only experimental at this
-        time and only available for manual testing as shown in this example.</li>
       </ul>
     </div>
   </div>

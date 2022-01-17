@@ -1,7 +1,7 @@
 /**
  * @fileoverview Browser code for itrans input and output.
  * @author Avinash Chopde <avinash@aczoom.com>
- * @version 0.5.0
+ * @version 0.6.0
  * @since 2021-02-20
  *
  * http://www.aczoom.com/itrans/online/
@@ -18,6 +18,7 @@ const constants = require('./src/constants');
 const Itrans = require('./src/Itrans');
 //import { Itrans } from "./src/Itrans.js";
 const DEFAULT_TSV = require('./data/DEFAULT_TSV');
+const ISO_TSV = require('./data/iso_tsv');
 
 const OUTPUT_FORMAT = constants.OUTPUT_FORMAT; // html7, unicodeNames, or utf8
 
@@ -26,15 +27,16 @@ const INPUT_FORM_ID = 'i-input-form'; // id of form containing textarea and butt
 const INPUT_ID = 'i-input-text'; // id of text area for entering itrans input
 const INPUT_FILE_ID = 'i-input-file'; // id of button to load file into input textarea
 const INPUT_CLEAR_ID = 'i-input-clear'; // id of button to clear input textarea
-const OUTPUT_ROW_2_ID = 'i-scripts-row-2'; // id of 2nd row of output textareas
 const OUTPUT_CLASS = 'c-output'; // class containing select and  textarea to show output
 const COPY_BUTTON_CLASS = 'copy-button'; // child of c-output used for copy to clipboard
+const MAX_OUTPUT_CLASS = 3; // by default (without s= scripts) show these many outputs
 
 // Tab-Separated-Value spreadsheet contains the itrans tables 
 // Web form for loading custom spreadsheet data from user's local filesystem
 const TSV_FORM_ID = 'i-data'; // form containing the load spreadsheet input
 const TSV_INPUT_ID = 'i-data-input'; // load new spreadsheet TSV from this file name
-const TSV_INPUT_RESET_ID = 'i-data-input-reset'; // load default spreadsheet TSV
+const TSV_INPUT_DEFAULT_ID = 'i-data-input-default'; // load default spreadsheet TSV
+const TSV_INPUT_ISO_ID = 'i-data-input-iso'; // load iso based input spreadsheet TSV
 const TSV_INPUT_MESSAGE_ID = 'i-data-msg'; // error or success messages on loading data
 // maximum size of TSV spreadsheet data to be loaded
 const MAX_TSV_SIZE = 100 * 1000; // in bytes. DEFAULT tsv data is under 20k.
@@ -116,7 +118,7 @@ function runItrans(inputText, outputDiv) {
   } else {
     options.language = outputScript;
   }
-  console.log('runItrans', outputDiv.selectElem.value);
+  // console.log('runItrans', outputDiv.selectElem.value);
   outputDiv.textElem.innerHTML = page.itrans.convert(inputText, options);
 }
 
@@ -240,25 +242,27 @@ function setupOutputDivs() {
   scripts = scripts.filter((script) => {
     const table = page.itrans.itransTable;
     const help = 'Valid names are in default page dropdown list. ' +
-      'Do not include the first # character.\n' +
+      'Omit any first # character.\n' +
       '"unicode-names" is also a valid name.';
     const pass = table.isLanguage(script) ||
       script === UNICODE_NAMES_OPTION.value;
     if (!pass) {
       const msg = 'Invalid language script name in URL "' + script + '"\n\n' + help;
       alert(msg);
-      console.assert(false, msg);
+      console.warn(false, msg);
     }
     return pass;
   });
 
   // number of output textareas sections to use
-  let useCount = outputs.length;
+  let useCount = outputs.length; // index.html defined c-output div count
   if (scriptsIn) {
     useCount = Math.min(useCount, scripts.length);
-    console.log('URL scripts', scripts, ', useCount', useCount,
-      ', outputs.length', outputs.length);
+  } else {
+    useCount = Math.min(useCount, MAX_OUTPUT_CLASS);
   }
+  console.log('URL scripts', scripts, ',useCount', useCount,
+    ', outputs.length', outputs.length);
   // remove any extra output sections on the web page
   if (outputs.length > useCount) {
     // HTMLCollection length cannot be reset, so have to loop and remove.
@@ -416,42 +420,48 @@ function loadCustomTsvFile(fileId, formId) {
 }
 
 /**
+ * Handle tsv= UTL fetch and return text on success or throw error.
+ */
+function handleFetch(response) {
+  if (!response.ok) {
+    throw Error(response.statusText);
+  }
+  return response.text();
+}
+
+/**
  * Load custom itrans tables from a URL parameter pointing to a TSV file.
  * Then setup the page.outputDivs with new languages and rerun itrans on
  * input text.
+ * Keywords DEFAULT and iso will load the built-in tables.
  *
  * @see {@link loadTableAndSetupOutputDivs} is called after TSV loaded.
  */
-function loadUrlTsv() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const urlTsv = urlParams.get(URL_PARAM_TSV);
+function loadUrlTsv(urlTsv) {
   const mode = {
     mode: 'cors',
-    cache: 'no-cache',
+    // cache: 'no-cache',
     headers: {
       // 'Content-Type': 'text/plain'
       'Content-Type': 'text/tab-separated-values'
     },
   };
-  
-  if (!urlTsv) {
+  if (urlTsv === 'DEFAULT') {
+    loadTableAndSetupOutputDivs(DEFAULT_TSV, 'Default', null);
+    return;
+  } else if (urlTsv === 'iso') {
+    loadTableAndSetupOutputDivs(ISO_TSV, 'ISO based', null);
     return;
   }
 
   fetch(urlTsv, mode)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Fetch failed: ' + urlTsv);
-        return '';
-      }
-      return response.text();
-    })
-
+    .then(response => handleFetch(response))
     .then(tsvString => loadTableAndSetupOutputDivs(
       tsvString, urlTsv, null))
-
     .catch(error => {
-      console.error('Failed URL data loading: ', error);
+      const msg = urlTsv + ' load failed: ' + error;
+      showTsvLoadedMessage(msg);
+      alert(msg);
     });
 }
 
@@ -483,7 +493,7 @@ function setupInputText() {
   page.inputTextElem.addEventListener('input', () => {
     clearTimeout(typingTimer);
     typingTimer = setTimeout(() => {
-      console.log('timer inputTextElem ' + page.inputTextElem);
+      // console.log('timer inputTextElem ' + page.inputTextElem);
       runAllItrans();
     }, doneTypingInterval);
   });
@@ -541,19 +551,28 @@ function setupWebPage() {
   }
 
   // Setup listener for reset button to reload default itrans TSV data.
-  const dataFileReset = document.getElementById(TSV_INPUT_RESET_ID);
-  if (dataFileReset) {
-    dataFileReset.addEventListener('click', () => {
+  const dataFileDefault = document.getElementById(TSV_INPUT_DEFAULT_ID);
+  if (dataFileDefault) {
+    dataFileDefault.addEventListener('click', () => {
       loadTableAndSetupOutputDivs(DEFAULT_TSV, 'Default', null);
     }, false);
   }
+  const dataFileIso = document.getElementById(TSV_INPUT_ISO_ID);
+  if (dataFileIso) {
+    dataFileIso.addEventListener('click', () => {
+      loadTableAndSetupOutputDivs(ISO_TSV, 'ISO based', null);
+    }, false);
+  }
 
-  // Load the built-in default itrans conversion table data.
-  loadTableAndSetupOutputDivs(DEFAULT_TSV, 'Default', null);
-
-  // If provided, replace the table with tsv= url file.
-  // If this fails, the previously loaded built-in default will be used.
-  loadUrlTsv();
+  // If provided, start with the table provided in tsv= url file.
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlTsv = urlParams.get(URL_PARAM_TSV);
+  if (urlTsv) {
+    loadUrlTsv(urlTsv);
+  } else {
+    // Load the built-in default itrans conversion table data.
+    loadTableAndSetupOutputDivs(DEFAULT_TSV, 'Default', null);
+  }
 
   console.log('Ready for interactive itrans use.');
 }

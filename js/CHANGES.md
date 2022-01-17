@@ -1,5 +1,19 @@
 # ChangeLog
 
+## Version 0.6.0
+  * 2022-01-17
+  * Added the iso based transliteration table as one of the defaults.
+    Both default (old) and iso-based input encoding now included by default.
+  * Added Load ISO button to load the iso-based table.
+  * Added tsv=iso to be used in URL to start with the ISO table.
+  * Fix DEFAULT.tsv SRI (input type should be empty, not consonant)
+  * Added 2 more output boxes so URL s= can use upto 5 scripts.
+  * Better error messages on tsv= invalid URL or URL with non-table data.
+  * Updated normalize.css to 8.0.1
+  * Fixed bug where invalid commands like #hindix would be treated as #hindi and then x printed.
+  * For historical record: roman vs roman-south: short-e, e, ee, ai and short-o, o, oo and au, since their handling is different for north-indian and south-indian scripts within ITRANS.
+    Added #iso column, which should in general match #roman.
+
 ## Version 0.5.0
   * 2022-01-09
   * tsv= URL parameter added to load custom tab-separated itrans table

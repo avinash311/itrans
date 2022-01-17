@@ -18,6 +18,7 @@
 const {
   Braces,
   createLiteralsRegExp,
+  escapeRegExp,
   expandUnicodeIds,
   toJSString,
 } = require('./util');
@@ -401,18 +402,23 @@ function setupTablesAndMaps() {
   // Create the regexs that find the next match in the input
   const languagesCodes = []; // #sanskrit ## etc
   const namesCodes = []; // {DDHA} {I} etc
-  const itransCodes = []; // k kh {DDHA} #sanskrit - all input codes
+  const itransCodes = []; // k kh {DDHA} #sanskrit {#sanskrit} - all input codes
   for (let key of allInputRowIndex.keys()) {
+    let escapedKey = escapeRegExp(key)
     if (isLanguageWord(key)) {
-      languagesCodes.push(key);
+      escapedKey += '\\b'; // must end in word boundary, don't match #hindix for example.
+      languagesCodes.push(escapedKey);
     } else if (BRACES.unwrap(key) !== undefined) {
-      namesCodes.push(key);
+      namesCodes.push(escapedKey);
     }
-    itransCodes.push(key); // all input codes
+    itransCodes.push(escapedKey); // all input codes
   }
-  this.itransRe = createLiteralsRegExp(itransCodes);
-  this.languagesRe = createLiteralsRegExp(languagesCodes);
-  this.namesRe = createLiteralsRegExp(namesCodes);
+  this.itransRe = createLiteralsRegExp(itransCodes, false);
+  this.languagesRe = createLiteralsRegExp(languagesCodes, false);
+  this.namesRe = createLiteralsRegExp(namesCodes, false);
+  // console.log('itransRe', this.itransRe);
+  // console.log('languagesRe ', this.languagesRe );
+  // console.log('namesRe', this.namesRe);
 
   // Validate data
   for (let i = 0; i < rowsLen; i++) {

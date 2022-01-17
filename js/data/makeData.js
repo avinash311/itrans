@@ -30,14 +30,23 @@ const USAGE = `
 Usage:
 node makeData DEFAULT
   will download tsv data from default URL and create DEFAULT.tsv
+node makeData iso
+  will download tsv data from ISO URL and create iso.tsv
 node makeData CUSTOM url
-  will download tsv data from url and create CUSTOM.tsv`;
+  will download tsv data from url and create CUSTOM.tsv
+node makeData
+  this help message`;
 
 /**
  * The default table is this spreadsheet which contains all the Indic itrans coversions.
- * It has been published to the web in TSV format at this URL.
+ * /pub? link is copied after using Share -> Publish to web at Google Docs site to make
+ * this table available in TSV format at this URL. See full comment above.
+ * /export? link does not need to be used on published doc, but doc should be viewable by all.
  */
-const URL_DEFAULT = 'https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/pub?gid=0&single=true&output=tsv';
+// const URL_DEFAULT = 'https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/pub?gid=0&single=true&output=tsv';
+const URL_DEFAULT = 'https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/export?format=tsv&gid=0';
+// const URL_ISO = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRgOzOmB8IB7POPc51goOhcE7ei07ZzRmHd6taHURNCZ90-BA99khJqGoWDHF9aGY65Be1O4gi3y1lF/pub?gid=2092594052&single=true&output=tsv';
+const URL_ISO = 'https://docs.google.com/spreadsheets/d/1PHC3EJ69PZ4U39LSWtjMJhOL7aVE5qdW8qANaPTKDW8/export?format=tsv&gid=2092594052';
 
 // All input arguments save-name words are suffixed with this to create the full file name.
 const FILE_SUFFIX = '.tsv';
@@ -116,7 +125,7 @@ function makeData(saveName, url) {
 
 // argv[1] is node, argv[2] is this script name, and rest are my args
 const saveName = process.argv[2]; // name the file ${saveName}.tsv 
-const url = process.argv[3] || URL_DEFAULT;
+const url = (saveName === 'DEFAULT') ? URL_DEFAULT : (saveName === 'iso') ? URL_ISO : process.argv[3];
 
 if (url && saveName) {
   makeData(saveName, url);

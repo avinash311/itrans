@@ -73,7 +73,9 @@ and the new browserify command results in a file size of around 40K instead of 3
 
 # Updating spreadsheet for customized Javascript package
 
-`data/DEFAULT_TSV.js` is loaded by the Itrans package, and it reads in the spreadsheet from `DEFAULT.tsv` from the same directory.
+`data/DEFAULT_TSV.js` and `data\iso_tsv.tsv` is loaded by the Itrans package.
+Old (default) itrans encoding is supported by `DEFAULT_TSV.tsv`, and it loads `DEFAULT.tsv` from the same directory.
+New (iso15919 based) encoding is supported by `iso_tsv.tsv` and it loads `iso.tsv`.
 It needs the `node-fetch` package to download the spreadsheet.
 
 The `DEFAULT.tsv` can be updated if needed, for local customizations, for example.
@@ -81,11 +83,13 @@ The `DEFAULT.tsv` can be updated if needed, for local customizations, for exampl
 Then the Javascript bundle can be created again, and that will include the current contents of `DEFAULT.tsv`.
 
 If needed, the default spreadsheet can be restored by downloading the TSV file.
+Or it can be customized by making a copy of the required default spreadsheet at the Google Docs site.
 Default spreadsheet in [TSV format](https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/pub?gid=0&single=true&output=tsv)
 and as a [normal spreadsheet](https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing).
+Alternatively, use the [iso based transliteration data table](https://docs.google.com/spreadsheets/d/1PHC3EJ69PZ4U39LSWtjMJhOL7aVE5qdW8qANaPTKDW8/).
 
 `npm run data`
-will update `DEFAULT.tsv` using the default itrans spreadheet at the URL above.
+will update `DEFAULT.tsv` and `iso.tsv` data files.
 
 You can create a custom TSV if needed, for loading in your customized Itrans Javascript package. The node script `data/makeData.js` can be used to do that.
 
@@ -96,6 +100,10 @@ node makeData.js CUSTOM local_file.tsv.txt
 
 All these commands will create CUSTOM.tsv file, which can be read and loaded into ItransTable.
 The files DEFAULT_TSV.js and browser.js show how that is done.
+
+# Update default/pre-loaded tables
+node makeData DEFAULT
+node makeData iso
 ```
 
 # Edit index.html and/or browser.js

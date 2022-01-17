@@ -61,15 +61,18 @@ function expandUnicodeIds(string) {
  * the [1] index.
  *
  * @param {array} strings All the literal strings to add to the RegExp.
+ * @param {boolean} escapeString If true: call escapeRegExp on each string.
  * @param {string} suffix Add this non matching RE to end of string
  * @returns {string} Returns the regexp in the form ^(str1|str2|...)suffix
  */
-function createLiteralsRegExp(strings, suffix = '') {
+function createLiteralsRegExp(strings, escapeString = true, suffix = '') {
 
   // sort in descending order, so longer length strings come earlier
   let sorted = strings.sort((a, b) => b.length - a.length);
 
-  sorted = sorted.map(escapeRegExp);
+  if (escapeString) {
+    sorted = sorted.map(escapeRegExp);
+  }
 
   return new RegExp('^(' + sorted.join('|') + ')' + suffix);
 }
