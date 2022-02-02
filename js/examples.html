@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs ======================================= -->
+  <meta charset="utf-8">
+  <title>Examples for the Online Interface to ITRANS</title>
+  <meta name="description" Content="Examples for Online Interface to ITRANS - text to Unicode conversion package.">
+  <meta name="author" content="Avinash Chopde">
+  <meta name="contact" content="avinash@aczoom.com">
+
+  <meta name="keywords" Content="ITRANS, Indian Languages, Indian Scripts,
+        Hindi, Marathi, Sanskrit, Devanagari, Telugu, Bengali, Gujarati,
+	Tamil, Gurmukhi, Malayalam, Oriya, Grantha, Romanized Sanskrit">
+
+  <!-- Mobile Specific Metas ================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT =================================================== -->
+  <!-- <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+  <!-- CSS ==================================================== -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/itrans.css">
+
+  <!-- Favicon ================================================ -->
+  <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body>
+
+<!-- Primary Page Layout ==================================== -->
+
+<div class="container">
+  <!-- columns should be the immediate child of a .row -->
+
+  <div class="row">
+    <div class="twelve columns">
+      <TABLE>
+        <TR>
+          <TD>
+            Back to <A HREF="http://www.aczoom.com/itrans/online" TARGET="_top">Online itrans</A>
+          </TD>
+        </TR>
+      </TABLE>
+    </div>
+  </div>
+
+  <p>
+  Jump to <a href="#iso">examples for iso based encoding</a>.
+  </p>
+
+  <h4>Examples for itrans 5.3 encoding</h4>
+
+  The full conversion table with input codes and output languages is at
+  <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">itrans 5.3 encoding table</a>.
+
+  <p>
+  This example primarily shows Hindi output, with some Sanskrit and other scripts at the end.
+  Note that the Unicode output in the Indian scripts will only display correctly on a system with a font with support for such characters.
+
+  <p>
+  The text in the Input column can be copied and pasted into the <A HREF="http://www.aczoom.com/itrans/online" TARGET="_top">Online itrans</A>
+  interface and any available language selected in the output box to see the letters in a different script.
+
+  <table class="u-full-width i-example-table">
+  <thead>
+    <tr>
+      <th>Input (itrans 5.30)</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<font size="-0">
+<pre>
+## 1: ## k  kh  g  gh  ~N | ṅ
+## 2: ## ch  chh | Ch  j  jh  ~n
+## 3: ## T  Th  D  Dh  N
+## 4: ## t  th  d  dh  n  ^n
+## 5: ## p  ph  b  bh  m
+## 6: ## y  r  R  l  ld | L  v
+## 7: ## sh  Sh  s  h  x | kSh  GY | j~n | dny
+## 8: ## q  K  G  J | z  .D
+## 9: ## .Dh  f  Y  zh
+
+## 10: ## a  aa | A  i  ii | I | ee
+## 11: ## u  uu | U  RRi | R^i  LLi | L^i
+## 12: ## RRI  LLI
+## 13: ## o  au  H
+
+## 14: ## c.a  c.e  ^e  e  ai  c.o  ^o
+## 15: ## .a  .h
+## 16: ## .c  .N  .n | M | .m
+## 17: ## SRI  OM | AUM  |  ||  Rs.
+## 18: ## 0  1  2  3  4  5  6  7  8  9
+
+## 19: ## ka{nukta}  ma{udatta}  ya{anudatta}
+## 20: ## {double-svarita} a{grave-accent}
+## 21: ## aa{acute-accent}
+
+## 22: ## {pushpika}  {karshana}  {shara}
+## 23: ## {prenkha}  {nihshvasa}
+
+## 24: ## ga{karshana}  ga{shara}
+## 25: ## ga{prenkha}  ga{nihshvasa}
+
+## 26: ## ka  kSha  ||  sa.nskRRit
+## 27: ## cha{nukta}  0  9  Tha.N  na.n  OM
+
+## 28: ## #sanskrit dil  #hindi dil
+## 29: ## #tamil E  O #oriya w
+</pre>
+</font>
+      </td>
+      <td>
+<font size="+0">
+<pre>
+ 1: क  ख  ग  घ  ङ । ङ
+ 2: च  छ । छ  ज  झ  ञ
+ 3: ट  ठ  ड  ढ  ण
+ 4: त  थ  द  ध  न  ऩ
+ 5: प  फ  ब  भ  म
+ 6: य  र  ऱ  ल  ळ । ळ  व
+ 7: श  ष  स  ह  क्ष । क्ष  ज्ञ । ज्ञ । ज्ञ
+ 8: क़  ख़  ग़  ज़ । ज़  ड़
+ 9: ढ़  फ़  य़  ऴ
+
+ 10: अ  आ । आ  इ  ई । ई । ई
+ 11: उ  ऊ । ऊ  ऋ । ऋ  ऌ । ऌ
+ 12: ॠ  ॡ
+ 13: ओ  औ  ः
+
+ 14: ॲ  ऍ  ऎ  ए  ऐ  ऑ  ऒ
+ 15: ऽ  ्‌
+ 16: ᳴  ँ  ं । ं । ं
+ 17: श्री  ॐ । ॐ  ।  ॥  ₹
+ 18: ०  १  २  ३  ४  ५  ६  ७  ८  ९
+
+ 19: क़  म॑  य॒
+ 20: ᳚ अ॓
+ 21: आ॔
+
+ 22: ꣸  ᳐  ᳑
+ 23: ᳒  ᳓
+
+ 24: ग᳐  ग᳑
+ 25: ग᳒  ग᳓
+
+ 26: क  क्ष  ॥  संस्कृत
+ 27: च़  ०  ९  ठँ  नं  ॐ
+
+ 28:  दिल्‌   दिल
+ 29:  ஏ  ஓ  ୱ୍‌
+</pre>
+</font>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+
+  <h4 id="iso">Examples for ISO based encoding</h4>
+
+  The full conversion table with input codes and output languages is in this
+  <a href="https://docs.google.com/spreadsheets/d/1PHC3EJ69PZ4U39LSWtjMJhOL7aVE5qdW8qANaPTKDW8/edit?usp=sharing">iso based input table for itrans</a>.
+
+  <p>
+  This example primarily shows Hindi output, with some other scripts at the end.
+  Note that the Unicode output in the Indian scripts will only display correctly on a system with a font with support for such characters.
+
+  <p>
+  The text in the Input column can be copied and pasted into the <A HREF="http://www.aczoom.com/itrans/online" TARGET="_top">Online itrans</A>
+  interface and any available language selected in the output box to see the letters in a different script.
+
+  <table class="u-full-width i-example-table">
+  <thead>
+    <tr>
+      <th>Input (iso based)</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<font size="-0">
+<pre>
+## 1: ## a  aa | A  i  ii | I  u  uu | U
+## 2: ## RRi | R^i  LLi | L^i  RRI  LLI
+## 3: ## e  ee | E  ai
+## 4: ## o  oo | O  au | ou | ow
+
+## 5: ## k | c  kh  g  gh  ~N | ng
+## 6: ## ch  chh  j  jh  ~n | ny | nj
+## 7: ## T  Th  D  Dh  N
+## 8: ## t  th  d  dh  n  ^n | nx
+## 9: ## p  ph  b  bh  m
+## 10: ## y  r  R  l  ld | L  v
+## 11: ## w  sh  Sh  s  h
+
+## 12: ## x | kSh  GY | j~n | dny | gn | gy
+
+## 13: ## q  K  G  J | z  .D  .Dh
+## 14: ## f  Y  zh  Zh
+
+## 15: ## {heavy-ya}  {gga}  {jja}  {ddda}  {bba}
+
+## 16: ## .nu  .a  .h
+## 17: ## c.a  c.e  c.o
+## 18: ## .c  .N  .n | M | .m  H
+## 19: ## .si  Q
+## 20: ## .ss  .an  .cbv | .N.h  .ds  .ga  .aa
+
+## 21: ## .N.a  .pu
+
+## 22: ## .ka  .sh  .pr  .ni
+
+## 23: ## SRI  OM | AUM  |  ||  Rs.
+
+## 24: ## 0  1  2  3  4  5  6  7  8  9
+
+## 25: ## #tamil  Q  #modi ~o  ^h
+</pre>
+</font>
+      </td>
+      <td>
+<font size="+0">
+<pre>
+ 1: अ  आ । आ  इ  ई । ई  उ  ऊ । ऊ
+ 2: ऋ । ऋ  ऌ । ऌ  ॠ  ॡ
+ 3: ऎ  ए । ए  ऐ
+ 4: ऒ  ओ । ओ  औ । औ । औ
+
+ 5: क । क  ख  ग  घ  ङ । ङ
+ 6: च  छ  ज  झ  ञ । ञ । ञ
+ 7: ट  ठ  ड  ढ  ण
+ 8: त  थ  द  ध  न  ऩ । ऩ
+ 9: प  फ  ब  भ  म
+ 10: य  र  ऱ  ल  ळ । ळ  व
+ 11: व  श  ष  स  ह
+
+ 12: क्ष । क्ष  ज्ञ । ज्ञ । ज्ञ । ज्ञ । ज्ञ
+
+ 13: क़  ख़  ग़  ज़ । ज़  ड़  ढ़
+ 14: फ़  य़  ऴ  ॹ
+
+ 15: ॺ  ॻ  ॼ  ॾ  ॿ
+
+ 16: ़  ऽ  ्‌
+ 17: ॲ  ऍ  ऑ
+ 18: ᳴  ँ  ं । ं । ं  ः
+ 19: ꣼  
+ 20: ॑  ॒  ꣳ । ꣳ  ᳚  ॓  ॔
+
+ 21: ꣷ  ꣸
+
+ 22: ᳐  ᳑  ᳒  ᳓
+
+ 23: श्री  ॐ । ॐ  ।  ॥  ₹
+
+ 24: ०  १  २  ३  ४  ५  ६  ७  ८  ९
+
+ 25:   ஃ   𑙃  𑙄
+</pre>
+</font>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+  <!-- =========================================================== -->
+
+  <div class="row">
+    <div class="twelve columns">
+      <TABLE>
+        <TR>
+          <TD>
+            Back to <A HREF="http://www.aczoom.com/itrans/online" TARGET="_top">Online itrans</A>
+          </TD>
+        </TR>
+      </TABLE>
+
+      <hr>
+
+    </div>
+  </div>
+</div>
+<!-- End Document ============================================= -->
+</body>
+</html>

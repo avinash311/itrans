@@ -48,17 +48,19 @@
   width: 100%;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-  box-sizing: border-box; border-width: 1px; border-style: dotted;
+  box-sizing: border-box;
+  border-top: 1px dotted;
+  border-bottom: 1px dotted;
 }
 form#i-data {
   margin-top: 5px; margin-bottom: 5px; padding: 0.5em;
-  box-sizing: border-box; border-width: 1px; border-style: dotted;
+  box-sizing: border-box;
+  border: 1px dotted;
 }
 
-form#i-data label {
-  width: 90%;
+form#i-data label,
+form#i-data button {
   margin-left: 1em;
-  margin-right: 1em;
 }
 
 .c-hide {
@@ -98,6 +100,12 @@ label, select { display: inline-block; vertical-align: middle; }
 
 body {
   background-image: url("/images/smil_d3.gif");
+}
+
+/* override the padding from skeleton pacakage to have examples cells look tighter */
+.i-example-table th,
+.i-example-table td {
+  padding: 0;
 }
 
 /* Later, TODO, if needed:

@@ -1,11 +1,13 @@
 # ChangeLog
 
 ## Version 0.6.0
-  * 2022-01-17
+  * 2022-02-01
   * Added the iso based transliteration table as one of the defaults.
     Both default (old) and iso-based input encoding now included by default.
   * Added Load ISO button to load the iso-based table.
   * Added tsv=iso to be used in URL to start with the ISO table.
+  * Added tsv=DEFAULT to be used in URL to start with the default table.
+  * Added examples.html showing all the itrans 5.3 and iso input codes.
   * Fix DEFAULT.tsv SRI (input type should be empty, not consonant)
   * Added 2 more output boxes so URL s= can use upto 5 scripts.
   * Better error messages on tsv= invalid URL or URL with non-table data.

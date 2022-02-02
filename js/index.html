@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="css/itrans.css">
 
   <!-- Javascript ============================================= -->
-  <script src="dist/itrans_bundle.js?v=101"></script> <!-- uses DOM elements of this page -->
+  <script src="dist/itrans_bundle.js?v=111"></script> <!-- uses DOM elements of this page -->
 
   <!-- Favicon ================================================ -->
   <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
@@ -68,12 +68,11 @@
         <textarea id="i-input-text" placeholder="Type here: a aa | ka kSha | sa.nskRRit | ..."
           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
         <br>
-        <label for="i-input-file" class="button button-primary">Load file</label>
+        <label for="i-input-file" class="button button-primary">Load text</label>
         <input type="file" id="i-input-file" class="c-hide button button-primary"><!--hidden by css-->
         <button class="u-pull-right" id="i-input-clear" type="button" value="Clear">Clear</button>
       </form>
       <br>
-      <a href="#example">Example itrans input text and output</a>
     </div>
 
     <div class="six columns c-output">
@@ -118,83 +117,55 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="six columns c-output">
-      <label for="i-sel-4">Output:</label>
-      <select id="i-sel-4">
-        <!-- only need the selected language, other languages will be added automatically -->
-        <option value="#sanskrit" selected>#sanskrit</option>
-      </select>
-      <button class="copy-button u-pull-right" type="button">
-        <img class="copy-icon" src="images/copy-icon.svg" alt="Copy" title="Copy"/>
-      </button>
-      <br>
-      <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
-    </div>
-
-    <div class="six columns c-output">
-      <label for="i-sel-5">Output:</label>
-      <select id="i-sel-5">
-        <!-- only need the selected language, other languages will be added automatically -->
-        <option value="#roman" selected>Romanized</option>
-      </select>
-      <button class="copy-button u-pull-right" type="button">
-        <img class="copy-icon" src="images/copy-icon.svg" alt="Copy" title="Copy"/>
-      </button>
-      <br>
-      <textarea placeholder="Converted text will be displayed here..." readonly></textarea>
-    </div>
-  </div>
-
-  <hr>
-
   <!-- =========================================================== -->
   <form id="i-data">
     <div class="row">
       <div class="twelve columns">
-        <b>Load tab-separated itrans conversion table</b>
-        <div id="i-data-msg"><!-- load message - success, failure --></div>
+        Load conversion table - click on desired button
       </div>
     </div>
-    <br clear="all">
     <div class="row">
-      <div class="three columns">
-        <input type="file" id="i-data-input" class="c-hide button button-primary"><!--hidden by css-->
-        <label for="i-data-input" class="button button-primary">Load .tsv</label>
+      <div class="twelve columns">
+        <input type="file" id="i-data-input" class="c-hide"><!--hidden by css-->
+        <label for="i-data-input" class="button button-primary" title="Load file from disk">Custom file .tsv</label>
+        <button type="button" class="button button-primary" title="Load default ISO table" id="i-data-input-iso">&nbsp;ISO&nbsp;</button>
+        <button type="button" class="button button-primary" title="Load default itrans 5.3 table" id="i-data-input-default">itrans 5.3</button>
       </div>
-      <div class="three columns">
-        <input type="button" class="button" value="Reset: iso" id="i-data-input-iso">
-      </div>
-      <div class="three columns">
-        <input type="button" class="button" value="Reset: default" id="i-data-input-default">
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <div id="i-data-msg"><!-- load message - success, failure --></div>
       </div>
     </div>
   </form>
   <div class="row">
     <div class="twelve columns">
-       Here's the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">default spreadsheet</a>
+       Here's the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">itrans 5.3 spreadsheet</a>
        and the <a href="https://docs.google.com/spreadsheets/d/1PHC3EJ69PZ4U39LSWtjMJhOL7aVE5qdW8qANaPTKDW8/edit?usp=sharing">iso based input spreadsheet</a> for itrans conversion.
        <br>
-       There are cells with explanation notes in the spreadsheet. Additional help is
-       available at the <a href="customize.html">customize this package</a> page.
+       There are cells with explanation notes in the spreadsheet.
+       <p>
+       Direct access to itrans 5.3 encoding: <a href="/itrans/online/"><b>aczoom.com/itrans/online/</b></a>
+       <br>
+       Direct access to iso based encoding: <a href="/itrans/online/?tsv=iso"><b>aczoom.com/itrans/online/?tsv=iso</b></a>
+       <br>
+       Additional help and starting with specific output languages is described
+       at the <a href="customize.html">customize this package</a> page.
+       </p>
     </div>
   </div>
 
-  <p>
   <hr>
 
   <!-- =========================================================== -->
   <div class="row">
     <div class="twelve columns">
-      <h4 id="example">Example</h4>
-      <!--
-      This is a new package, and should work with latest versions of most web browsers.
-      It works with the latest
-      <a href="https://www.google.com/chrome/browser/desktop/">Chrome web browser</a>
-      and
-      <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge web browser</a>.
-      -->
+      <h4>Examples</h4>
       <p>
+      Visit this page for <a href="examples.html">examples of most of the codes</a> used for both itrans 5.3 and iso based codes.
+      </p>
+
+      <h5>Brief example itrans 5.3 encoding</h5>
       <b>Note</b>: itrans uses a precise mapping of input codes to output code. It is not a phonetic
       conversion system, nor is it meant to be. (There are many other systems that do that.)
       Itrans is a table-driven, customizable mapping of input words to any Unicode character
@@ -204,7 +175,7 @@
   </div>
   <div class="row">
     <div class="six columns">
-      Default (original itrans input encoding)
+      Default (original itrans 5.3 input encoding)
       <br>Enter this example text in the <em>Enter itrans input</em> box above:
       <p><pre>
 a aa | ka kSha || sa.nskRRit
@@ -236,14 +207,15 @@ cha{nukta} 0 9  Tha.N na.n OM
       <p>
       Try these other examples to see additional features. Copy each of these snippets
       and enter it in the <em>Enter itrans input</em> box above.
+      Also visit this page for <a href="examples.html">examples of most of the codes</a> used for both itrans 5.3 and iso based codes.
       </p>
       <ul>
         <li><code>#hindi ma shrii #kannada ta Ta</code>
         <br>These language markers
         (#hindi and #kannada) show that all the language column names
-        from the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">spreadsheet</a> or any custom loaded spreadsheet
+        from the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">itrans 5.3 table</a> or any custom loaded table
         can be explicity specified in the input text.</li>
-        <li>In addition to loading updated spreadsheet conversion tables, this entire
+        <li>In addition to loading updated conversion tables, this entire
         web page can be recreated and customized and hosted locally.
         It requires coding, and familiarity with
         Javascript, HTML, CSS, etc. Details are at the <a href="customize.html">customize this
@@ -261,12 +233,12 @@ cha{nukta} 0 9  Tha.N na.n OM
   Please note that no technical support is available for this web page or for the tools on this web page.
   <BR>
   If you do find a bug (note that mapping issues may not be bugs, you can modify the mapping
-  and use a customized spreadsheet as described above), feel free to file it at the
+  and use a customized table spreadsheet as described above), feel free to file it at the
   <a href="https://github.com/avinash311/itrans/issues">GitHub itrans issues</a> page.
   </p>
 
-  <h4>Older itrans6 online web interface - no longer available.</h4>
   <!--
+  <h4>Older itrans6 online web interface - no longer available.</h4>
   For the older itrans online interface visit the <a href="http://www.aczoom.com/itrans/online/itrans6/">itrans6 web server-based online interface</a>.
   -->
 

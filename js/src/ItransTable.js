@@ -406,7 +406,10 @@ function setupTablesAndMaps() {
   for (let key of allInputRowIndex.keys()) {
     let escapedKey = escapeRegExp(key)
     if (isLanguageWord(key)) {
-      escapedKey += '\\b'; // must end in word boundary, don't match #hindix for example.
+      const lastChar = key.charAt(key.length - 1);
+      if ((/\w/).test(lastChar)) { // if #hindi etc (not ##), then ...
+        escapedKey += '\\b'; // must end in word boundary, don't match #hindix for example.
+      }
       languagesCodes.push(escapedKey);
     } else if (BRACES.unwrap(key) !== undefined) {
       namesCodes.push(escapedKey);
@@ -414,7 +417,10 @@ function setupTablesAndMaps() {
     itransCodes.push(escapedKey); // all input codes
   }
   this.itransRe = createLiteralsRegExp(itransCodes, false);
-  this.languagesRe = createLiteralsRegExp(languagesCodes, false);
+  // skip spaces after a word language code. Not working: #hindi<spaces> will output each space, not skip it.
+  // /^(#roman-south|#malayalam|#sanskrit|#gurmukhi|#gujarati|#marathi|#bengali|#kannada|#grantha|#telugu|#hindi|#oriya|#tamil|#roman|#modi|#iso|##)\s*/
+  // Does skip spaces after a ## though that enters Indic script.
+  this.languagesRe = createLiteralsRegExp(languagesCodes, false, '\\s*'); // TODO: spaces not being skipping for #hindi, etc
   this.namesRe = createLiteralsRegExp(namesCodes, false);
   // console.log('itransRe', this.itransRe);
   // console.log('languagesRe ', this.languagesRe );

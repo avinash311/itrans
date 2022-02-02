@@ -18,7 +18,10 @@ const constants = require('./src/constants');
 const Itrans = require('./src/Itrans');
 //import { Itrans } from "./src/Itrans.js";
 const DEFAULT_TSV = require('./data/DEFAULT_TSV');
+const DEFAULT_TSV_NAME = 'Default itrans 5.3 encoding table';
 const ISO_TSV = require('./data/iso_tsv');
+const ISO_TSV_NAME = 'Default ISO based encoding table';
+// const { version } = require('./package.json');
 
 const OUTPUT_FORMAT = constants.OUTPUT_FORMAT; // html7, unicodeNames, or utf8
 
@@ -297,6 +300,9 @@ function setupOutputDivs() {
         document.execCommand("copy");
       }, false);
   }
+
+  // Since we can be called when new TSV file is loaded, update all outputs
+  runAllItrans();
 }
 
 /**
@@ -447,10 +453,10 @@ function loadUrlTsv(urlTsv) {
     },
   };
   if (urlTsv === 'DEFAULT') {
-    loadTableAndSetupOutputDivs(DEFAULT_TSV, 'Default', null);
+    loadTableAndSetupOutputDivs(DEFAULT_TSV, DEFAULT_TSV_NAME, null);
     return;
   } else if (urlTsv === 'iso') {
-    loadTableAndSetupOutputDivs(ISO_TSV, 'ISO based', null);
+    loadTableAndSetupOutputDivs(ISO_TSV, ISO_TSV_NAME, null);
     return;
   }
 
@@ -554,13 +560,13 @@ function setupWebPage() {
   const dataFileDefault = document.getElementById(TSV_INPUT_DEFAULT_ID);
   if (dataFileDefault) {
     dataFileDefault.addEventListener('click', () => {
-      loadTableAndSetupOutputDivs(DEFAULT_TSV, 'Default', null);
+      loadTableAndSetupOutputDivs(DEFAULT_TSV, DEFAULT_TSV_NAME, null);
     }, false);
   }
   const dataFileIso = document.getElementById(TSV_INPUT_ISO_ID);
   if (dataFileIso) {
     dataFileIso.addEventListener('click', () => {
-      loadTableAndSetupOutputDivs(ISO_TSV, 'ISO based', null);
+      loadTableAndSetupOutputDivs(ISO_TSV, ISO_TSV_NAME, null);
     }, false);
   }
 
@@ -571,7 +577,7 @@ function setupWebPage() {
     loadUrlTsv(urlTsv);
   } else {
     // Load the built-in default itrans conversion table data.
-    loadTableAndSetupOutputDivs(DEFAULT_TSV, 'Default', null);
+    loadTableAndSetupOutputDivs(DEFAULT_TSV, DEFAULT_TSV_NAME, null);
   }
 
   console.log('Ready for interactive itrans use.');

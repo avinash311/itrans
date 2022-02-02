@@ -1,5 +1,5 @@
-INPUT	CODE-NAME	INPUT-TYPE	#sanskrit	#hindi	#modi	#bengali	#gurmukhi	#gujarati	#oriya	#tamil	#telugu	#kannada	#malayalam	#grantha	#iso
-a.C	candra-a		u+0972	u+0972											æ
+INPUT	CODE-NAME	INPUT-TYPE	#sanskrit	#hindi	#modi	#bengali	#gurmukhi	#gujarati	#oriya	#tamil	#telugu	#kannada	#malayalam	#grantha	#iso15919
+c.a	candra-a		u+0972	u+0972											æ
 a	a	vowel	u+0905	u+0905	u+11600	u+0985	u+0A05	u+0A85	u+0B05	u+0B85	u+0C05	u+0C85	u+0D05	u+11305	a
 aa | A	aa	vowel	u+0906	u+0906	u+11601	u+0986	u+0A06	u+0A86	u+0B06	u+0B86	u+0C06	u+0C86	u+0D06	u+11306	ā
 i	i	vowel	u+0907	u+0907	u+11602	u+0987	u+0A07	u+0A87	u+0B07	u+0B87	u+0C07	u+0C87	u+0D07	u+11307	i
@@ -10,16 +10,16 @@ RRi | R^i	vocalic-r	vowel	u+090B	u+090B	u+11606	u+098B		u+0A8B	u+0B0B	{ra}{dv-u}
 LLi | L^i	vocalic-l	vowel	u+090C	u+090C	u+11608	u+098C		u+0A8C	u+0B0C	{la}{dv-u}u+0027	u+0C0C	u+0C8C	u+0D0C	u+1130C	l̥
 RRI	vocalic-rr	vowel	u+0960	u+0960	u+11607	u+09E0		u+0AE0	u+0B60	{ra}{dv-uu}u+0027	u+0C60	u+0CE0	u+0D60	u+11360	r̥̄
 LLI	vocalic-ll	vowel	u+0961	u+0961	u+11609	u+09E1		u+0AE1	u+0B61	{la}{dv-uu}u+0027	u+0C61	u+0CE1	u+0D61	u+11361	l̥̄
-E.C	candra-e	vowel	u+090D	u+090D				u+0A8D							ê
+c.e	candra-e	vowel	u+090D	u+090D				u+0A8D							ê
 e	e	vowel	u+090E	u+090E						u+0B8E	u+0C0E	u+0C8E	u+0D0E		e
 ee | E	ee	vowel	u+090F	u+090F	u+1160A	u+098F	u+0A0F	u+0A8F	u+0B0F	u+0B8F	u+0C0F	u+0C8F	u+0D0F	u+1130F	ē
 ai	ai	vowel	u+0910	u+0910	u+1160B	u+0990	u+0A10	u+0A90	u+0B10	u+0B90	u+0C10	u+0C90	u+0D10	u+11310	ai
-A.C	candra-o		u+0911	u+0911				u+0A91							ô
+c.o	candra-o	vowel	u+0911	u+0911				u+0A91							ô
 o	o	vowel	u+0912	u+0912						u+0B92	u+0C12	u+0C92	u+0D12		o
 oo | O	oo	vowel	u+0913	u+0913	u+1160C	u+0993	u+0A13	u+0A93	u+0B13	u+0B93	u+0C13	u+0C93	u+0D13	u+11313	ō
 au | ou | ow	au	vowel	u+0914	u+0914	u+1160D	u+0994	u+0A14	u+0A94	u+0B14	u+0B94	u+0C14	u+0C94	u+0D14	u+11314	au
 															
-	dv-short-a	dependent-vowel													
+															
 	dv-a	dependent-vowel													a
 	dv-aa	dependent-vowel	u+093E	u+093E	u+11630	u+09BE	u+0A3E	u+0ABE	u+0B3E	u+0BBE	u+0C3E	u+0CBE	u+0D3E	u+1133E	ā
 	dv-i	dependent-vowel	u+093F	u+093F	u+11631	u+09BF	u+0A3F	u+0ABF	u+0B3F	u+0BBF	u+0C3F	u+0CBF	u+0D3F	u+1133F	i
@@ -80,8 +80,8 @@ h	ha	consonant	u+0939	u+0939	u+1162E	u+09B9	u+0A39	u+0AB9	u+0B39	u+0BB9	u+0C39	u
 															
 x | kSh	ksha	consonant	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	kṣ
 GY | j~n | dny | gn | gy	jnya	consonant	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	jñ
-SRI	sha-ra-ii		{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	śī
-OM | AUM	om	sign	u+0950	u+0950	u+0950	u+0993u+0981	u+0A74	u+0AD0	u+0B13u+0B01	u+0BD0	u+0C13u+0C02	u+0C93u+0C82	u+0D13u+0D02	u+11350	oṁ
+SRI	sha-ra-ii		{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	śrī
+OM | AUM	om		u+0950	u+0950	u+0950	u+0993u+0981	u+0A74	u+0AD0	u+0B13u+0B01	u+0BD0	u+0C13u+0C02	u+0C93u+0C82	u+0D13u+0D02	u+11350	oṁ
 															
 q	qa	consonant	u+0958	u+0958											q
 K	khha	consonant	u+0959	u+0959			u+0A59								k͟h
@@ -106,37 +106,37 @@ Zh	zha	consonant	u+0979	u+0979				u+0AF9
 															
 	rrra	consonant									u+0C5A				
 															
-.nu	nukta	dependent-vowel	u+093C	u+093C		u+09BC	u+0A3C	u+0ABC	u+0B3C		u+0C3C	u+0CBC		u+1133C	
-.a	avagraha	sign	u+093D	u+093D	u+093D	u+09BD		u+0ABD	u+0B3D	u+093D	u+0C3D	u+0CBD	u+0D3D	u+1133D	’
+.nu	nukta	dependent-vowel	u+093C	u+093C		u+09BC	u+0A3C	u+0ABC	u+0B3C		u+0C3C	u+0CBC		u+1133C	m̈
+.a	avagraha	vedic-sign	u+093D	u+093D	u+093D	u+09BD		u+0ABD	u+0B3D	u+093D	u+0C3D	u+0CBD	u+0D3D	u+1133D	’
 	virama		u+094D	u+094D	u+1163F	u+09CD	u+0A4D	u+0ACD	u+0B4D	u+0BCD	u+0C4D	u+0CCD	u+0D4D	u+1134D	
 .h	explicit-virama		{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	
-.c	candra	vedic-tone	u+1CF4	u+1CF4	u+11640					u+1CF4					
-.N	chandrabindu	sign	u+0901	u+0901	{anusvara}{dv-candra-e}	u+0981	u+0A01	u+0A81	u+0B01	u+0901	u+0C01	u+0C81	u+0D01	u+11301	m̐
+.c	candra	vedic-tone	u+1CF4	u+1CF4	u+11640					u+1CF4		u+1CF4		u+1CF4	
+.N	chandrabindu	vedic-tone	u+0901	u+0901	{anusvara}{dv-candra-e}	u+0981	u+0A01	u+0A81	u+0B01	u+0901	u+0C01	u+0C81	u+0D01	u+11301	m̐
 .n | M | .m	anusvara	dependent-vowel	u+0902	u+0902	u+1163D	u+0982	u+0A02	u+0A82	u+0B02	u+0B82	u+0C02	u+0C82	u+0D02	u+11302	ṁ
-H	visarga	sign	u+0903	u+0903	u+1163E	u+0983	u+0A03	u+0A83	u+0B03	u+0903	u+0C03	u+0C83	u+0D03	u+11303	ḥ
-.si	siddham	vedic-tone	u+A8FC	u+A8FC		u+0980					u+0C77	u+0C84			
-Q	tamil-visarga	sign								u+0B83					
-.ss	udatta-svarita	vedic-tone	u+0951	u+0951						u+0951				u+0951	
-.an	anudatta	vedic-tone	u+0952	u+0952						u+0952				u+0952	
-.cbv | .N.h	candrabindu-virama	sign	u+A8F3	u+A8F3						u+A8F3				u+A8F3	
-.ds	double-svarita 	vedic-tone	u+1CDA	u+1CDA						u+1CDA				u+1CDA	
-.ga	grave-accent		u+0953	u+0953										u+0953	`
-.aa	acute-accent		u+0954	u+0954										u+0954	'
-|	danda		u+0964	u+0964	u+11641	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	.
-||	double-danda		u+0965	u+0965	u+11642	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	..
+H	visarga	vedic-sign	u+0903	u+0903	u+1163E	u+0983	u+0A03	u+0A83	u+0B03	u+0903	u+0C03	u+0C83	u+0D03	u+11303	ḥ
+.si	siddham	vedic-sign	u+A8FC	u+A8FC		u+0980					u+0C77	u+0C84			꣼
+Q	tamil-visarga	sign								u+0B83					ḵ
+.ss	udatta-svarita	vedic-tone	u+0951	u+0951						u+0951				u+0951	̍
+.an	anudatta	vedic-tone	u+0952	u+0952						u+0952				u+0952	̱
+.cbv | .N.h	candrabindu-virama	vedic-sign	u+A8F3	u+A8F3						u+A8F3				u+A8F3	
+.ds	double-svarita 	vedic-tone	u+1CDA	u+1CDA						u+1CDA				u+1CDA	̎
+.ga	grave-accent	sign	u+0953	u+0953						u+0953				u+0953	`
+.aa	acute-accent	sign	u+0954	u+0954						u+0954				u+0954	'
+|	danda	sign	u+0964	u+0964	u+11641	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	.
+||	double-danda	sign	u+0965	u+0965	u+11642	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	..
 															
-.N.a	candrabindu-avagraha		u+A8F7	u+A8F7										u+A8F7	
-.pu	pushpika		u+A8F8	u+A8F8										u+A8F8	
+.N.a	candrabindu-avagraha	vedic-sign	u+A8F7	u+A8F7										u+A8F7	ꣷ
+.pu	pushpika	vedic-tone	u+A8F8	u+A8F8										u+A8F8	꣸
 															
-.ka	karshana		u+1CD0	u+1CD0	u+1CD0									u+1CD0	
-.sh	shara		u+1CD1	u+1CD1	u+1CD1									u+1CD1	
-.pr	prenkha		u+1CD2	u+1CD2	u+1CD2					u+1CD2				u+1CD2	
-.ni	nihshvasa		u+1CD3	u+1CD3	u+1CD3									u+1CD3	
+.ka	karshana	vedic-tone	u+1CD0	u+1CD0	u+1CD0									u+1CD0	᳐
+.sh	shara	vedic-tone	u+1CD1	u+1CD1	u+1CD1									u+1CD1	᳑
+.pr	prenkha	vedic-tone	u+1CD2	u+1CD2	u+1CD2					u+1CD2				u+1CD2	᳒
+.ni	nihshvasa	vedic-tone	u+1CD3	u+1CD3	u+1CD3									u+1CD3	᳓
 															
 ~o	abbreviation				u+11643										
 ^h	huva				u+11644										
-Rs.	rupee-sign	sign	u+20B9	u+20B9	u+20B9	u+09F3	u+20B9	u+0AF1	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	
-~Rs.	rupee-mark		u+20B9	u+20B9	u+A838	u+09F2	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	
+Rs.	rupee-sign	sign	u+20B9	u+20B9	u+20B9	u+09F3	u+20B9	u+0AF1	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	₹
+~Rs.	rupee-mark	sign	u+20B9	u+20B9	u+A838	u+09F2	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	u+20B9	₹
 															
 0	zero		u+0966	u+0966	u+11650	u+09E6	u+0A66	u+0AE6	u+0B66	u+0BE6	u+0C66	u+0CE6	u+0D66	u+0BE6	0
 1	one		u+0967	u+0967	u+11651	u+09E7	u+0A67	u+0AE7	u+0B67	u+0BE7	u+0C67	u+0CE7	u+0D67	u+0BE7	1
@@ -161,8 +161,8 @@ _	no-output	command
 															
 ##	itrans-toggle	command													
 															
-	face-grin		😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	
-	face-neutral		u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	
-	face-frown		u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	
-	skier		u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	
-	heart		u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	
+	face-grin		😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀
+	face-neutral		u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	😐
+	face-frown		u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	☹
+	skier		u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	⛷
+	heart		u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	❤
