@@ -107,21 +107,21 @@ Zh	zha	consonant	u+0979	u+0979				u+0AF9
 	rrra	consonant									u+0C5A				
 															
 .nu	nukta	dependent-vowel	u+093C	u+093C		u+09BC	u+0A3C	u+0ABC	u+0B3C		u+0C3C	u+0CBC		u+1133C	m̈
-.a	avagraha	vedic-sign	u+093D	u+093D	u+093D	u+09BD		u+0ABD	u+0B3D	u+093D	u+0C3D	u+0CBD	u+0D3D	u+1133D	’
+.a	avagraha	vedic-sign	u+093D	u+093D	u+093D	u+09BD		u+0ABD	u+0B3D	u+1133D	u+0C3D	u+0CBD	u+0D3D	u+1133D	’
 	virama		u+094D	u+094D	u+1163F	u+09CD	u+0A4D	u+0ACD	u+0B4D	u+0BCD	u+0C4D	u+0CCD	u+0D4D	u+1134D	
 .h	explicit-virama		{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	
-.c	candra	vedic-tone	u+1CF4	u+1CF4	u+11640					u+1CF4		u+1CF4		u+1CF4	
-.N	chandrabindu	vedic-tone	u+0901	u+0901	{anusvara}{dv-candra-e}	u+0981	u+0A01	u+0A81	u+0B01	u+0901	u+0C01	u+0C81	u+0D01	u+11301	m̐
+.c	candra	vedic-tone	u+1CF4	u+1CF4	u+11640					u+0306		u+1CF4		u+1CF4	
+.N	chandrabindu	vedic-tone	u+0901	u+0901	{anusvara}{dv-candra-e}	u+0981	u+0A01	u+0A81	u+0B01	u+0310	u+0C01	u+0C81	u+0D01	u+11301	m̐
 .n | M | .m	anusvara	dependent-vowel	u+0902	u+0902	u+1163D	u+0982	u+0A02	u+0A82	u+0B02	u+0B82	u+0C02	u+0C82	u+0D02	u+11302	ṁ
-H	visarga	vedic-sign	u+0903	u+0903	u+1163E	u+0983	u+0A03	u+0A83	u+0B03	u+0903	u+0C03	u+0C83	u+0D03	u+11303	ḥ
-.si	siddham	vedic-sign	u+A8FC	u+A8FC		u+0980					u+0C77	u+0C84			꣼
+H	visarga	vedic-sign	u+0903	u+0903	u+1163E	u+0983	u+0A03	u+0A83	u+0B03	u+003A	u+0C03	u+0C83	u+0D03	u+11303	ḥ
 Q	tamil-visarga	sign								u+0B83					ḵ
+.si	siddham	vedic-sign	u+A8FC	u+A8FC		u+0980					u+0C77	u+0C84			꣼
 .ss	udatta-svarita	vedic-tone	u+0951	u+0951						u+0951				u+0951	̍
 .an	anudatta	vedic-tone	u+0952	u+0952						u+0952				u+0952	̱
 .cbv | .N.h	candrabindu-virama	vedic-sign	u+A8F3	u+A8F3						u+A8F3				u+A8F3	
 .ds	double-svarita 	vedic-tone	u+1CDA	u+1CDA						u+1CDA				u+1CDA	̎
-.ga	grave-accent	sign	u+0953	u+0953						u+0953				u+0953	`
-.aa	acute-accent	sign	u+0954	u+0954						u+0954				u+0954	'
+.ga	grave-accent	sign	u+0953	u+0953						u+0300				u+0300	`
+.aa	acute-accent	sign	u+0954	u+0954						u+0301				u+0301	'
 |	danda	sign	u+0964	u+0964	u+11641	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	.
 ||	double-danda	sign	u+0965	u+0965	u+11642	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	..
 															
