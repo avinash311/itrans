@@ -1,7 +1,7 @@
 /**
  * @fileoverview Browser code for itrans input and output.
  * @author Avinash Chopde <avinash@aczoom.com>
- * @version 0.6.0
+ * @version 0.6.1
  * @since 2021-02-20
  *
  * http://www.aczoom.com/itrans/online/

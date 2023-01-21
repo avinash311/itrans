@@ -21,10 +21,10 @@ Assumes at least these versions:
 
 ```
     npm --version
-    3.10.3   [8.3.1 works too]
+    3.10.3   [8.19.3 works too]
 
     node --version
-    v6.6.0   [v17.4.0 works too]
+    v6.6.0   [v18.13.0 works too]
 ```
 
 ## node modules

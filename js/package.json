@@ -1,6 +1,6 @@
 {
   "name": "itrans",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "itrans - convert input text to unicode text",
   "scripts": {
     "browserify": "browserify browser -t brfs | terser > dist/itrans_bundle.js",

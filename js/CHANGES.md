@@ -1,5 +1,10 @@
 # ChangeLog
 
+## Version 0.6.1
+  * 2023-01-20
+  * Updated the iso based transliteration table as one of the defaults.
+    Issues: https://github.com/avinash311/itrans/issues/7 and issues/6.
+
 ## Version 0.6.0
   * 2022-02-01
   * Added the iso based transliteration table as one of the defaults.
