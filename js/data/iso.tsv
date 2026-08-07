@@ -1,4 +1,4 @@
-INPUT	CODE-NAME	INPUT-TYPE	#sanskrit	#hindi	#marathi	#modi	#bengali	#gurmukhi	#gujarati	#oriya	#tamil	#telugu	#kannada	#malayalam	#grantha	#IAST	#iso	#IPA	dev-reference
+INPUT	CODE-NAME	INPUT-TYPE	#sanskrit	#hindi	#marathi	#modi	#bengali	#gurmukhi	#gujarati	#oriya	#tamil	#telugu	#kannada	#malayalam	#grantha	#iast	#iso	#ipa	dev-reference
 c.a	candra-a		u+0972	u+0972	u+0972											ă	ă	æ	ॲ
 a	a	vowel	u+0905	u+0905	u+0905	u+11600	u+0985	u+0A05	u+0A85	u+0B05	u+0B85	u+0C05	u+0C85	u+0D05	u+11305	a	a	ə	अ
 aa | A	aa	vowel	u+0906	u+0906	u+0906	u+11601	u+0986	u+0A06	u+0A86	u+0B06	u+0B86	u+0C06	u+0C86	u+0D06	u+11306	ā	ā	ɑː	आ
@@ -20,24 +20,24 @@ oo | O	oo	vowel	u+0913	u+0913	u+0913	u+1160C	u+0993	u+0A13	u+0A93	u+0B13	u+0B93	
 au | ou | ow	au	vowel	u+0914	u+0914	u+0914	u+1160D	u+0994	u+0A14	u+0A94	u+0B14	u+0B94	u+0C14	u+0C94	u+0D14	u+11314	au	au	əu	औ
 																			
 																			
-	dv-a	dependent-vowel																	
-	dv-aa	dependent-vowel	u+093E	u+093E	u+093E	u+11630	u+09BE	u+0A3E	u+0ABE	u+0B3E	u+0BBE	u+0C3E	u+0CBE	u+0D3E	u+1133E				
-	dv-i	dependent-vowel	u+093F	u+093F	u+093F	u+11631	u+09BF	u+0A3F	u+0ABF	u+0B3F	u+0BBF	u+0C3F	u+0CBF	u+0D3F	u+1133F				
-	dv-ii	dependent-vowel	u+0940	u+0940	u+0940	u+11632	u+09C0	u+0A40	u+0AC0	u+0B40	u+0BC0	u+0C40	u+0CC0	u+0D40	u+11340				
-	dv-u	dependent-vowel	u+0941	u+0941	u+0941	u+11633	u+09C1	u+0A41	u+0AC1	u+0B41	u+0BC1	u+0C41	u+0CC1	u+0D41	u+11341				
-	dv-uu	dependent-vowel	u+0942	u+0942	u+0942	u+11634	u+09C2	u+0A42	u+0AC2	u+0B42	u+0BC2	u+0C42	u+0CC2	u+0D42	u+11342				
-	dv-vocalic-r	dependent-vowel	u+0943	u+0943	u+0943	u+11635	u+09C3		u+0AC3	u+0B43	{end-word-vowel}{ra}{dv-u}u+0027	u+0C43	u+0CC3	u+0D43	u+11343				
-	dv-vocalic-rr	dependent-vowel	u+0944	u+0944	u+0944	u+11636	u+09C4		u+0AC4	u+0B44	{end-word-vowel}{ra}{dv-uu}u+0027	u+0C44	u+0CC4	u+0D44	u+11344				
-	dv-vocalic-l	dependent-vowel	u+0962	u+0962	u+0962	u+11637	u+09E2		u+0AE2	u+0B62	{end-word-vowel}{la}{dv-u}u+0027	u+0C62	u+0CE2	u+0D62	u+11362				
-	dv-vocalic-ll	dependent-vowel	u+0963	u+0963	u+0963	u+11638	u+09E3		u+0AE3	u+0B63	{end-word-vowel}{la}{dv-uu}u+0027	u+0C63	u+0CE3	u+0D63	u+11363				
-	dv-candra-e	dependent-vowel	u+0945	u+0945	u+0945				u+0AC5										
-	dv-e	dependent-vowel	u+0946	u+0946	u+0946		u+09C7				u+0BC6	u+0C46	u+0CC6	u+0D46					
-	dv-ee	dependent-vowel	u+0947	u+0947	u+0947	u+11639	u+09C7	u+0A47	u+0AC7	u+0B47	u+0BC7	u+0C47	u+0CC7	u+0D47	u+11347				
-	dv-ai	dependent-vowel	u+0948	u+0948	u+0948	u+1163A	u+09C8	u+0A48	u+0AC8	u+0B48	u+0BC8	u+0C48	u+0CC8	u+0D48	u+11348				
-	dv-candra-o	dependent-vowel	u+0949	u+0949	u+0949				u+0AC9	u+0AC9									
-	dv-o	dependent-vowel	u+094A	u+094A	u+094A		u+09CB				u+0BCA	u+0C4A	u+0CCA	u+0D4A					
-	dv-oo	dependent-vowel	u+094B	u+094B	u+094B	u+1163B	u+09CB	u+0A4B	u+0ACB	u+0B4B	u+0BCB	u+0C4B	u+0CCB	u+0D4B	u+1134B				
-	dv-au	dependent-vowel	u+094C	u+094C	u+094C	u+1163C	u+09CC	u+0A4C	u+0ACC	u+0B4C	u+0BCC	u+0C4C	u+0CCC	u+0D4C	u+1134C				
+	dv-a	dependent-vowel														a	a	ə	
+	dv-aa	dependent-vowel	u+093E	u+093E	u+093E	u+11630	u+09BE	u+0A3E	u+0ABE	u+0B3E	u+0BBE	u+0C3E	u+0CBE	u+0D3E	u+1133E	ā	ā	ɑː	
+	dv-i	dependent-vowel	u+093F	u+093F	u+093F	u+11631	u+09BF	u+0A3F	u+0ABF	u+0B3F	u+0BBF	u+0C3F	u+0CBF	u+0D3F	u+1133F	i	i	ɪ	
+	dv-ii	dependent-vowel	u+0940	u+0940	u+0940	u+11632	u+09C0	u+0A40	u+0AC0	u+0B40	u+0BC0	u+0C40	u+0CC0	u+0D40	u+11340	ī	ī	iː	
+	dv-u	dependent-vowel	u+0941	u+0941	u+0941	u+11633	u+09C1	u+0A41	u+0AC1	u+0B41	u+0BC1	u+0C41	u+0CC1	u+0D41	u+11341	u	u	u	
+	dv-uu	dependent-vowel	u+0942	u+0942	u+0942	u+11634	u+09C2	u+0A42	u+0AC2	u+0B42	u+0BC2	u+0C42	u+0CC2	u+0D42	u+11342	ū	ū	uː	
+	dv-vocalic-r	dependent-vowel	u+0943	u+0943	u+0943	u+11635	u+09C3		u+0AC3	u+0B43	{end-word-vowel}{ra}{dv-u}u+0027	u+0C43	u+0CC3	u+0D43	u+11343	ṛ	r̥ 	ɾɨ	
+	dv-vocalic-rr	dependent-vowel	u+0944	u+0944	u+0944	u+11636	u+09C4		u+0AC4	u+0B44	{end-word-vowel}{ra}{dv-uu}u+0027	u+0C44	u+0CC4	u+0D44	u+11344	ṝ	r̥̄	ɾɨː	
+	dv-vocalic-l	dependent-vowel	u+0962	u+0962	u+0962	u+11637	u+09E2		u+0AE2	u+0B62	{end-word-vowel}{la}{dv-u}u+0027	u+0C62	u+0CE2	u+0D62	u+11362	ḷ	l̥ 	lɨ	
+	dv-vocalic-ll	dependent-vowel	u+0963	u+0963	u+0963	u+11638	u+09E3		u+0AE3	u+0B63	{end-word-vowel}{la}{dv-uu}u+0027	u+0C63	u+0CE3	u+0D63	u+11363	ḹ	l̥̄	lɨː	
+	dv-candra-e	dependent-vowel	u+0945	u+0945	u+0945				u+0AC5							ê	ê	æ	
+	dv-e	dependent-vowel	u+0946	u+0946	u+0946		u+09C7				u+0BC6	u+0C46	u+0CC6	u+0D46		ĕ	e	e	
+	dv-ee	dependent-vowel	u+0947	u+0947	u+0947	u+11639	u+09C7	u+0A47	u+0AC7	u+0B47	u+0BC7	u+0C47	u+0CC7	u+0D47	u+11347	e	ē	eː	
+	dv-ai	dependent-vowel	u+0948	u+0948	u+0948	u+1163A	u+09C8	u+0A48	u+0AC8	u+0B48	u+0BC8	u+0C48	u+0CC8	u+0D48	u+11348	ai	ai	əɪ	
+	dv-candra-o	dependent-vowel	u+0949	u+0949	u+0949				u+0AC9	u+0AC9						ô	ô	ɔ	
+	dv-o	dependent-vowel	u+094A	u+094A	u+094A		u+09CB				u+0BCA	u+0C4A	u+0CCA	u+0D4A		ŏ	o	o	
+	dv-oo	dependent-vowel	u+094B	u+094B	u+094B	u+1163B	u+09CB	u+0A4B	u+0ACB	u+0B4B	u+0BCB	u+0C4B	u+0CCB	u+0D4B	u+1134B	o	ō	oː	
+	dv-au	dependent-vowel	u+094C	u+094C	u+094C	u+1163C	u+09CC	u+0A4C	u+0ACC	u+0B4C	u+0BCC	u+0C4C	u+0CCC	u+0D4C	u+1134C	au	au	əu	
 																			
 k | c	ka	consonant	u+0915	u+0915	u+0915	u+1160E	u+0995	u+0A15	u+0A95	u+0B15	u+0B95	u+0C15	u+0C95	u+0D15	u+11315	k	k	k	क्‌
 kh	kha	consonant	u+0916	u+0916	u+0916	u+1160F	u+0996	u+0A16	u+0A96	u+0B16	u+0B95	u+0C16	u+0C96	u+0D16	u+11316	kh	kh	kʰ	ख्‌
@@ -81,7 +81,9 @@ h	ha	consonant	u+0939	u+0939	u+0939	u+1162E	u+09B9	u+0A39	u+0AB9	u+0B39	u+0BB9	u
 x | kSh	ksha	consonant	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner}{ssa}{dv-a}	kṣ	kṣ	kʂ	क्ष्‌
 GY | j~n | dny	jnya	consonant	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	jñ	jñ	d͡ʒɲ	ज्ञ्‌
 SRI	sha-ra-ii		{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	śrī	śrī	ʃɾiː	श्री
-OM | AUM	om		u+0950	u+0950	u+0950	u+0950	u+0993u+0981	u+0A74	u+0AD0	u+0B13u+0B01	u+0BD0	u+0C13u+0C02	u+0C93u+0C82	u+0D13u+0D02	u+11350	oṃ	ōṁ	oːm	ॐ
+																			
+AUM | OUM	om-sign		u+0950	u+0950	u+0950	u+0950	u+0993u+0981	u+0A74	u+0AD0	u+0B13u+0B01	u+0BD0	u+0C13u+0C02	u+0C93u+0C82	u+0D13u+0D01	u+11350	oṃ	ōṁ	oːm	ॐ
+OM	o-m		u+0913u+0902	u+0913u+0902	u+0913u+0902	u+0913u+0902	u+0993u+0982	u+0A13u+0A02	u+0A93u+0A82	u+0B13u+0B02	u+0B93u+0BAEu+0BCD	u+0C13u+0C02	u+0C93u+0C82	u+0D13u+0D02	u+11313u+11302	oṃ	ōṁ	oːm	ओं
 																			
 q	qa	consonant	u+0958	u+0958	u+0958											q	q	q	क़्‌
 K	khha	consonant	u+0959	u+0959	u+0959			u+0A59								k͟h	k͟h	x	ख़्‌
@@ -111,19 +113,19 @@ Q	nukta	dependent-vowel	u+093C	u+093C	u+093C		u+09BC	u+0A3C	u+0ABC	u+0B3C		u+0C3
 	virama		u+094D	u+094D	u+094D	u+1163F	u+09CD	u+0A4D	u+0ACD	u+0B4D	u+0BCD	u+0C4D	u+0CCD	u+0D4D	u+1134D				
 .h	explicit-virama		{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}	{virama}{zwnj}				्‌
 .c	candra-ardhachandra	vedic-tone	u+1CF4	u+1CF4	u+1CF4	u+11640					u+1CF4		u+1CF4		u+1CF4	᳴	᳴	᳴	᳴
-.N	chandrabindu	vedic-tone	u+0901	u+0901	u+0901	{anusvara}{dv-candra-e}	u+0981	u+0A01	u+0A81	u+0B01	u+0901	u+0C01	u+0C81	u+0D01	u+11301	m̐	m̐	̃	ँ
-.n | M | .m	anusvara	dependent-vowel	u+0902	u+0902	u+0902	u+1163D	u+0982	u+0A02	u+0A82	u+0B02	u+0B82	u+0C02	u+0C82	u+0D02	u+11302	ṃ 	ṁ	̃ 	ं
+.N	combining-chandrabindu	vedic-tone	u+0901	u+0901	u+0901	{anusvara}{dv-candra-e}	u+0981	u+0A01	u+0A81	u+0B01	u+0901	u+0C01	u+0C81	u+0D01	u+11301	m̐	m̐	̃	ँ
+.n | M | .m	anusvara	dependent-vowel	u+0902	u+0902	u+0902	u+1163D	u+0982	u+0A02	u+0A82	u+0B02	u+0BAEu+0BCD	u+0C02	u+0C82	u+0D02	u+11302	ṃ 	ṁ	̃ 	ं
 H	visarga	vedic-sign	u+0903	u+0903	u+0903	u+1163E	u+0983	u+0A03	u+0A83	u+0B03	u+A789	u+0C03	u+0C83	u+0D03	u+11303	ḥ	ḥ	h	ः
 ~H	tamil-visarga	sign									u+0B83								
-.si	siddham	vedic-sign	u+A8FC	u+A8FC	u+A8FC		u+0980					u+0C77	u+0C84			꣼	꣼	꣼	꣼
-\'	svarita	vedic-tone	u+0951	u+0951	u+0951						u+0951				u+0951	̍ 	̍ 	↑	॑
-\_	anudatta	vedic-tone	u+0952	u+0952	u+0952						u+0952				u+0952	̱ 	̱ 	↓	॒
+.si	siddham	vedic-sign	u+A8FC	u+A8FC	u+A8FC	U+115C1	u+0980	U+115C1	U+A8FC	U+115C1	U+115C1	u+0C77	u+0C84	U+115C1	U+115C1	꣼	꣼	꣼	꣼
+\' | \‘ | \’	svarita	vedic-tone	u+0951	u+0951	u+0951						u+0951				u+0951	̍ 	̍ 	↑	॑
+\_	anudatta	vedic-tone	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	u+0952	̱	̱	↓	॒
 \m	spacing-candrabindu	vedic-tone	u+A8F2	u+A8F2	u+A8F2	u+A8F2	u+A8F2	u+A8F2	u+A8F2	u+A8F2	u+A8F2	u+A8F2	u+A8F2	u+A8F2	u+A8F2	ꣲ	ꣲ	ꣲ	ꣲ
 \m+	candrabinduvirama	vedic-sign	u+A8F3	u+A8F3	u+A8F3						u+A8F3				u+A8F3	gͫ 	gͫ 	gͫ 	ꣳ
 \m++	double-candrabindu-virama	vedic-sign	u+A8F4	u+A8F4	u+A8F4	u+A8F4	u+A8F4	u+A8F4	u+A8F4	u+A8F4	u+A8F4	u+A8F4	u+A8F4	u+A8F4	u+A8F4	gͫ̄	gͫ̄	gͫ̄	ꣴ
-\''	double-svarita 	vedic-tone	u+1CDA	u+1CDA	u+1CDA						u+1CDA				u+1CDA	̎ 	̎ 	↑↑	 ᳚
-.ga	grave-accent	sign	u+0953	u+0953	u+0953						u+0953				u+0300	`	`	`	॓
-.aa	acute-accent	sign	u+0954	u+0954	u+0954						u+0954				u+0301	'	'	'	॔
+\'' | \" | \“ | \”	double-svarita 	vedic-tone	u+1CDA	u+1CDA	u+1CDA						u+1CDA				u+1CDA	̎ 	̎ 	↑↑	 ᳚
+.ga	grave-accent	sign	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0953	u+0300	`	`	`	॓
+.aa	acute-accent	sign	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0954	u+0301	'	'	'	॔
 |	danda	sign	u+0964	u+0964	u+0964	u+11641	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	u+0964	'	'	'	।
 ||	double-danda	sign	u+0965	u+0965	u+0965	u+11642	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	u+0965	..	..	..	॥
 																			
@@ -154,17 +156,17 @@ Rs.	rupee-sign	sign	u+20B9	u+20B9	u+20B9	u+20B9	u+09F3	u+20B9	u+0AF1	u+20B9	u+20
 {}	no-ligature	command	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}	{virama}{zwj}				
 _	no-output	command																	
 																			
-	zwsp		u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B				
-	zwnj		u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C				
-	zwj		u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D				
+	zwsp		u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	u+200B	
+	zwnj		u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	u+200C	
+	zwj		u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	u+200D	
 																			
-	consonants-joiner	command	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}				
-	end-word-vowel	command	{explicit-virama}	{dv-a}	{dv-a}	{dv-a}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}				
+	consonants-joiner	command	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	{virama}	
+	end-word-vowel	command	{explicit-virama}	{dv-a}	{dv-a}	{dv-a}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	{explicit-virama}	
 																			
 ##	itrans-toggle	command																	
 																			
-	face-grin		😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀				
-	face-neutral		u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610				
-	face-frown		u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639				
-	skier		u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7				
-	heart		u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764				
+	face-grin		😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	😀	
+	face-neutral		u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F610	u+1F611	u+1F612	u+1F613	
+	face-frown		u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2639	u+2640	u+2641	u+2642	
+	skier		u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F7	u+26F8	u+26F9	u+26F10	
+	heart		u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2764	u+2765	u+2766	u+2767	

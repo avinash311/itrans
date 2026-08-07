@@ -12,7 +12,7 @@
 
   <meta name="keywords" Content="ITRANS, Indian Languages, Indian Scripts,
         Hindi, Marathi, Sanskrit, Devanagari, Telugu, Bengali, Gujarati,
-	Tamil, Gurmukhi, Malayalam, Oriya, Grantha, Romanized Sanskrit">
+	Tamil, Gurmukhi, Malayalam, Oriya, Grantha, Romanized Sanskrit, ISO, ISO15919, IAST, IPA, ">
 
   <!-- Mobile Specific Metas ================================== -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/itrans.css">
 
   <!-- Javascript ============================================= -->
-  <script src="dist/itrans_bundle.js?v=114"></script> <!-- uses DOM elements of this page -->
+  <script src="dist/itrans_bundle.js?v=110"></script> <!-- uses DOM elements of this page -->
 
   <!-- Favicon ================================================ -->
   <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
@@ -147,14 +147,13 @@
        and the <a href="https://docs.google.com/spreadsheets/d/1PHC3EJ69PZ4U39LSWtjMJhOL7aVE5qdW8qANaPTKDW8/edit?usp=sharing">iso based input spreadsheet</a> for itrans conversion.
        <br>
        There are cells with explanation notes in the spreadsheet. As of 2026, input codes for both ITRANS and ISO are mostly the same.
-       <p>
-       Direct access to itrans 5.3 encoding: <a href="/itrans/online/"><b>aczoom.com/itrans/online/</b></a>
-       <br>
-       Direct access to iso based encoding: <a href="/itrans/online/?tsv=iso"><b>aczoom.com/itrans/online/?tsv=iso</b></a>
-       <br>
-       Additional help and starting with specific output languages is described
-       at the <a href="customize.html">customize this package</a> page.
-       </p>
+       <p><ul>
+       <li>Direct access to itrans 5.3 encoding: <a href="/itrans/online/"><b>aczoom.com/itrans/online/</b></a></li>
+       <li>Direct access to iso based encoding: <a href="/itrans/online/?tsv=iso"><b>aczoom.com/itrans/online/?tsv=iso</b></a></li>
+       <li>Additional help and starting with specific output languages is described at the <a href="customize.html">customize this package</a> page.</li>
+       <li><i>Note</i>:<code>#roman</code> is now deprecated and will be removed after 2027. Use <code>#iso</code> instead.
+           Also related are the <code>#iast</code> and <code>#ipa</code> outputs. <a href="examples.html">Examples shown here.</a></li>
+       </ul></p>
     </div>
   </div>
 
@@ -197,6 +196,7 @@ cha{nukta} 0 9  Tha.N na.n OM
         itrans conversion, or use the last used language marker for itrans conversion,
         depending on whether it is the first ## or the second ## marker.</li>
         <li>use of unicode names directly<code>{face-grin}</code></li>
+        <li>Visit <a href="examples.html">examples of many of the codes</a> used for both itrans 5.3 and iso based codes.</li>
       </ul>
     </div>
     <div class="six columns">
@@ -206,23 +206,24 @@ cha{nukta} 0 9  Tha.N na.n OM
   </div>
   <div class="row">
     <div class="twelve columns">
-      <h4 id="more-examples">More Examples</h4>
-      <p>
-      Try these other examples to see additional features. Copy each of these snippets
-      and enter it in the <em>Enter itrans input</em> box above.
-      Also visit this page for <a href="examples.html">examples of most of the codes</a> used for both itrans 5.3 and iso based codes.
-      </p>
+      <h4 id="references">References</h4>
       <ul>
-        <li><code>#hindi ma shrii #kannada ta Ta</code>
-        <br>These language markers
-        (#hindi and #kannada) show that all the language column names
-        from the <a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">itrans 5.3 table</a> or any custom loaded table
-        can be explicity specified in the input text.</li>
-        <li>In addition to loading updated conversion tables, this entire
-        web page can be recreated and customized and hosted locally.
-        It requires coding, and familiarity with
-        Javascript, HTML, CSS, etc. Details are at the <a href="customize.html">customize this
-        package</a> page.</li>
+        <li>ITRANS: <a href="http://aczoom.com/itrans">aczoom.com/itrans</a> was created back in 1990s and used for many docs, especially Hindi song lyrics</li>
+        <li>All supported output scripts are shown in the drop down list for the <code>Output</code> field in the form.
+        Use <code>#&lt;script name&gt;</code> in the input to switch to different output. Use <code>##</code> to switch to English (or native language in your browser).</li>
+        <li>#iso output follows <a href="https://en.wikipedia.org/wiki/ISO_15919">ISO 15919</a> (Wikipedia).</li>
+        <li>#iast output follows <a href="https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration">International Alphabet of Sanskrit Transliteration</a> (Wikipedia).</li>
+        <li>#ipa output follows <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet">International Phonetic Alphabet</a> (Wikipedia).</li>
+        <li>All the output characters are define in the code based on data in these spreadsheets:
+            <ul>
+            <li><a href="https://docs.google.com/spreadsheets/d/14wZl8zCa4khZV3El2VGoqurKBLGx21mbS-yORi4w7Qo/edit?usp=sharing">itrans table</a>.</li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1PHC3EJ69PZ4U39LSWtjMJhOL7aVE5qdW8qANaPTKDW8/edit?usp=sharing">iso based input spreadsheet</a> (mostly same as the itrans 5.3 table).</li>
+            <li>In addition to loading updated conversion tables, this entire
+            web page can be recreated and customized and hosted locally.
+            It requires coding, and familiarity with
+            Javascript, HTML, CSS, etc. Details are at the <a href="customize.html">customize this package</a> page.</li>
+            </ul>
+        </li>
       </ul>
     </div>
   </div>
@@ -235,9 +236,10 @@ cha{nukta} 0 9  Tha.N na.n OM
   <p>
   Please note that no technical support is available for this web page or for the tools on this web page.
   <BR>
-  If you do find a bug (note that mapping issues may not be bugs, you can modify the mapping
-  and use a customized table spreadsheet as described above), feel free to file it at the
-  <a href="https://github.com/avinash311/itrans/issues">GitHub itrans issues</a> page.
+  If you do find a bug (or a mapping that may be incorrect), feel free to file an issue at the
+  <a href="https://github.com/avinash311/itrans/issues">GitHub itrans issues</a> page. Note that for extensive and private mappings,
+  you can create a copy and load your own spreadsheet. For even more customization for changes to the code
+  Javascript, HTML, CSS, see the information in <a href="customize.html">customize this package</a> page.</li>
   </p>
 
   <!--

@@ -1,7 +1,19 @@
 # ChangeLog
 
+## Version 0.6.7
+  * 2026-08-07
+  * svarita and double-svarita now also support the left/right smart quotes HTML chars
+  * AUM|OUM and OM updates
+  * anusvara, anudatta, siddham, grave-accent, acute-accent updates
+
+## Version 0.6.6
+  * 2026-07-04
+  * Renamed IAST and IPA to iast and ipa. All names are lower-case now.
+  * #iso, #iast, #ipas were missing dependent-vowel data. Now filled in.
+  * index.html updated to mention that #roman is no longer supported and to use #iso (or #iast or #ipa instead).
+
 ## Version 0.6.5
-  * 2026-01-01
+  * 2026-07-01
   * OM output for some languages was incorrect (double characters output), now fixed.
   * #roman removed. Use one of the #IAST or #IPA or #iso codes instead.
   * A bunch of internal-only changes for spreadsheet devanagari reference column.
