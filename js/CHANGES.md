@@ -1,5 +1,14 @@
 # ChangeLog
 
+<<<<<<< HEAD
+## Version 0.6.8
+  * 2026-08-29
+  * \.  and   \..   alternatives for |  and  ||   danda and double-danda
+  * A few missing unicode characters for ISO signs added, copying over from itrans-5.3
+  * Removed column tamils-unused from itrans-5.3
+
+=======
+>>>>>>> 44fb78f7a0baaea37751a02b7d1f87c503328f61
 ## Version 0.6.7
   * 2026-08-07
   * svarita and double-svarita now also support the left/right smart quotes HTML chars
