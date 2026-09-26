@@ -82,8 +82,8 @@ x | kSh	ksha	consonant	{ka}{consonants-joiner}{ssa}{dv-a}	{ka}{consonants-joiner
 GY | j~n | dny	jnya	consonant	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	{ja}{consonants-joiner}{nya}{dv-a}	jñ	jñ	d͡ʒɲ	ज्ञ्‌	
 SRI	sha-ra-ii		{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	{sha}{consonants-joiner}{ra}{dv-ii}	śrī	śrī	ʃɾiː	श्री	
 																				
-AUM | OUM	om-sign		u+0950	u+0950	u+0950	u+0950	u+0993u+0981	u+0A74	u+0AD0	u+0B13u+0B01	u+0BD0	u+0C13u+0C02	u+0C93u+0C82	u+0D13u+0D01	u+11350	oṃ	ōṁ	oːm	ॐ	
-OM	o-m		u+0913u+0902	u+0913u+0902	u+0913u+0902	u+0913u+0902	u+0993u+0982	u+0A13u+0A02	u+0A93u+0A82	u+0B13u+0B02	u+0B93u+0BAEu+0BCD	u+0C13u+0C02	u+0C93u+0C82	u+0D13u+0D02	u+11313u+11302	oṃ	ōṁ	oːm	ओं	
+AUM | OM	om-sign		u+0950	u+0950	u+0950	u+0950	u+0993u+0981	u+0A74	u+0AD0	u+0B13u+0B01	u+0BD0	u+0C13u+0C02	u+0C93u+0C82	u+0D13u+0D01	u+11350	oṃ	ōṁ	oːm	ॐ	
+OUM	o-m		u+0913u+0902	u+0913u+0902	u+0913u+0902	u+0913u+0902	u+0993u+0982	u+0A13u+0A02	u+0A93u+0A82	u+0B13u+0B02	u+0B93u+0BAEu+0BCD	u+0C13u+0C02	u+0C93u+0C82	u+0D13u+0D02	u+11313u+11302	oṃ	ōṁ	oːm	ओं	
 																				
 q	qa	consonant	u+0958	u+0958	u+0958											q	q	q	क़्‌	
 K	khha	consonant	u+0959	u+0959	u+0959			u+0A59								k͟h	k͟h	x	ख़्‌	
